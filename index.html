@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="styles/elements/forms.css">
     <link rel="stylesheet" href="styles/elements/buttons.css">
     <link rel="stylesheet" href="styles/elements/box.css">
+    <link rel="stylesheet" href="styles/elements/table.css">
 
     <!-- META TAGS -->
     <!-- Primary Meta Tags -->
@@ -80,37 +81,39 @@
                 <div class="box">
                     <legend class="box-legend">Settings</legend>
 
-                    <fieldset>
-                        <legend>General</legend>
+                    <form>
+                        <fieldset>
+                            <legend>General</legend>
 
-                        <label for="sex-type">Sex</label>
-                        <select name="sex-type">
-                            <option value="random">Random</option>
-                            <option value="masculine">Masculine</option>
-                            <option value="feminine">Feminine</option>
-                        </select>
+                            <label for="name-style">Name Style</label>
+                            <select name="name-style">
+                                <option value="random">Random</option>
+                                <option value="USA">United States</option>
+                            </select>
 
-                        <label for="name-style">Name Style</label>
-                        <select name="name-style">
-                            <option value="random">Random</option>
-                            <option value="USA">United States</option>
-                        </select>
+                            <label for="sex-type">Sex</label>
+                            <select name="sex-type">
+                                <option value="random">Random</option>
+                                <option value="masculine">Masculine</option>
+                                <option value="feminine">Feminine</option>
+                            </select>
 
-                        <label for="age-range">Age Range</label>
-                        <select name="age-range">
-                            <option value="random">Random</option>
-                            <option value="child">Child (0-12 years old)</option>
-                            <option value="teenager">Teenager (13-19 years old)</option>
-                            <option value="youngAdult">Young Adult (20-29 years old)</option>
-                            <option value="adult">Adult (30-59 years old)</option>
-                            <option value="elderly">Elderly (60+ years old)</option>
-                        </select>
-                    </fieldset>
+                            <label for="age-range">Age Range</label>
+                            <select name="age-range">
+                                <option value="random">Random</option>
+                                <option value="child">Child (0-12 years old)</option>
+                                <option value="teenager">Teenager (13-19 years old)</option>
+                                <option value="youngAdult">Young Adult (20-29 years old)</option>
+                                <option value="adult">Adult (30-59 years old)</option>
+                                <option value="elderly">Elderly (60+ years old)</option>
+                            </select>
+                        </fieldset>
 
-                    <div class="app-settings-buttons">
-                        <button type="submit" class="btn btn-primary-success">Generate</button>
-                        <button type="reset" class="btn btn-destructive">Reset</button>
-                    </div>
+                        <div class="app-settings-buttons">
+                            <button type="submit" class="btn btn-primary-success">Generate</button>
+                            <button type="reset" class="btn btn-destructive">Reset</button>
+                        </div>
+                    </form>
                 </div>
             </div>
 
@@ -119,58 +122,307 @@
                 <div class="box">
                     <legend class="box-legend">Character Sheet</legend>
 
-                    <!-- FIELDS -->
-                    <fieldset>
-                        <legend>General</legend>
+                    <section class="app-cs-section">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">GENERAL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Name</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Occupation</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Sex</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Country of Residence</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Country of Birth</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Civil Status</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Date of Birth</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">SCHOOLING</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Education Level</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Training or Specialization Area</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Certifications Obtained</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Favorite Subjects</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                        <label for="age">Age:</label>
-                        <input type="number" id="age" name="age">
 
-                        <label for="occupation">Occupation:</label>
-                        <input type="text" id="occupation" name="occupation">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">PHYSICAL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Height</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Weight (KG)</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Blood Type</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Eye Color</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Hair Color</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Ethnicity</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Body Type</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Posture</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
 
-                        <fieldset>
-                            <legend>Sex</legend>
+                            </tfoot>
+                        </table>
 
-                            <input type="radio" name="sex" id="masculine" value="M">
-                            <label for="masculine">Masculine</label>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">FAMILY</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Family Members</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Relationship with Each Member</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Pets</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
 
-                            <input type="radio" name="sex" id="feminine" value="F">
-                            <label for="feminine">Feminine</label>
-                        </fieldset>
+                            </tfoot>
+                        </table>
 
-                        <label for="country_of_residence">Country of Residence:</label>
-                        <select name="country_of_residence" id="country_of_residence">
-                            <!-- OPTIONS -->
-                        </select>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">FEATURES</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Strength</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Constitution</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Dexterity</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Intelligence</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Education</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Charisma</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
 
-                        <label for="country_of_birth">Country of Birth:</label>
-                        <select name="country_of_birth" id="country_of_birth">
-                            <!-- OPTIONS -->
-                        </select>
+                            </tfoot>
+                        </table>
 
-                        <label for="marital_status">Marital Status:</label>
-                        <input type="number" id="marital_status" name="marital_status">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">SKILLS</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
 
-                        <label for="date_of_birth">Date of Birth:</label>
-                        <input type="date" id="date_of_birth" name="date_of_birth">
-                    </fieldset>
-                    </form>
+                            </tfoot>
+                        </table>
 
-                    <!-- ACTIONS -->
-                    <div class="app-cs-buttons">
-                        <button class="btn btn-primary-default">Download</button>
-                    </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">BACKGROUND</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Personality</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Personal Description</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Ideologies/Beliefs</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Significant People</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Important Locations</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Dear Belongings</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Notable Physical Characteristics</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Wounds and Scars</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Striking Traits</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Morality</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Phobias</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Quirks</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Traumatic Experiences</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+
+                            </tfoot>
+                        </table>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colspan="2">HISTORY</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Goals and Dreams</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Personal Conflicts</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Remarkable Moments in Life</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Historical Events that Influenced</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Unexpected Twists</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Important Previous Relationships</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+
+                            </tfoot>
+                        </table>
+                    </section>
                 </div>
             </div>
     </main>
 
+    <!--
     <footer>
         <p>&copy; 2024 Starciad. Todos os direitos reservados.</p>
     </footer>
+    -->
 </body>
 
 </html>
