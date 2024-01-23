@@ -1,0 +1,15 @@
+header {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 16px;
+    width: 100%;
+    height: auto;
+
+    background-color: #010409;
+
+    border-color: #21262d;
+    border-style: solid;
+    border-width: 0px 0px 2px 0px;
+}

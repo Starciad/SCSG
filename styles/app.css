@@ -1,0 +1,58 @@
+body {
+    background-color: #0d1117;
+}
+
+.app {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-items: center;
+
+    padding: 32px;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* ==================== */
+/* SECTION */
+/* INTRO */
+.app-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.app-intro-logo h1 {
+    color: green;
+    font-family: Impact;
+    font-weight: 100;
+    font-size: 40px;
+}
+
+.app-intro-logo h2 {
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.app-intro-description {
+    margin-top: 32px;
+}
+
+/* SETTINGS */
+.app-settings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.app-settings-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+/* CHARACTER SHEET */
+.app-cs-buttons {
+    display: flex;
+    justify-content: center;
+}

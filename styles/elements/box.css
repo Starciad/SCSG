@@ -1,0 +1,32 @@
+.box {
+    padding: 16px;
+
+    margin-bottom: 32px;
+
+    border-radius: 8px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+
+    background-color: #161b22;
+
+    box-shadow: black 1px 1px 1px 1px;
+}
+
+.box-legend {
+    padding: 8px;
+
+    width: 29%;
+
+    border-radius: 8px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+
+    background-color: #0d1117;
+
+    margin-top: -34px;
+    margin-bottom: 16px;
+
+    font-weight: bolder;
+}

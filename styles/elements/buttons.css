@@ -1,0 +1,61 @@
+/* =================== */
+/* DEFAULT */
+.btn {
+    display: inline-block;
+
+    width: auto;
+    height: auto;
+
+    padding: 8px;
+    margin: 4px;
+    
+    cursor: pointer;
+
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 8px;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.btn:active {
+    position: relative;
+    top: 1px;
+}
+
+/* =================== */
+/* SETTINGS */
+.btn-nil {
+    color: #777f88;
+    background-color: transparent;
+    border-color: #21262d;
+}
+
+.btn-primary-default {
+    color: white;
+    background-color: #5865f2;
+}
+
+.btn-primary-success {
+    color: white;
+    background-color: #238636;
+}
+
+.btn-secondary {
+    color: white;
+    background-color: #545454;
+}
+
+.btn-destructive {
+    color: white;
+    background-color: #862323;
+}

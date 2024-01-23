@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎭 ➥ SCSG - Star Character Sheet Generator.</title>
+
+    <!-- SCRIPTS -->
+    <script src="scripts/managers/countriesManager.js" type="module"></script>
+    <script src="scripts/main.js" type="module" defer></script>
+
+    <!-- STYLES -->
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/elements/buttons.css">
+    <link rel="stylesheet" href="styles/elements/box.css">
+
+    <!-- META TAGS -->
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Star Character Sheet Generator" />
+    <meta name="description"
+        content="Easily and quickly generate unique fictional characters based on your preferences for your stories. Ignite your imagination and breathe life into your worlds with the  SCSG." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="Star Character Sheet Generator" />
+    <meta property="og:description"
+        content="Easily and quickly generate unique fictional characters based on your preferences for your stories. Ignite your imagination and breathe life into your worlds with the  SCSG." />
+    <meta property="og:image" content="" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="" />
+    <meta property="twitter:title" content="Star Character Sheet Generator" />
+    <meta property="twitter:description"
+        content="Easily and quickly generate unique fictional characters based on your preferences for your stories. Ignite your imagination and breathe life into your worlds with the  SCSG." />
+    <meta property="twitter:image" content="" />
+</head>
+
+<body>
+    <header>
+        <div id="header-left">
+            <button class="btn btn-nil">Repository</button>
+        </div>
+
+        <div id="header-right">
+            <button class="btn btn-nil">Credits</button>
+            <button class="btn btn-nil">About</button>
+        </div>
+    </header>
+
+    <main class="app">
+        <div class="app-body">
+            <!-- INTRODUCTION -->
+            <div class="app-intro">
+                <div class="box">
+                    <legend class="box-legend">Introduction</legend>
+    
+                    <div class="app-intro-logo">
+                        <h1 align="center">Star Character Sheet Generator</h1>
+                        <h2 align="center">Spark your imagination by creating unique characters</h2>
+                    </div>
+    
+                    <div class="app-intro-description">
+                        <p align="center">This application generates bases for fictional characters that can be molded based on your
+                            preferences. Customize and create engaging character bases for your stories.</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- SETTINGS -->
+            <div class="app-settings">
+                <div class="box">
+                    <legend class="box-legend">Settings</legend>
+
+                    <form>
+
+                    </form>
+
+                    <div class="app-settings-buttons">
+                        <button type="submit" class="btn btn-primary-success">Generate</button>
+                        <button type="reset" class="btn btn-destructive">Reset</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SHEET -->
+            <div class="app-cs">
+                <div class="box">
+                    <legend class="box-legend">Character Sheet</legend>
+
+                    <!-- FIELDS -->
+                    <fieldset>
+                        <legend>General</legend>
+
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name">
+
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age">
+
+                        <label for="occupation">Occupation:</label>
+                        <input type="text" id="occupation" name="occupation">
+
+                        <fieldset>
+                            <legend>Sex</legend>
+
+                            <input type="radio" name="sex" id="masculine" value="M">
+                            <label for="masculine">Masculine</label>
+
+                            <input type="radio" name="sex" id="feminine" value="F">
+                            <label for="feminine">Feminine</label>
+                        </fieldset>
+
+                        <label for="country_of_residence">Country of Residence:</label>
+                        <select name="country_of_residence" id="country_of_residence">
+                            <!-- OPTIONS -->
+                        </select>
+
+                        <label for="country_of_birth">Country of Birth:</label>
+                        <select name="country_of_birth" id="country_of_birth">
+                            <!-- OPTIONS -->
+                        </select>
+
+                        <label for="marital_status">Marital Status:</label>
+                        <input type="number" id="marital_status" name="marital_status">
+
+                        <label for="date_of_birth">Date of Birth:</label>
+                        <input type="date" id="date_of_birth" name="date_of_birth">
+                    </fieldset>
+                </form>
+
+                <!-- ACTIONS -->
+                <div class="app-cs-buttons">
+                    <button class="btn btn-primary-default">Download</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Starciad. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
