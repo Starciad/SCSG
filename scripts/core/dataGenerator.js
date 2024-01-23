@@ -1,9 +1,16 @@
 import { EUANamesCollection } from "../collections/names/EUANamesCollection.js";
 import { random } from "../math/random.js";
+import { updateCharacterSheetTable } from "./pageUpdater.js";
 
 export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
     let char_fullname = getRandomName(nameStyleType, sexType);
     let char_age = getRandomAge(ageRangeType);
+
+    updateCharacterSheetTable({
+        firstName: char_fullname.firstName,
+        lastName: char_fullname.lastName,
+        age: char_age,
+    });
 }
 
 function getRandomName(nameStyleType, sexType) {
@@ -37,19 +44,19 @@ function getRandomAge(ageRangeType) {
             return random.getRandomNumber(0, 100);
 
         case "child":
-            return random.getRandomNumber(1, 12);
+            return random.getRandomNumber(0, 12);
 
         case "teenager":
             return random.getRandomNumber(13, 19);
 
         case "youngAdult":
-            return random.getRandomNumber(20, 35);
+            return random.getRandomNumber(20, 29);
 
         case "adult":
-            return random.getRandomNumber(36, 60);
+            return random.getRandomNumber(30, 59);
 
         case "elderly":
-            return random.getRandomNumber(61, 100);
+            return random.getRandomNumber(60, 100);
 
         default:
             return random.getRandomNumber(0, 100);
