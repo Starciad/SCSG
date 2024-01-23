@@ -1,0 +1,40 @@
+/* GENERAL */
+table {
+    padding: 16px;
+
+    width: 100%;
+
+    border-radius: 8px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+
+    margin: 12px;
+
+    background-color: #0d1117;
+
+    font-weight: 500;
+}
+
+/* ELEMENTS */
+th {
+    padding: 16px;
+
+    border-radius: 8px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+
+    background-color: #0a0d12;
+}
+
+td {
+    padding: 8px;
+
+    border-radius: 8px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+
+    background-color: #161b22;
+}
