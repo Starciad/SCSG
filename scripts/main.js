@@ -1,29 +1,17 @@
-import { countriesManager } from "./managers/countriesManager.js";
+import { SCSGenerator } from "./core/dataGenerator.js";
 
-// BUILD FORM
-function BuildFormOptions() {
-    let cm = new countriesManager();
+// Elements
+let SCSGGenerateButton = document.querySelector("#scsg-generate-button");
 
-    let tags = [
-        document.getElementById('country_of_residence'),
-        document.getElementById('country_of_birth')
-    ];
+// Events
+SCSGGenerateButton.addEventListener('click', () => {
+    let nameStyleType = document.querySelector("#name-style-type").value;
+    let sexType = document.querySelector("#sex-type").value;
+    let ageRangeType = document.querySelector("#age-range-type").value;
 
-    tags.forEach(element => {
-        element.innerHTML = "";
-
-        cm.countries.forEach(element => {
-            let option = document.createElement('option');
-            option.value = country.id;
-            option.text = country.name;
-            element.add(option);
-        });
-    });
-}
-
-// =================================== //
-function Main() {
-    BuildFormOptions();
-};
-
-Main();
+    SCSGenerator(
+        nameStyleType,
+        sexType,
+        ageRangeType
+    );
+});

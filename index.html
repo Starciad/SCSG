@@ -7,7 +7,17 @@
     <title>🎭 ➥ SCSG - SCSG - Star Character Sheet Generator.</title>
 
     <!-- SCRIPTS -->
-    <script src="scripts/managers/countriesManager.js" type="module"></script>
+    <!-- Core -->
+    <script src="scripts/core/dataGenerator.js" type="module"></script>
+    <script src="scripts/core/pageUpdater.js" type="module"></script>
+
+    <!-- Collections -->
+    <script src="scripts/collections/names/EUANamesCollection.js" type="module"></script>
+
+    <!-- Math -->
+    <script src="scripts/math/random.js" type="module"></script>
+
+    <!-- Core -->
     <script src="scripts/main.js" type="module" defer></script>
 
     <!-- STYLES -->
@@ -85,33 +95,31 @@
                         <fieldset>
                             <legend>General</legend>
 
-                            <label for="name-style">Name Style</label>
-                            <select name="name-style">
-                                <option value="random">Random</option>
-                                <option value="USA">United States</option>
+                            <label for="name-style-type">Name Style</label>
+                            <select name="name-style-type" id="name-style-type">
+                                <option value="USA" selected>United States</option>
                             </select>
 
                             <label for="sex-type">Sex</label>
-                            <select name="sex-type">
-                                <option value="random">Random</option>
-                                <option value="masculine">Masculine</option>
+                            <select name="sex-type" id="sex-type">
+                                <option value="masculine" selected>Masculine</option>
                                 <option value="feminine">Feminine</option>
                             </select>
 
-                            <label for="age-range">Age Range</label>
-                            <select name="age-range">
-                                <option value="random">Random</option>
+                            <label for="age-range-type">Age Range</label>
+                            <select name="age-range-type" id="age-range-type">
+                                <option value="random" selected>Random</option>
                                 <option value="child">Child (0-12 years old)</option>
                                 <option value="teenager">Teenager (13-19 years old)</option>
-                                <option value="youngAdult">Young Adult (20-29 years old)</option>
+                                <option value="youngAdult" selected>Young Adult (20-29 years old)</option>
                                 <option value="adult">Adult (30-59 years old)</option>
                                 <option value="elderly">Elderly (60+ years old)</option>
                             </select>
                         </fieldset>
 
                         <div class="app-settings-buttons">
-                            <button type="submit" class="btn btn-primary-success">Generate</button>
-                            <button type="reset" class="btn btn-destructive">Reset</button>
+                            <button id="scsg-generate-button" type="button" class="btn btn-primary-success">Generate</button>
+                            <button id="scsg-reset-button" type="reset" class="btn btn-destructive">Reset</button>
                         </div>
                     </form>
                 </div>
