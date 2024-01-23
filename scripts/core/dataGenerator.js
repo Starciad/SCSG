@@ -4,7 +4,8 @@ import { random } from "../math/random.js";
 import { updateCharacterSheetTable } from "./pageUpdater.js";
 
 export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
-    let char_fullname = getRandomName(nameStyleType, sexType);
+    let char_sex = getRandomSex(sexType);
+    let char_fullname = getRandomName(nameStyleType, char_sex);
     let char_age = getRandomAge(ageRangeType);
     let char_occupation = getRandomOccupation();
 
@@ -12,7 +13,8 @@ export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
         firstName: char_fullname.firstName,
         lastName: char_fullname.lastName,
         age: char_age,
-        occupation: char_occupation
+        occupation: char_occupation,
+        sex: char_sex.charAt(0).toUpperCase() + char_sex.slice(1)
     });
 }
 
@@ -68,4 +70,18 @@ function getRandomAge(ageRangeType) {
 
 function getRandomOccupation() {
     return SCSGOccupationsCollection.getRandomOccupation();
+}
+
+function getRandomSex(sexType) {
+    if (sexType === "random") {
+        if (Math.random() < 0.5) {
+            return "masculine";
+        }
+        else {
+            return "feminine";
+        }
+    }
+    else {
+        return sexType;
+    }
 }

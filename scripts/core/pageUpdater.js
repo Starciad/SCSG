@@ -4,4 +4,5 @@ export function updateCharacterSheetTable(characterInfos) {
     document.querySelector("#cs-general-last-name").innerHTML = characterInfos.lastName;
     document.querySelector("#cs-general-age").innerHTML = characterInfos.age;
     document.querySelector("#cs-general-occupation").innerHTML = characterInfos.occupation;
+    document.querySelector("#cs-general-sex").innerHTML = characterInfos.sex;
 }
