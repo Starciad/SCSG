@@ -1,4 +1,4 @@
-export const SCSGOccupationsCollection = Object.freeze({
+export const OccupationsCollection = Object.freeze({
     occupations: [
         "Lawyer",
         "Wanderer",

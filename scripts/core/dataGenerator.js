@@ -1,5 +1,5 @@
 import { EUANamesCollection } from "../collections/names/EUANamesCollection.js";
-import { SCSGOccupationsCollection } from "../collections/occupations/SCSGOccupationsCollection.js";
+import { OccupationsCollection } from "../collections/occupations/OccupationsCollection.js";
 import { random } from "../math/random.js";
 import { updateCharacterSheetTable } from "./pageUpdater.js";
 
@@ -69,7 +69,7 @@ function getRandomAge(ageRangeType) {
 }
 
 function getRandomOccupation() {
-    return SCSGOccupationsCollection.getRandomOccupation();
+    return OccupationsCollection.getRandomOccupation();
 }
 
 function getRandomSex(sexType) {
