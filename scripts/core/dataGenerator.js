@@ -1,15 +1,18 @@
 import { EUANamesCollection } from "../collections/names/EUANamesCollection.js";
+import { SCSGOccupationsCollection } from "../collections/occupations/SCSGOccupationsCollection.js";
 import { random } from "../math/random.js";
 import { updateCharacterSheetTable } from "./pageUpdater.js";
 
 export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
     let char_fullname = getRandomName(nameStyleType, sexType);
     let char_age = getRandomAge(ageRangeType);
+    let char_occupation = getRandomOccupation();
 
     updateCharacterSheetTable({
         firstName: char_fullname.firstName,
         lastName: char_fullname.lastName,
         age: char_age,
+        occupation: char_occupation
     });
 }
 
@@ -61,4 +64,8 @@ function getRandomAge(ageRangeType) {
         default:
             return random.getRandomNumber(0, 100);
     }
+}
+
+function getRandomOccupation() {
+    return SCSGOccupationsCollection.getRandomOccupation();
 }
