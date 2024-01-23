@@ -59,14 +59,15 @@
             <div class="app-intro">
                 <div class="box">
                     <legend class="box-legend">Introduction</legend>
-    
+
                     <div class="app-intro-logo">
                         <h1 align="center">SCSG - Star Character Sheet Generator</h1>
                         <h2 align="center">Spark your imagination by creating unique characters</h2>
                     </div>
-    
+
                     <div class="app-intro-description">
-                        <p align="center">This application generates bases for fictional characters that can be molded based on your
+                        <p align="center">This application generates bases for fictional characters that can be molded
+                            based on your
                             preferences. Customize and create engaging character bases for your stories.</p>
                     </div>
                 </div>
@@ -78,9 +79,32 @@
                 <div class="box">
                     <legend class="box-legend">Settings</legend>
 
-                    <form>
+                    <fieldset>
+                        <legend>General</legend>
 
-                    </form>
+                        <label for="sex-type">Sex</label>
+                        <select name="sex-type">
+                            <option value="random">Random</option>
+                            <option value="masculine">Masculine</option>
+                            <option value="feminine">Feminine</option>
+                        </select>
+
+                        <label for="name-style">Name Style</label>
+                        <select name="name-style">
+                            <option value="random">Random</option>
+                            <option value="USA">United States</option>
+                        </select>
+
+                        <label for="age-range">Age Range</label>
+                        <select name="age-range">
+                            <option value="random">Random</option>
+                            <option value="child">Child (0-12 years old)</option>
+                            <option value="teenager">Teenager (13-19 years old)</option>
+                            <option value="youngAdult">Young Adult (20-29 years old)</option>
+                            <option value="adult">Adult (30-59 years old)</option>
+                            <option value="elderly">Elderly (60+ years old)</option>
+                        </select>
+                    </fieldset>
 
                     <div class="app-settings-buttons">
                         <button type="submit" class="btn btn-primary-success">Generate</button>
@@ -133,14 +157,14 @@
                         <label for="date_of_birth">Date of Birth:</label>
                         <input type="date" id="date_of_birth" name="date_of_birth">
                     </fieldset>
-                </form>
+                    </form>
 
-                <!-- ACTIONS -->
-                <div class="app-cs-buttons">
-                    <button class="btn btn-primary-default">Download</button>
+                    <!-- ACTIONS -->
+                    <div class="app-cs-buttons">
+                        <button class="btn btn-primary-default">Download</button>
+                    </div>
                 </div>
             </div>
-        </div>
     </main>
 
     <footer>
