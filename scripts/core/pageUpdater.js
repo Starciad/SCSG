@@ -7,4 +7,5 @@ export function updateCharacterSheetTable(characterInfos) {
     document.querySelector("#cs-general-sex").innerHTML = characterInfos.sex;
     document.querySelector("#cs-general-residence-country").innerHTML = characterInfos.residenceCountry.name;
     document.querySelector("#cs-general-birth-country").innerHTML = characterInfos.birthCountry.name;
+    document.querySelector("#cs-general-civil-status").innerHTML = characterInfos.civilStatus;
 }

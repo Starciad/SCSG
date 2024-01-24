@@ -1,3 +1,4 @@
+import { CivilStatusCollection } from "../collections/CivilStatusCollection.js";
 import { CountriesCollection } from "../collections/CountriesCollection.js";
 import { EUANamesCollection } from "../collections/names/EUANamesCollection.js";
 import { OccupationsCollection } from "../collections/OccupationsCollection.js";
@@ -11,6 +12,7 @@ export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
     let char_occupation = getRandomOccupation();
     let char_residence_country = getRandomCountry();
     let char_birth_country = getRandomCountry();
+    let char_civil_status = getRandomCivilStatus();
 
     updateCharacterSheetTable({
         firstName: char_fullname.firstName,
@@ -19,7 +21,8 @@ export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
         occupation: char_occupation,
         sex: char_sex.charAt(0).toUpperCase() + char_sex.slice(1),
         residenceCountry: char_residence_country,
-        birthCountry: char_birth_country
+        birthCountry: char_birth_country,
+        civilStatus: char_civil_status,
     });
 }
 
@@ -93,4 +96,8 @@ function getRandomSex(sexType) {
 
 function getRandomCountry() {
     return CountriesCollection.getRandomCountry();
+}
+
+function getRandomCivilStatus() {
+    return CivilStatusCollection.getRandomCivilStatus();
 }
