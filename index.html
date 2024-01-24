@@ -11,24 +11,24 @@
     <script src="scripts/core/dataGenerator.js" type="module"></script>
     <script src="scripts/core/pageUpdater.js" type="module"></script>
     <script src="scripts/core/pageManager.js" type="module"></script>
-    
+
     <!-- Math -->
     <script src="scripts/math/random.js" type="module"></script>
-    
+
     <!-- Collections -->
     <script src="scripts/collections/names/EUANamesCollection.js" type="module"></script>
-    
+
     <script src="scripts/collections/general/OccupationsCollection.js" type="module"></script>
     <script src="scripts/collections/general/CountriesCollection.js" type="module"></script>
     <script src="scripts/collections/general/CivilStatusCollection.js" type="module"></script>
-    
+
     <script src="scripts/collections/physical/BloodTypeCollection.js" type="module"></script>
     <script src="scripts/collections/physical/HeightCollection.js" type="module"></script>
     <script src="scripts/collections/physical/WeightCollection.js" type="module"></script>
     <script src="scripts/collections/physical/BodyTypeCollection.js" type="module"></script>
-    
+
     <script src="scripts/collections/appearance/SkinToneCollection.js" type="module"></script>
-    
+
     <!-- Core -->
     <script src="scripts/main.js" type="module" defer></script>
 
@@ -43,6 +43,7 @@
     <link rel="stylesheet" href="styles/elements/buttons.css">
     <link rel="stylesheet" href="styles/elements/box.css">
     <link rel="stylesheet" href="styles/elements/table.css">
+    <link rel="stylesheet" href="styles/elements/appElements.css">
 
     <!-- META TAGS -->
     <!-- Primary Meta Tags -->
@@ -76,7 +77,7 @@
                 </div>
 
                 <div id="header-right">
-                    
+
                 </div>
             </header>
         </div>
@@ -89,42 +90,47 @@
             </aside>
 
             <main class="page-main">
-                <div class="app-sections">
-                    <!-- HOME -->
-                    <div class="app-section-category" data-name="HOME">
-                        <!-- INTRO -->
-                        <section class="app-section app-intro" data-name="Introduction">
-                            Introduction
-                        </section>
+                <div class="page-content">
+                    <div class="app-sections">
+                        <!-- HOME -->
+                        <div class="app-section-category" data-name="HOME">
+                            <!-- INTRO -->
+                            <section class="app-section app-intro" data-name="Introduction">
+                                <h1>Introduction</h1>
 
-                        <!-- INTRO -->
-                        <section class="app-section app-intro" data-name="Repository">
-                            Repository
-                        </section>
-                        
-                        <!-- INTRO -->
-                        <section class="app-section app-intro" data-name="About">
-                            About
-                        </section>
-                        
-                        <!-- INTRO -->
-                        <section class="app-section app-intro" data-name="Credits">
-                            Credits
-                        </section>
+                                <h2>Spark your imagination by creating unique characters.</h2>
+                                <p>This application generates bases for fictional characters that can be molded based on
+                                    your preferences. Customize and create engaging character bases for your stories.
+                                </p>
+
+                            </section>
+
+                            <!-- INTRO -->
+                            <section class="app-section app-intro" data-name="Repository">
+                                Repository
+                            </section>
+
+                            <!-- INTRO -->
+                            <section class="app-section app-intro" data-name="About">
+                                About
+                            </section>
+
+                            <!-- INTRO -->
+                            <section class="app-section app-intro" data-name="Credits">
+                                Credits
+                            </section>
+                        </div>
+
+                        <div class="app-section-category" data-name="GENERATOR">
+                            <!-- SETTINGS -->
+                            <section class="app-section app-settings" data-name="Settings">
+
+                            </section>
+                        </div>
                     </div>
 
-                    <div class="app-section-category" data-name="GENERATOR">
-                        <!-- SETTINGS -->
-                        <section class="app-section app-settings" data-name="Settings">
-
-                        </section>
-                    </div>
-
-                    </div>
                     <!-- CHARACTER -->
                     <div class="app-section-category" data-name="CHARACTER">
-
-
                         <!-- GENERAL -->
                         <section class="app-section" data-name="General">
 
@@ -141,14 +147,19 @@
                         </section>
                     </div>
                 </div>
-            </main>
 
-            <div class="page-footer">
-                <footer>
-                    <p><span style="color: gray;">&copy; 2024 Starciad:</span> <a
-                            href="https://github.com/Starciad/SCSG.git">https://github.com/Starciad/SCSG</a></p>
-                </footer>
-            </div>
+                <div class="page-control-panel">
+                    <button id="control-panel-btn-previous" class="btn btn-destructive">Previous</button>
+                    <button id="control-panel-btn-next" class="btn btn-primary-success">Next</button>
+                </div>
+            </main>
+        </div>
+        
+        <div class="page-footer">
+            <footer>
+                <p><span style="color: gray;">&copy; 2024 Starciad:</span> <a
+                        href="https://github.com/Starciad/SCSG.git">https://github.com/Starciad/SCSG</a></p>
+            </footer>
         </div>
     </div>
 </body>
