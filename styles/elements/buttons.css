@@ -22,14 +22,15 @@
 }
 
 .btn:hover {
-    background-color: white;
-    color: black;
-    border-color: black;
+    opacity: 0.7;
 }
 
 .btn:active {
-    position: relative;
-    top: 1px;
+    transform: translateY(1px);
+}
+
+.btn:disabled {
+    opacity: 0.5;
 }
 
 /* =================== */
