@@ -10,30 +10,33 @@
     <!-- Core -->
     <script src="scripts/core/dataGenerator.js" type="module"></script>
     <script src="scripts/core/pageUpdater.js" type="module"></script>
-
+    <script src="scripts/core/pageManager.js" type="module"></script>
+    
     <!-- Math -->
     <script src="scripts/math/random.js" type="module"></script>
-
+    
     <!-- Collections -->
     <script src="scripts/collections/names/EUANamesCollection.js" type="module"></script>
-
+    
     <script src="scripts/collections/general/OccupationsCollection.js" type="module"></script>
     <script src="scripts/collections/general/CountriesCollection.js" type="module"></script>
     <script src="scripts/collections/general/CivilStatusCollection.js" type="module"></script>
-
+    
     <script src="scripts/collections/physical/BloodTypeCollection.js" type="module"></script>
     <script src="scripts/collections/physical/HeightCollection.js" type="module"></script>
     <script src="scripts/collections/physical/WeightCollection.js" type="module"></script>
     <script src="scripts/collections/physical/BodyTypeCollection.js" type="module"></script>
-
+    
     <script src="scripts/collections/appearance/SkinToneCollection.js" type="module"></script>
-
+    
     <!-- Core -->
     <script src="scripts/main.js" type="module" defer></script>
 
     <!-- STYLES -->
     <link rel="stylesheet" href="styles/default.css">
     <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="styles/page.css">
+    <link rel="stylesheet" href="styles/hidden.css">
     <link rel="stylesheet" href="styles/elements/header.css">
     <link rel="stylesheet" href="styles/elements/footer.css">
     <link rel="stylesheet" href="styles/elements/forms.css">
@@ -65,389 +68,89 @@
 </head>
 
 <body>
-    <header>
-        <div id="header-left">
-            <button id="scsg-repository-button" class="btn btn-nil">Repository</button>
+    <div class="page">
+        <div class="page-header">
+            <header>
+                <div id="header-left">
+                    <button id="scsg-aside-menu-button" class="btn btn-nil">...</button>
+                </div>
+
+                <div id="header-right">
+                    
+                </div>
+            </header>
         </div>
 
-        <div id="header-right">
-            <button id="scsg-credits-button" class="btn btn-nil">Credits</button>
-            <button id="scsg-about-button" class="btn btn-nil">About</button>
+        <div class="page-content">
+            <aside class="page-aside">
+                <div class="app-menu">
+                    <!-- PROCEDURAL NAVIGATOR -->
+                </div>
+            </aside>
+
+            <main class="page-main">
+                <div class="app-sections">
+                    <!-- HOME -->
+                    <div class="app-section-category" data-name="HOME">
+                        <!-- INTRO -->
+                        <section class="app-section app-intro" data-name="Introduction">
+                            Introduction
+                        </section>
+
+                        <!-- INTRO -->
+                        <section class="app-section app-intro" data-name="Repository">
+                            Repository
+                        </section>
+                        
+                        <!-- INTRO -->
+                        <section class="app-section app-intro" data-name="About">
+                            About
+                        </section>
+                        
+                        <!-- INTRO -->
+                        <section class="app-section app-intro" data-name="Credits">
+                            Credits
+                        </section>
+                    </div>
+
+                    <div class="app-section-category" data-name="GENERATOR">
+                        <!-- SETTINGS -->
+                        <section class="app-section app-settings" data-name="Settings">
+
+                        </section>
+                    </div>
+
+                    </div>
+                    <!-- CHARACTER -->
+                    <div class="app-section-category" data-name="CHARACTER">
+
+
+                        <!-- GENERAL -->
+                        <section class="app-section" data-name="General">
+
+                        </section>
+
+                        <!-- PHYSICAL -->
+                        <section class="app-section" data-name="Physical">
+
+                        </section>
+
+                        <!-- APPEARANCE -->
+                        <section class="app-section" data-name="Appearance">
+
+                        </section>
+                    </div>
+                </div>
+            </main>
+
+            <div class="page-footer">
+                <footer>
+                    <p><span style="color: gray;">&copy; 2024 Starciad:</span> <a
+                            href="https://github.com/Starciad/SCSG.git">https://github.com/Starciad/SCSG</a></p>
+                </footer>
+            </div>
         </div>
-    </header>
-
-    <main class="app">
-        <div class="app-body">
-            <!-- INTRODUCTION -->
-            <div class="app-intro">
-                <div class="box">
-                    <legend class="box-legend">Introduction</legend>
-
-                    <div class="app-intro-logo">
-                        <h1 align="center">SCSG - Star Character Sheet Generator</h1>
-                        <h2 align="center">Spark your imagination by creating unique characters</h2>
-                    </div>
-
-                    <div class="app-intro-description">
-                        <p align="center">This application generates bases for fictional characters that can be molded
-                            based on your
-                            preferences. Customize and create engaging character bases for your stories.</p>
-                    </div>
-                </div>
-            </div>
-
-
-            <!-- SETTINGS -->
-            <div class="app-settings">
-                <div class="box">
-                    <legend class="box-legend">Settings</legend>
-
-                    <form>
-                        <fieldset>
-                            <legend>General</legend>
-
-                            <label for="name-style-type">Name Style</label>
-                            <select name="name-style-type" id="name-style-type">
-                                <option value="USA" selected>United States</option>
-                            </select>
-
-                            <label for="sex-type">Sex</label>
-                            <select name="sex-type" id="sex-type">
-                                <option value="random" selected>Random</option>
-                                <option value="masculine">Masculine</option>
-                                <option value="feminine">Feminine</option>
-                            </select>
-
-                            <label for="age-range-type">Age Range</label>
-                            <select name="age-range-type" id="age-range-type">
-                                <option value="random" selected>Random</option>
-                                <option value="child">Child (0-12 years old)</option>
-                                <option value="teenager">Teenager (13-19 years old)</option>
-                                <option value="youngAdult">Young Adult (20-29 years old)</option>
-                                <option value="adult">Adult (30-59 years old)</option>
-                                <option value="elderly">Elderly (60+ years old)</option>
-                            </select>
-                        </fieldset>
-
-                        <div class="app-settings-buttons">
-                            <button id="scsg-generate-button" type="button"
-                                class="btn btn-primary-success">Generate</button>
-                            <button id="scsg-reset-button" type="reset" class="btn btn-destructive">Reset</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <!-- SHEET -->
-            <div class="app-cs">
-                <div class="box">
-                    <legend class="box-legend">Character Sheet</legend>
-
-                    <section class="app-cs-section">
-                        <!-- CS GENERAL -->
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th colspan="2">GENERAL</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Name</td>
-                                    <td id="cs-general-first-name">Empty</td>
-                                </tr>
-                                <tr>
-                                    <td>Surname</td>
-                                    <td id="cs-general-last-name">Empty</td>
-                                </tr>
-                                <tr>
-                                    <td>Age</td>
-                                    <td id="cs-general-age">Empty</td>
-                                </tr>
-                                <tr>
-                                    <td>Occupation</td>
-                                    <td id="cs-general-occupation">Empty</td>
-                                </tr>
-                                <tr>
-                                    <td>Sex</td>
-                                    <td id="cs-general-sex">Empty</td>
-                                </tr>
-                                <tr>
-                                    <td>Country of Residence</td>
-                                    <td id="cs-general-residence-country">Empty</td>
-                                </tr>
-                                <tr>
-                                    <td>Country of Birth</td>
-                                    <td id="cs-general-birth-country">Empty</td>
-                                </tr>
-                                <tr>
-                                    <td>Civil Status</td>
-                                    <td id="cs-general-civil-status">Empty</td>
-                                </tr>
-                                <tr>
-                                    <td>Date of Birth</td>
-                                    <td id="cs-general-birth-date">Empty</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <!-- CS PHYSICAL -->
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th colspan="2">PHYSICAL</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Height (Centimeters)</td>
-                                    <td id="cs-physical-height">Empty</td>
-                                </tr>
-                                <tr>
-                                    <td>Weight (Kilograms)</td>
-                                    <td id="cs-physical-weight">Empty</td>
-                                </tr>
-                                <tr>
-                                    <td>Blood Type</td>
-                                    <td id="cs-physical-blood-type">Empty</td>
-                                </tr>
-                                <tr>
-                                    <td>Body Type</td>
-                                    <td id="cs-physical-body-type">Empty</td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <!-- CS APPEARANCE -->
-                        <div class="cs-appearance-elements">
-                            <h1 align="center">APPEARANCE</h1>
-
-                            <!-- BODY -->
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">BODY</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Skin Tone</td>
-                                        <td id="cs-appearance-skin-tone">Empty</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            <!-- FACE -->
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">FACE</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <!-- GENERAL -->
-                                    <tr>
-                                        <th colspan="2">GENERAL</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Formato</td>
-                                        <td>Empty</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Sinais Distintivos</td>
-                                        <td>Empty</td>
-                                    </tr>
-
-                                    <!-- BARBA -->
-                                    <tr>
-                                        <th colspan="2">BARBA</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Cor</td>
-                                        <td>Empty</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Tipo</td>
-                                        <td>Empty</td>
-                                    </tr>
-
-                                    <!-- OLHOS -->
-                                    <tr>
-                                        <th colspan="2">OLHOS</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Cor</td>
-                                        <td>Empty</td>
-                                    </tr>
-
-                                    <!-- SOBRANCELHAS -->
-                                    <tr>
-                                        <th colspan="2">SOBRANCELHAS</th>
-                                    </tr>
-
-                                    <!-- NARIZ -->
-                                    <tr>
-                                        <th colspan="2">NARIZ</th>
-                                    </tr>
-
-                                    <!-- BOCA -->
-                                    <tr>
-                                        <th colspan="2">BOCA</th>
-                                    </tr>
-
-                                    <!-- ORELHAS -->
-                                    <tr>
-                                        <th colspan="2">ORELHAS</th>
-                                    </tr>
-
-                                    <!-- ORELHAS -->
-                                    <tr>
-                                        <th colspan="2">ORELHAS</th>
-                                    </tr>
-
-                                    <!-- CABELO -->
-                                    <tr>
-                                        <th colspan="2">CABELO</th>
-                                    </tr>
-
-                                </tbody>
-                            </table>
-
-                            <!-- VESTIMENTAS -->
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">VESTIMENTAS</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <tr>
-                                            <td>Chapéus</td>
-                                            <td>Empty</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Camiseta</td>
-                                            <td>Empty</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Calças</td>
-                                            <td>Empty</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Luvas</td>
-                                            <td>Empty</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Botas</td>
-                                            <td>Empty</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Capas</td>
-                                            <td>Empty</td>
-                                        </tr>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            <!-- ACESSÓRIOS -->
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">ACESSÓRIOS</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <tr>
-                                            <td>Óculos</td>
-                                            <td>Empty</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Relógios</td>
-                                            <td>Empty</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Pulseiras</td>
-                                            <td>Empty</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Colares</td>
-                                            <td>Empty</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Anéis</td>
-                                            <td>Empty</td>
-                                        </tr>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            <!-- ADORNOS -->
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">ADORNOS</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Tatuagens</td>
-                                        <td>Empty</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Piercings</td>
-                                        <td>Empty</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    
-                                </tfoot>
-                            </table>
-
-                            <!-- CARACTERÍSTICAS NOTÁVEIS -->
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">CARACTERÍSTICAS NOTÁVEIS</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th colspan="2">DEFICIÊNCIAS</th>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="2">[ LISTA ]</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-                            <!-- FERIMENTOS E CICATRIZES -->
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th colspan="2">FERIMENTOS E CICATRIZES</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>[ LISTA ]</td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    
-                                </tfoot>
-                            </table>
-                        </div>
-                    </section>
-                </div>
-            </div>
-    </main>
-
-    <footer>
-        <p><span style="color: gray;">&copy; 2024 Starciad Copyright:</span> <a
-                href="https://github.com/Starciad/SCSG.git">https://github.com/Starciad/SCSG</a></p>
-    </footer>
+    </div>
 </body>
 
 </html>
