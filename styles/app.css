@@ -1,18 +1,5 @@
-body {
-    display: flex;
-
-    height: 100%;
-    width: 100%;
-
-    justify-content: center;
-    align-items: center;
-    
-    flex-direction: column;
-
-    background-color: #010409;
-    color: #E6EDF3;
-}
-
+/* ==================== */
+/* MAIN */
 .app {
     display: flex;
 
@@ -22,71 +9,99 @@ body {
     width: 100%;
     height: 100%;
 
-    max-width: 1200px;
-
     background-color: #0d1117;
 }
 
 /* ==================== */
-/* SECTION */
-/* INTRO */
-.app-intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+/* MENU */
+.app-menu {
+    padding: 16px;
 
-.app-intro-logo h1 {
-    color: green;
-    font-family: Impact;
-    font-weight: 100;
-    font-size: 40px;
-}
-
-.app-intro-logo h2 {
-    font-weight: 100;
-    font-size: 20px;
-}
-
-.app-intro-description {
-    margin-top: 32px;
-}
-
-/* SETTINGS */
-.app-settings {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.app-settings-buttons {
-    display: flex;
-    justify-content: center;
-}
-
-/* CHARACTER SHEET */
-.app-cs-section {
-    display: flex;
-    flex-wrap: wrap;
-
-    justify-content: center;
-
-    width: 100%;
     height: 100%;
+    width: 100%;
 }
 
-.app-cs-buttons {
+/* GROUP */
+.app-menu-group {
     display: flex;
-    justify-content: center;
-}
 
-.cs-appearance-elements {
-    display: flex;
     flex-direction: column;
 
     padding: 16px;
-    margin-top: 32px;
 
+    height: auto;
     width: 100%;
-    height: 100%;
+
+    margin-top: 16px;
+    margin-bottom: 32px;
+
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: #1e1f22;
+}
+
+.app-menu-group-title {
+    display: flex;
+
+    flex-direction: column;
+
+    font-weight: bold;
+
+    text-align: center;
+    text-anchor: middle;
+
+    padding: 4px;
+
+    margin-top: -28px;
+    margin-bottom: 8px;
+
+    border-radius: 4px;
+
+    background-color: #1e1f22;
+}
+
+/* BUTTONS */
+.app-menu-btn {
+    width: 100%;
+    height: auto;
+
+    text-align: start;
+    
+    font-weight: bolder;
+    font-size: medium;
+
+    border-radius: 8px;
+    border-style: none;
+
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+    padding: 8px;
+
+    background-color: transparent;
+}
+
+.app-menu-btn-selected {
+    background-color: #35373c;
+}
+
+.app-menu-btn:hover {
+    background-color: #35373c;
+}
+
+.app-menu-btn:active {
+    background-color: #3f4248;
+}
+
+.app-menu-btn-decorator {
+
+}
+
+.app-menu-btn-avatar #value {
+
+}
+
+.app-menu-btn-decorator #value {
+
 }
