@@ -13,6 +13,14 @@ const ageBasedHeightRange = [
     { minAge: 51, maxAge: 100, minHeight: 140, maxHeight: 180 }
 ];
 
+const weightRangeBasedOnAge = [
+    { minAge: 0, maxAge: 12, minWeight: 20, maxWeight: 40 },
+    { minAge: 13, maxAge: 18, minWeight: 45, maxWeight: 70 },
+    { minAge: 19, maxAge: 30, minWeight: 50, maxWeight: 80 },
+    { minAge: 31, maxAge: 50, minWeight: 45, maxWeight: 75 },
+    { minAge: 51, maxAge: 100, minWeight: 40, maxWeight: 70 }
+];
+
 export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
     // General
     let char_sex = getRandomSex(sexType);
@@ -26,6 +34,7 @@ export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
 
     // Physical
     let char_height = getRandomHeight(char_age);
+    let char_weight = getRandomWeight(char_age);
 
     updateCharacterSheetTable({
         // General
@@ -41,6 +50,7 @@ export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
 
         // Physical
         height: char_height,
+        weight: char_weight
     });
 }
 
@@ -143,5 +153,12 @@ function getRandomHeight(age) {
     const randomHeight = random.getRandomNumber(currentRange.minHeight, currentRange.maxHeight);
 
     return randomHeight;
+}
+
+function getRandomWeight(age) {
+    const currentRange = weightRangeBasedOnAge.find(range => age >= range.minAge && age <= range.maxAge);
+    const randomWeight = random.getRandomNumber(currentRange.minWeight, currentRange.maxWeight);
+    
+    return randomWeight;
 }
 //#endregion

@@ -12,6 +12,7 @@ export function updateCharacterSheetTable(characterInfos) {
     
     // Physical
     document.querySelector("#cs-physical-height").innerHTML = characterInfos.height;
+    document.querySelector("#cs-physical-weight").innerHTML = characterInfos.weight;
 }
 
 function getFormattedDate(date) {
