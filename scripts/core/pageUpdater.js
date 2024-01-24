@@ -8,4 +8,11 @@ export function updateCharacterSheetTable(characterInfos) {
     document.querySelector("#cs-general-residence-country").innerHTML = characterInfos.residenceCountry.name;
     document.querySelector("#cs-general-birth-country").innerHTML = characterInfos.birthCountry.name;
     document.querySelector("#cs-general-civil-status").innerHTML = characterInfos.civilStatus;
+    document.querySelector("#cs-general-birth-date").innerHTML = getFormattedDate(characterInfos.birthDate);
+}
+
+function getFormattedDate(date) {
+    return date.day.toString().padStart(2, '0') + "/" +
+        date.month.toString().padStart(2, '0') + "/" +
+        date.year + " (dd/mm/yyyy)";
 }

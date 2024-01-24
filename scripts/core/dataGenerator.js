@@ -13,6 +13,7 @@ export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
     let char_residence_country = getRandomCountry();
     let char_birth_country = getRandomCountry();
     let char_civil_status = getRandomCivilStatus();
+    let char_birth_date = getRandomBirthDate(char_age);
 
     updateCharacterSheetTable({
         firstName: char_fullname.firstName,
@@ -23,6 +24,7 @@ export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
         residenceCountry: char_residence_country,
         birthCountry: char_birth_country,
         civilStatus: char_civil_status,
+        birthDate: char_birth_date,
     });
 }
 
@@ -100,4 +102,19 @@ function getRandomCountry() {
 
 function getRandomCivilStatus() {
     return CivilStatusCollection.getRandomCivilStatus();
+}
+
+function getRandomBirthDate(currentAge) {
+    const currentYear = new Date().getFullYear();
+    const birthYear = currentYear - currentAge;
+    
+    const birthMonth = random.getRandomNumber(1, 12);
+    const maxDaysInMonth = new Date(birthYear, birthMonth, 0).getDate();
+    const birthDay = random.getRandomNumber(1, maxDaysInMonth);
+
+    return {
+        year: birthYear,
+        month: birthMonth,
+        day: birthDay
+    };
 }
