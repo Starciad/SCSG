@@ -17,7 +17,7 @@
 .box-legend {
     padding: 8px;
 
-    width: 29%;
+    width: auto;
 
     border-radius: 8px;
     border-color: black;

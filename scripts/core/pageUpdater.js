@@ -14,5 +14,5 @@ export function updateCharacterSheetTable(characterInfos) {
 function getFormattedDate(date) {
     return date.day.toString().padStart(2, '0') + "/" +
         date.month.toString().padStart(2, '0') + "/" +
-        date.year + " (dd/mm/yyyy)";
+        date.year + " (day/month/year)";
 }
