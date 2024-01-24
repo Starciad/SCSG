@@ -21,6 +21,9 @@ const weightRangeBasedOnAge = [
     { minAge: 51, maxAge: 100, minWeight: 40, maxWeight: 70 }
 ];
 
+const bloodTypes = ["A", "B", "AB", "O"];
+const rhFactors = ["+", "-"];
+
 export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
     // General
     let char_sex = getRandomSex(sexType);
@@ -35,6 +38,8 @@ export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
     // Physical
     let char_height = getRandomHeight(char_age);
     let char_weight = getRandomWeight(char_age);
+    let char_blood_type = getRandomBloodType();
+    let char_rh_factor = getRandomRhFactor();
 
     updateCharacterSheetTable({
         // General
@@ -50,7 +55,9 @@ export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
 
         // Physical
         height: char_height,
-        weight: char_weight
+        weight: char_weight,
+        bloodType: char_blood_type,
+        rhFactor: char_rh_factor
     });
 }
 
@@ -160,5 +167,13 @@ function getRandomWeight(age) {
     const randomWeight = random.getRandomNumber(currentRange.minWeight, currentRange.maxWeight);
     
     return randomWeight;
+}
+
+function getRandomBloodType() {
+    return random.getRandomArrayElement(bloodTypes);
+}
+
+function getRandomRhFactor() {
+    return random.getRandomArrayElement(rhFactors);
 }
 //#endregion
