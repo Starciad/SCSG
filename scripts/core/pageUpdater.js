@@ -14,10 +14,10 @@ export function updateCharacterSheetTable(characterInfos) {
     document.querySelector("#cs-physical-height").innerHTML = characterInfos.height;
     document.querySelector("#cs-physical-weight").innerHTML = characterInfos.weight;
     document.querySelector("#cs-physical-blood-type").innerHTML = characterInfos.bloodType + characterInfos.rhFactor;
+    document.querySelector("#cs-physical-body-type").innerHTML = characterInfos.bodyType;
     
     // Appearance
     document.querySelector("#cs-appearance-skin-tone").innerHTML = characterInfos.skinTone;
-
 }
 
 function getFormattedDate(date) {

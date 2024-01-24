@@ -1,13 +1,27 @@
-import { BloodTypeCollection } from "../collections/physical/BloodTypeCollection.js";
+//#region IMPORTS
+// Names
+import { EUANamesCollection } from "../collections/names/EUANamesCollection.js";
+
+// General
+import { OccupationsCollection } from "../collections/general/OccupationsCollection.js";
 import { CivilStatusCollection } from "../collections/general/CivilStatusCollection.js";
 import { CountriesCollection } from "../collections/general/CountriesCollection.js";
+
+// Physical
+import { BloodTypeCollection } from "../collections/physical/BloodTypeCollection.js";
 import { HeightCollection } from "../collections/physical/HeightCollection.js";
-import { EUANamesCollection } from "../collections/names/EUANamesCollection.js";
-import { OccupationsCollection } from "../collections/general/OccupationsCollection.js";
 import { WeightCollection } from "../collections/physical/WeightCollection.js";
-import { random } from "../math/random.js";
-import { updateCharacterSheetTable } from "./pageUpdater.js";
+import { BodyTypeCollection } from "../collections/physical/BodyTypeCollection.js";
+
+// Appearance
 import { SkinToneCollection } from "../collections/appearance/SkinToneCollection.js";
+
+// Math
+import { random } from "../math/random.js";
+
+// Core
+import { updateCharacterSheetTable } from "./pageUpdater.js";
+//#endregion
 
 export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
     // General
@@ -25,6 +39,7 @@ export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
     let char_weight = getRandomWeight(char_age);
     let char_blood_type = getRandomBloodType();
     let char_rh_factor = getRandomRhFactor();
+    let char_body_type = getRandomBodyType();
 
     // Appearance
     let char_appearance_skin_tone = getRandomSkinTone();
@@ -46,6 +61,7 @@ export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
         weight: char_weight,
         bloodType: char_blood_type,
         rhFactor: char_rh_factor,
+        bodyType: char_body_type,
 
         // Appearance
         skinTone: char_appearance_skin_tone,
@@ -160,6 +176,10 @@ function getRandomBloodType() {
 
 function getRandomRhFactor() {
     return BloodTypeCollection.getRandomRhFactor();
+}
+
+function getRandomBodyType() {
+    return BodyTypeCollection.getRandomBodyType();
 }
 //#endregion
 
