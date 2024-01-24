@@ -115,7 +115,7 @@ export const CountriesCollection = Object.freeze({
         { "name": "Kazakhstan", "code": "KZ" },
         { "name": "Kenya", "code": "KE" },
         { "name": "Kiribati", "code": "KI" },
-        { "name": "Korea, Democratic People\'S Republic of Korea", "code": "KP" },
+        { "name": "Korea, Democratic People\'s Republic of Korea", "code": "KP" },
         { "name": "Korea, Republic of Korea", "code": "KR" },
         { "name": "Kuwait", "code": "KW" },
         { "name": "Kyrgyzstan", "code": "KG" },
