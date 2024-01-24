@@ -9,6 +9,9 @@ export function updateCharacterSheetTable(characterInfos) {
     document.querySelector("#cs-general-birth-country").innerHTML = characterInfos.birthCountry.name;
     document.querySelector("#cs-general-civil-status").innerHTML = characterInfos.civilStatus;
     document.querySelector("#cs-general-birth-date").innerHTML = getFormattedDate(characterInfos.birthDate);
+    
+    // Physical
+    document.querySelector("#cs-physical-height").innerHTML = characterInfos.height;
 }
 
 function getFormattedDate(date) {

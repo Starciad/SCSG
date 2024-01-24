@@ -5,7 +5,16 @@ import { OccupationsCollection } from "../collections/OccupationsCollection.js";
 import { random } from "../math/random.js";
 import { updateCharacterSheetTable } from "./pageUpdater.js";
 
+const ageBasedHeightRange = [
+    { minAge: 0, maxAge: 12, minHeight: 100, maxHeight: 160 },
+    { minAge: 13, maxAge: 18, minHeight: 150, maxHeight: 190 },
+    { minAge: 19, maxAge: 30, minHeight: 160, maxHeight: 200 },
+    { minAge: 31, maxAge: 50, minHeight: 150, maxHeight: 190 },
+    { minAge: 51, maxAge: 100, minHeight: 140, maxHeight: 180 }
+];
+
 export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
+    // General
     let char_sex = getRandomSex(sexType);
     let char_fullname = getRandomName(nameStyleType, char_sex);
     let char_age = getRandomAge(ageRangeType);
@@ -15,7 +24,11 @@ export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
     let char_civil_status = getRandomCivilStatus();
     let char_birth_date = getRandomBirthDate(char_age);
 
+    // Physical
+    let char_height = getRandomHeight(char_age);
+
     updateCharacterSheetTable({
+        // General
         firstName: char_fullname.firstName,
         lastName: char_fullname.lastName,
         age: char_age,
@@ -25,9 +38,13 @@ export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
         birthCountry: char_birth_country,
         civilStatus: char_civil_status,
         birthDate: char_birth_date,
+
+        // Physical
+        height: char_height,
     });
 }
 
+//#region General
 function getRandomName(nameStyleType, sexType) {
     let firstName;
     let lastName;
@@ -118,3 +135,13 @@ function getRandomBirthDate(currentAge) {
         day: birthDay
     };
 }
+//#endregion
+
+//#region Physical
+function getRandomHeight(age) {
+    const currentRange = ageBasedHeightRange.find(range => age >= range.minAge && age <= range.maxAge);
+    const randomHeight = random.getRandomNumber(currentRange.minHeight, currentRange.maxHeight);
+
+    return randomHeight;
+}
+//#endregion
