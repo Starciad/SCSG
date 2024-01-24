@@ -1,28 +1,12 @@
+import { BloodTypeCollection } from "../collections/BloodTypeCollection.js";
 import { CivilStatusCollection } from "../collections/CivilStatusCollection.js";
 import { CountriesCollection } from "../collections/CountriesCollection.js";
+import { HeightCollection } from "../collections/HeightCollection.js";
 import { EUANamesCollection } from "../collections/names/EUANamesCollection.js";
 import { OccupationsCollection } from "../collections/OccupationsCollection.js";
+import { WeightCollection } from "../collections/WeightCollection.js";
 import { random } from "../math/random.js";
 import { updateCharacterSheetTable } from "./pageUpdater.js";
-
-const ageBasedHeightRange = [
-    { minAge: 0, maxAge: 12, minHeight: 100, maxHeight: 160 },
-    { minAge: 13, maxAge: 18, minHeight: 150, maxHeight: 190 },
-    { minAge: 19, maxAge: 30, minHeight: 160, maxHeight: 200 },
-    { minAge: 31, maxAge: 50, minHeight: 150, maxHeight: 190 },
-    { minAge: 51, maxAge: 100, minHeight: 140, maxHeight: 180 }
-];
-
-const weightRangeBasedOnAge = [
-    { minAge: 0, maxAge: 12, minWeight: 20, maxWeight: 40 },
-    { minAge: 13, maxAge: 18, minWeight: 45, maxWeight: 70 },
-    { minAge: 19, maxAge: 30, minWeight: 50, maxWeight: 80 },
-    { minAge: 31, maxAge: 50, minWeight: 45, maxWeight: 75 },
-    { minAge: 51, maxAge: 100, minWeight: 40, maxWeight: 70 }
-];
-
-const bloodTypes = ["A", "B", "AB", "O"];
-const rhFactors = ["+", "-"];
 
 export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
     // General
@@ -156,24 +140,18 @@ function getRandomBirthDate(currentAge) {
 
 //#region Physical
 function getRandomHeight(age) {
-    const currentRange = ageBasedHeightRange.find(range => age >= range.minAge && age <= range.maxAge);
-    const randomHeight = random.getRandomNumber(currentRange.minHeight, currentRange.maxHeight);
-
-    return randomHeight;
+    return HeightCollection.getRandomHeight(age);
 }
 
 function getRandomWeight(age) {
-    const currentRange = weightRangeBasedOnAge.find(range => age >= range.minAge && age <= range.maxAge);
-    const randomWeight = random.getRandomNumber(currentRange.minWeight, currentRange.maxWeight);
-    
-    return randomWeight;
+    return WeightCollection.getRandomWeight(age);
 }
 
 function getRandomBloodType() {
-    return random.getRandomArrayElement(bloodTypes);
+    return BloodTypeCollection.getRandomBloodType();
 }
 
 function getRandomRhFactor() {
-    return random.getRandomArrayElement(rhFactors);
+    return BloodTypeCollection.getRandomRhFactor();
 }
 //#endregion

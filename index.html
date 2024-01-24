@@ -11,14 +11,17 @@
     <script src="scripts/core/dataGenerator.js" type="module"></script>
     <script src="scripts/core/pageUpdater.js" type="module"></script>
 
+    <!-- Math -->
+    <script src="scripts/math/random.js" type="module"></script>
+
     <!-- Collections -->
     <script src="scripts/collections/names/EUANamesCollection.js" type="module"></script>
     <script src="scripts/collections/OccupationsCollection.js" type="module"></script>
     <script src="scripts/collections/CountriesCollection.js" type="module"></script>
     <script src="scripts/collections/CivilStatusCollection.js" type="module"></script>
-
-    <!-- Math -->
-    <script src="scripts/math/random.js" type="module"></script>
+    <script src="scripts/collections/BloodTypeCollection.js" type="module"></script>
+    <script src="scripts/collections/HeightCollection.js" type="module"></script>
+    <script src="scripts/collections/WeightCollection.js" type="module"></script>
 
     <!-- Core -->
     <script src="scripts/main.js" type="module" defer></script>
@@ -182,7 +185,7 @@
                                 </tr>
                             </tbody>
                         </table>
-
+                        
                         <!-- CS PHYSICAL -->
                         <table>
                             <thead>
@@ -203,21 +206,25 @@
                                     <td>Blood Type</td>
                                     <td id="cs-physical-blood-type">Empty</td>
                                 </tr>
+                            </tbody>
+                        </table>
+                        
+                        <!-- CS APPEARANCE -->
+                        <table>
+                            <thead>
                                 <tr>
-                                    <td>Ethnicity</td>
-                                    <td id="cs-physical-ethnicity">Empty</td>
+                                    <th colspan="2">APPEARANCE</th>
                                 </tr>
+                            </thead>
+                            <tbody>
                                 <tr>
-                                    <td>Posture Type</td>
-                                    <td id="cs-physical-posture-type">Empty</td>
+                                    <td>Skin Tone</td>
+                                    <td id="cs-appearence-skin-tone">Empty</td>
                                 </tr>
                             </tbody>
-                            <tfoot>
-
-                            </tfoot>
                         </table>
-                    </section>
-                </div>
+                        </section>
+                        </div>
             </div>
     </main>
 

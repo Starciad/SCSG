@@ -1,3 +1,5 @@
+import { random } from "../math/random.js";
+
 export const CivilStatusCollection = Object.freeze({
     civilStatus: [
         "Single",
@@ -8,7 +10,6 @@ export const CivilStatusCollection = Object.freeze({
     ],
 
     getRandomCivilStatus: function () {
-        const randomIndex = Math.floor(Math.random() * this.civilStatus.length);
-        return this.civilStatus[randomIndex];
+        return random.getRandomArrayElement(this.civilStatus);
     },
 });

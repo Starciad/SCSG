@@ -1,11 +1,13 @@
+import { random } from "../math/random.js";
+
 export const CountriesCollection = Object.freeze({
     countries: [
-        { "name": "Afghanistan", "code": "AF" },
-        { "name": "land Islands", "code": "AX" },
+        { "name": "Afghanistan", "code": "AF" }, 
+        { "name": "Land Islands", "code": "AX" },
         { "name": "Albania", "code": "AL" },
         { "name": "Algeria", "code": "DZ" },
         { "name": "American Samoa", "code": "AS" },
-        { "name": "AndorrA", "code": "AD" },
+        { "name": "Andorra", "code": "AD" },
         { "name": "Angola", "code": "AO" },
         { "name": "Anguilla", "code": "AI" },
         { "name": "Antarctica", "code": "AQ" },
@@ -247,7 +249,6 @@ export const CountriesCollection = Object.freeze({
     ],
 
     getRandomCountry: function () {
-        const randomIndex = Math.floor(Math.random() * this.countries.length);
-        return this.countries[randomIndex];
+        return random.getRandomArrayElement(this.countries);
     },
 });

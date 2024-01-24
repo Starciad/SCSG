@@ -1,3 +1,5 @@
+import { random } from "../math/random.js";
+
 export const OccupationsCollection = Object.freeze({
     occupations: [
         "Lawyer",
@@ -173,7 +175,6 @@ export const OccupationsCollection = Object.freeze({
     ],
 
     getRandomOccupation: function () {
-        const randomIndex = Math.floor(Math.random() * this.occupations.length);
-        return this.occupations[randomIndex];
+        return random.getRandomArrayElement(this.occupations);
     },
 });
