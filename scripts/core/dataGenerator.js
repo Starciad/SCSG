@@ -1,10 +1,10 @@
-import { BloodTypeCollection } from "../collections/BloodTypeCollection.js";
-import { CivilStatusCollection } from "../collections/CivilStatusCollection.js";
-import { CountriesCollection } from "../collections/CountriesCollection.js";
-import { HeightCollection } from "../collections/HeightCollection.js";
+import { BloodTypeCollection } from "../collections/physical/BloodTypeCollection.js";
+import { CivilStatusCollection } from "../collections/general/CivilStatusCollection.js";
+import { CountriesCollection } from "../collections/general/CountriesCollection.js";
+import { HeightCollection } from "../collections/physical/HeightCollection.js";
 import { EUANamesCollection } from "../collections/names/EUANamesCollection.js";
-import { OccupationsCollection } from "../collections/OccupationsCollection.js";
-import { WeightCollection } from "../collections/WeightCollection.js";
+import { OccupationsCollection } from "../collections/general/OccupationsCollection.js";
+import { WeightCollection } from "../collections/physical/WeightCollection.js";
 import { random } from "../math/random.js";
 import { updateCharacterSheetTable } from "./pageUpdater.js";
 

@@ -1,4 +1,4 @@
-import { random } from "../math/random.js";
+import { random } from "../../math/random.js";
 
 export const WeightCollection = Object.freeze({
     weightRangeBasedOnAge: [
