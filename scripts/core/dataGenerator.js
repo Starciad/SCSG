@@ -7,6 +7,7 @@ import { OccupationsCollection } from "../collections/general/OccupationsCollect
 import { WeightCollection } from "../collections/physical/WeightCollection.js";
 import { random } from "../math/random.js";
 import { updateCharacterSheetTable } from "./pageUpdater.js";
+import { SkinToneCollection } from "../collections/appearance/SkinToneCollection.js";
 
 export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
     // General
@@ -25,6 +26,9 @@ export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
     let char_blood_type = getRandomBloodType();
     let char_rh_factor = getRandomRhFactor();
 
+    // Appearance
+    let char_appearance_skin_tone = getRandomSkinTone();
+
     updateCharacterSheetTable({
         // General
         firstName: char_fullname.firstName,
@@ -41,7 +45,10 @@ export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
         height: char_height,
         weight: char_weight,
         bloodType: char_blood_type,
-        rhFactor: char_rh_factor
+        rhFactor: char_rh_factor,
+
+        // Appearance
+        skinTone: char_appearance_skin_tone,
     });
 }
 
@@ -153,5 +160,11 @@ function getRandomBloodType() {
 
 function getRandomRhFactor() {
     return BloodTypeCollection.getRandomRhFactor();
+}
+//#endregion
+
+//#region Appearance
+function getRandomSkinTone() {
+    return SkinToneCollection.getRandomSkinTone();
 }
 //#endregion
