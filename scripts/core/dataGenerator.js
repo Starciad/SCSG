@@ -1,5 +1,6 @@
+import { CountriesCollection } from "../collections/CountriesCollection.js";
 import { EUANamesCollection } from "../collections/names/EUANamesCollection.js";
-import { OccupationsCollection } from "../collections/occupations/OccupationsCollection.js";
+import { OccupationsCollection } from "../collections/OccupationsCollection.js";
 import { random } from "../math/random.js";
 import { updateCharacterSheetTable } from "./pageUpdater.js";
 
@@ -8,13 +9,17 @@ export function SCSGenerator(nameStyleType, sexType, ageRangeType) {
     let char_fullname = getRandomName(nameStyleType, char_sex);
     let char_age = getRandomAge(ageRangeType);
     let char_occupation = getRandomOccupation();
+    let char_residence_country = getRandomCountry();
+    let char_birth_country = getRandomCountry();
 
     updateCharacterSheetTable({
         firstName: char_fullname.firstName,
         lastName: char_fullname.lastName,
         age: char_age,
         occupation: char_occupation,
-        sex: char_sex.charAt(0).toUpperCase() + char_sex.slice(1)
+        sex: char_sex.charAt(0).toUpperCase() + char_sex.slice(1),
+        residenceCountry: char_residence_country,
+        birthCountry: char_birth_country
     });
 }
 
@@ -84,4 +89,8 @@ function getRandomSex(sexType) {
     else {
         return sexType;
     }
+}
+
+function getRandomCountry() {
+    return CountriesCollection.getRandomCountry();
 }
