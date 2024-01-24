@@ -30,17 +30,23 @@ label {
 }
 
 select {
-    color: black;
+    color: #c9d1c3;
+
+    font-weight: bold;
 
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    border-radius: 16px;
+
+    border-color: #494e57;
+    border-radius: 8px;
+
+    background-color: #21262d;
 }
 
 option {
-    color: black;
+    color: #c9d1c3;
     
     font-size: 18px;
 
@@ -54,5 +60,5 @@ input {
     padding: 12px 20px;
     margin: 8px 0;
     box-sizing: border-box;
-    border-radius: 16px;
+    border-radius: 8px;
 }
