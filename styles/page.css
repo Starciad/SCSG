@@ -42,6 +42,7 @@
 
 .page-main {
     display: flex;
+    flex-direction: column;
 
     overflow-y: auto;
 
@@ -51,3 +52,17 @@
     background-color: #313338;
 }
 
+/* ==================== */
+/* CONTROL PANEL */
+.page-control-panel {
+    display: flex;
+
+    width: 100%;
+    height: auto;
+
+    padding: 16px;
+
+    justify-content: space-between;
+
+    background-color: #2d2f33;
+}

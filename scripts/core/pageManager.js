@@ -1,10 +1,13 @@
 let categories = [];
 let sections = [];
-
 let buttons = [];
 
-export function buildAppMenu() {
+let currentSectionIndex;
+let currentButtonIndex;
+
+export function buildDynamicAppMenu() {
     let appMenu = document.querySelector(".app-menu");
+    let tempSectionIndex = 0;
 
     document.querySelectorAll(".app-section-category").forEach(category => {
         let categoryName = category.dataset.name;
@@ -48,7 +51,7 @@ export function buildAppMenu() {
 
             sectionCategory.appendChild(sectionButton);
 
-            let targetSection = { name: sectionName, element: section };
+            let targetSection = { name: sectionName, index: tempSectionIndex, element: section };
             sections.push(targetSection);
             buttons.push(sectionButton);
 
@@ -57,6 +60,8 @@ export function buildAppMenu() {
                 selectButton(sectionButton);
                 showSection(targetSection);
             });
+
+            tempSectionIndex++;
         });
     });
 
@@ -64,9 +69,20 @@ export function buildAppMenu() {
     selectButton(buttons[0]);
 }
 
+export function buildControlPanel() {
+    let previousButton = document.querySelector("#control-panel-btn-previous");
+    let nextButton = document.querySelector("#control-panel-btn-next");
+
+    previousButton.addEventListener('click', previousSection);
+    nextButton.addEventListener('click', nextSection);
+}
+
 // ================================== //
 //#region SECTIONS
+// Tools
 function showSection(section) {
+    currentSectionIndex = section.index;
+
     closeAllSections();
     section.element.classList.remove("hidden");
 }
@@ -80,10 +96,32 @@ function closeAllSections() {
 function closeSection(section) {
     section.element.classList.add("hidden");
 }
+
+// Controls
+function nextSection() {
+    let index = currentSectionIndex + 1;
+    if (index < sections.length) {
+        setSectionByIndex(index);
+    }
+}
+
+function previousSection() {
+    let index = currentSectionIndex - 1;
+    if (index >= 0) {
+        setSectionByIndex(index);
+    }
+}
+
+// Utilities
+function setSectionByIndex(index) {
+    showSection(sections[index]);
+    selectButton(buttons[index]);
+}
 //#endregion
 
 // ================================== //
 //#region BUTTONS
+// Tools
 function selectButton(button) {
     deselectAllButtons();
     button.classList.add("app-menu-btn-selected");

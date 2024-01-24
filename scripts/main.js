@@ -1,5 +1,5 @@
 import { SCSGenerator } from "./core/dataGenerator.js";
-import { buildAppMenu } from "./core/pageManager.js";
+import { buildControlPanel, buildDynamicAppMenu } from "./core/pageManager.js";
 
 // Buttons
 let SCSGGenerateButton = document.querySelector("#scsg-generate-button");
@@ -9,7 +9,8 @@ let SCSGMenuButton = document.querySelector("#scsg-aside-menu-button");
 let pageAside = document.querySelector(".page-aside");
 
 // Builders
-buildAppMenu();
+buildDynamicAppMenu();
+buildControlPanel();
 
 // Events
 // SCSGGenerateButton.addEventListener('click', () => {

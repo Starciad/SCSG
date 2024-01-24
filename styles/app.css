@@ -94,14 +94,19 @@
     background-color: #3f4248;
 }
 
-.app-menu-btn-decorator {
+/* ==================== */
+/* SECTIONS */
+.app-sections {
+    width: 100%;
+    height: 100%;
+
+    padding: 16px;
+}
+
+.app-section-category {
 
 }
 
-.app-menu-btn-avatar #value {
-
-}
-
-.app-menu-btn-decorator #value {
-
+.app-section {
+    
 }
