@@ -3,7 +3,10 @@ import { buildControlPanel, buildDynamicAppMenu } from "./core/pageManager.js";
 
 // Buttons
 let SCSGGenerateButton = document.querySelector("#scsg-generate-button");
-let SCSGMenuButton = document.querySelector("#scsg-aside-menu-button");
+let githubRepositoryButton = document.querySelector("#gh-repo-button");
+let creditsStarciadButton = document.querySelector("#credits-btn-starciad");
+let creditsIgorUPButton = document.querySelector("#credits-btn-igorup");
+let creditsInsanyaButton = document.querySelector("#credits-btn-insanya");
 
 // Pages
 let pageAside = document.querySelector(".page-aside");
@@ -13,6 +16,22 @@ buildDynamicAppMenu();
 buildControlPanel();
 
 // Events
+githubRepositoryButton.addEventListener('click', () => {
+    window.open("https://github.com/Starciad/SCSG.git", '_blank').focus();
+});
+
+creditsStarciadButton.addEventListener('click', () => {
+    window.open("https://github.com/Starciad/", '_blank').focus();
+});
+
+creditsIgorUPButton.addEventListener('click', () => {
+    window.open("https://github.com/igorunderplayer", '_blank').focus();
+});
+
+creditsInsanyaButton.addEventListener('click', () => {
+    window.open("https://github.com/Insanya29", '_blank').focus();
+});
+
 // SCSGGenerateButton.addEventListener('click', () => {
 //     let nameStyleType = document.querySelector("#name-style-type").value;
 //     let sexType = document.querySelector("#sex-type").value;
@@ -23,18 +42,6 @@ buildControlPanel();
 //         sexType,
 //         ageRangeType
 //     );
-// });
-// 
-// SCSGRepositoryButton.addEventListener('click', () => {
-//     window.open("https://github.com/Starciad/SCSG.git", '_blank').focus();
-// });
-// 
-// SCSGCreditsButton.addEventListener('click', () => {
-//     window.location.href = "./about.html";
-// });
-// 
-// SCSGAboutButton.addEventListener('click', () => {
-//     window.location.href = "./credits.html";
 // });
 
 SCSGMenuButton.addEventListener('click', () => {
