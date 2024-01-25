@@ -190,13 +190,49 @@
                             </section>
                         </div>
 
+                        <!-- GENERATOR -->
                         <div class="app-section-category" data-name="GENERATOR">
                             <!-- SETTINGS -->
                             <section class="app-section" data-name="Settings">
                                 <h1>Settings</h1>
+
+                                <form>
+                                    <fieldset>
+                                        <legend>General</legend>
+            
+                                        <label for="name-style-type">Name Style</label>
+                                        <select name="name-style-type" id="name-style-type">
+                                            <option value="USA" selected>United States</option>
+                                        </select>
+            
+                                        <label for="sex-type">Sex</label>
+                                        <select name="sex-type" id="sex-type">
+                                            <option value="random" selected>Random</option>
+                                            <option value="masculine">Masculine</option>
+                                            <option value="feminine">Feminine</option>
+                                        </select>
+            
+                                        <label for="age-range-type">Age Range</label>
+                                        <select name="age-range-type" id="age-range-type">
+                                            <option value="random" selected>Random</option>
+                                            <option value="child">Child (0-12 years old)</option>
+                                            <option value="teenager">Teenager (13-19 years old)</option>
+                                            <option value="youngAdult">Young Adult (20-29 years old)</option>
+                                            <option value="adult">Adult (30-59 years old)</option>
+                                            <option value="elderly">Elderly (60+ years old)</option>
+                                        </select>
+                                    </fieldset>
+            
+                                    <div class="app-settings-buttons">
+                                        <button id="scsg-generate-button" type="button"
+                                            class="btn btn-primary-success">Generate</button>
+                                        <button id="scsg-reset-button" type="reset" class="btn btn-destructive">Reset</button>
+                                    </div>
+                                </form>
                             </section>
                         </div>
 
+                        <!-- CHARACTER -->
                         <div class="app-section-category" data-name="CHARACTER">
                             <!-- GENERAL -->
                             <section class="app-section" data-name="General">

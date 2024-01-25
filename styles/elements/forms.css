@@ -1,3 +1,5 @@
+/* ==================== */
+/* FORM */
 form {
     display: flex;
 
@@ -6,6 +8,8 @@ form {
     padding: 8px;
 }
 
+/* ==================== */
+/* FIELDSET */
 fieldset {
     display: flex;
     flex-direction: column;
@@ -14,23 +18,30 @@ fieldset {
     margin: 16px 0px 16px 0px;
 
     border-radius: 8px;
-    border-color: #262f3b;
+    border-color: #1e1f22;
     border-style: solid;
 }
 
 fieldset legend {
     padding: 0px 16px 0px 16px;
 
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+/* ==================== */
+/* LABEL */
+label {
+    color: #a8bac1;
+
     font-size: 16px;
     font-weight: bolder;
 }
 
-label {
-    font-size: 18px;
-}
-
+/* ==================== */
+/* SELECT */
 select {
-    color: #c9d1c3;
+    color: #dbd2b1;
 
     font-weight: bold;
 
@@ -39,26 +50,16 @@ select {
     margin: 8px 0;
     box-sizing: border-box;
 
-    border-color: #494e57;
+    border-style: none;
     border-radius: 8px;
 
-    background-color: #21262d;
+    background-color: #1e1f22;
 }
 
 option {
-    color: #c9d1c3;
+    color: #dbd2b1;
     
     font-size: 18px;
 
     padding: 12px 20px;
-}
-
-input {
-    color: black;
-
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border-radius: 8px;
 }
