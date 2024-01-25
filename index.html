@@ -37,6 +37,10 @@
     <link rel="stylesheet" href="styles/app.css">
     <link rel="stylesheet" href="styles/page.css">
     <link rel="stylesheet" href="styles/hidden.css">
+
+    <link rel="stylesheet" href="styles/specials/credits.css">
+    <link rel="stylesheet" href="styles/specials/gh_repository_card.css">
+
     <link rel="stylesheet" href="styles/elements/header.css">
     <link rel="stylesheet" href="styles/elements/footer.css">
     <link rel="stylesheet" href="styles/elements/forms.css">
@@ -102,49 +106,114 @@
                                 <p>This application generates bases for fictional characters that can be molded based on
                                     your preferences. Customize and create engaging character bases for your stories.
                                 </p>
-
                             </section>
 
-                            <!-- INTRO -->
-                            <section class="app-section app-intro" data-name="Repository">
-                                Repository
+                            <!-- ABOUT -->
+                            <section class="app-section" data-name="About">
+                                <h1>About</h1>
+
+                                <h2>Welcome to SCSG!</h2>
+                                <p>The <strong>Star Character Sheet Generator (SCSG)</strong> is a free, simple, and
+                                    fast tool
+                                    designed to bring your characters to life in your stories, whether for books, RPGs,
+                                    scripts, and more.</p>
+
+                                <h2>What makes SCSG special?</h2>
+                                <p>The main purpose of this application is to provide a dynamic and customizable way to
+                                    create character sheets. Shaping foundations for fictional characters according to
+                                    your preferences, SCSG makes the process of developing engaging characters easy,
+                                    fast, secure, and dynamic.</p>
+
+                                <p>Explore the freedom of customizing the character model according to your preferences,
+                                    creating more engaging, concise, and meaningful narratives. With SCSG, your journey
+                                    of character creation becomes not only effective but also exciting!</p>
                             </section>
 
-                            <!-- INTRO -->
-                            <section class="app-section app-intro" data-name="About">
-                                About
+                            <!-- REPOSITORY -->
+                            <section class="app-section" data-name="Repository">
+                                <h1>Repository</h1>
+
+                                <p>This project is a gift
+                                    to enthusiasts who seek a tool providing a fast, secure, reliable, and comprehensive
+                                    environment for crafting high-quality characters for a myriad of storytelling
+                                    purposes.</p>
+
+                                <p>Developed and maintained by the author <a
+                                        href="https://github.com/Starciad">Starciad</a>, this project serves as a
+                                    foundation for exploration and learning across various domains. While the pace of
+                                    feature releases may not be as rapid due to its role in ongoing study, we sincerely
+                                    hope that you can find value and inspiration in the features already implemented.
+                                    Your enjoyment and utilization of our tool bring us immense satisfaction! ❤</p>
+
+                                <p>Our heartfelt wish is that this application contributes to and enriches your creative
+                                    endeavors.</p>
+
+                                <p>If you're curious about the inner workings, feel free to explore the project's
+                                    repository on the GitHub platform.</p>
+
+                                <button id="gh-repo-button" type="button" class="btn btn-primary-default">GitHub</button>
                             </section>
 
-                            <!-- INTRO -->
-                            <section class="app-section app-intro" data-name="Credits">
-                                Credits
+                            <!-- CREDITS -->
+                            <section class="app-section" data-name="Credits">
+                                <h1>Credits</h1>
+
+                                <p>This project comes to life through the collaboration of numerous individuals who
+                                    deserve special recognition and gratitude!</p>
+
+                                <h2>Autores</h2>
+                                <div class="credits-row">
+                                    <button id="credits-btn-starciad" class="credits-square">
+                                        <div class="ce-avatar ce-avatar-border ce-avatar-starciad"></div>
+                                        <div class="ce-username">Starciad</div>
+                                    </button>
+                                </div>
+
+                                <h2>Auxiliadores</h2>
+                                <div class="credits-row">
+                                    <button id="credits-btn-igorup" class="credits-square">
+                                        <div class="ce-avatar ce-avatar-border ce-avatar-igorup"></div>
+                                        <div class="ce-username">Igor_UP</div>
+                                    </button>
+                                </div>
+
+                                <h2>Testadores</h2>
+                                <div class="credits-row">
+                                    <button id="credits-btn-insanya" class="credits-square">
+                                        <div class="ce-avatar ce-avatar-border ce-avatar-insanya"></div>
+                                        <div class="ce-username">Insanya29</div>
+                                    </button>
+                                    <button class="credits-square">
+                                        <div class="ce-avatar ce-avatar-focsi"></div>
+                                        <div class="ce-username">Focsi</div>
+                                    </button>
+                                </div>
                             </section>
                         </div>
 
                         <div class="app-section-category" data-name="GENERATOR">
                             <!-- SETTINGS -->
-                            <section class="app-section app-settings" data-name="Settings">
-
+                            <section class="app-section" data-name="Settings">
+                                <h1>Settings</h1>
                             </section>
                         </div>
-                    </div>
 
-                    <!-- CHARACTER -->
-                    <div class="app-section-category" data-name="CHARACTER">
-                        <!-- GENERAL -->
-                        <section class="app-section" data-name="General">
+                        <div class="app-section-category" data-name="CHARACTER">
+                            <!-- GENERAL -->
+                            <section class="app-section" data-name="General">
+                                <h1>General</h1>
+                            </section>
 
-                        </section>
+                            <!-- PHYSICAL -->
+                            <section class="app-section" data-name="Physical">
+                                <h1>Physical</h1>
+                            </section>
 
-                        <!-- PHYSICAL -->
-                        <section class="app-section" data-name="Physical">
-
-                        </section>
-
-                        <!-- APPEARANCE -->
-                        <section class="app-section" data-name="Appearance">
-
-                        </section>
+                            <!-- APPEARANCE -->
+                            <section class="app-section" data-name="Appearance">
+                                <h1>Appearance</h1>
+                            </section>
+                        </div>
                     </div>
                 </div>
 
@@ -154,7 +223,7 @@
                 </div>
             </main>
         </div>
-        
+
         <div class="page-footer">
             <footer>
                 <p><span style="color: gray;">&copy; 2024 Starciad:</span> <a
