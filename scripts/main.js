@@ -3,6 +3,8 @@ import { buildControlPanel, buildDynamicAppMenu } from "./core/pageManager.js";
 
 // Buttons
 let SCSGGenerateButton = document.querySelector("#scsg-generate-button");
+let SCSGAsideMenuButton = document.querySelector("#scsg-aside-menu-button");
+
 let githubRepositoryButton = document.querySelector("#gh-repo-button");
 let creditsStarciadButton = document.querySelector("#credits-btn-starciad");
 let creditsIgorUPButton = document.querySelector("#credits-btn-igorup");
@@ -16,6 +18,10 @@ buildDynamicAppMenu();
 buildControlPanel();
 
 // Events
+SCSGAsideMenuButton.addEventListener('click', () => {
+    pageAside.classList.toggle('hidden');
+});
+
 githubRepositoryButton.addEventListener('click', () => {
     window.open("https://github.com/Starciad/SCSG.git", '_blank').focus();
 });
@@ -43,7 +49,3 @@ creditsInsanyaButton.addEventListener('click', () => {
 //         ageRangeType
 //     );
 // });
-
-SCSGMenuButton.addEventListener('click', () => {
-    pageAside.classList.toggle('hidden');
-});
