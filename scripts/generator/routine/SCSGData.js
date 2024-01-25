@@ -18,6 +18,7 @@ import { SkinToneCollection } from "../../collections/appearance/SkinToneCollect
 
 // Math
 import { random } from "../../math/Random.js";
+import { FaceShapesCollection } from "../../collections/appearance/FaceShapesCollection.js";
 //#endregion
 
 export function SCSGData(settings) {
@@ -40,6 +41,7 @@ export function SCSGData(settings) {
 
     // Appearance
     let char_appearance_skin_tone = appearanceGenerator.getRandomSkinTone();
+    let char_appearance_face_shape = appearanceGenerator.getRandomFaceShape();
 
     return {
         // General
@@ -67,6 +69,7 @@ export function SCSGData(settings) {
         // Appearance
         appearance: {
             skin_tone: char_appearance_skin_tone,
+            face_shape: char_appearance_face_shape,
         },
     };
 }
@@ -192,6 +195,10 @@ const physicalGenerator = Object.freeze({
 const appearanceGenerator = Object.freeze({
     getRandomSkinTone: function () {
         return SkinToneCollection.getRandomSkinTone();
+    },
+
+    getRandomFaceShape: function () {
+        return FaceShapesCollection.getRandomFaceShape();
     }
 });
 //#endregion

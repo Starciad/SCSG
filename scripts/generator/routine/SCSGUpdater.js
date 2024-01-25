@@ -19,6 +19,7 @@ export function SCSGUpdater(characterInfos) {
 
     // Appearance
     document.querySelector("#cs-appearance-skin-tone").innerHTML = characterInfos.appearance.skin_tone;
+    document.querySelector("#cs-appearance-face-shape").innerHTML = characterInfos.appearance.face_shape;
 }
 
 function getFormattedDate(date) {
