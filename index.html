@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="styles/hidden.css">
 
     <link rel="stylesheet" href="styles/specials/credits.css">
+    <link rel="stylesheet" href="styles/specials/markdown.css">
 
     <link rel="stylesheet" href="styles/elements/header.css">
     <link rel="stylesheet" href="styles/elements/footer.css">
@@ -51,23 +52,20 @@
     <!-- META TAGS -->
     <!-- Primary Meta Tags -->
     <meta name="title" content="SCSG - Star Character Sheet Generator" />
-    <meta name="description"
-        content="Easily and quickly generate unique fictional characters based on your preferences for your stories. Ignite your imagination and breathe life into your worlds with the  SCSG." />
+    <meta name="description" content="Easily and quickly generate unique fictional characters based on your preferences for your stories. Ignite your imagination and breathe life into your worlds with the  SCSG." />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="" />
     <meta property="og:title" content="SCSG - Star Character Sheet Generator" />
-    <meta property="og:description"
-        content="Easily and quickly generate unique fictional characters based on your preferences for your stories. Ignite your imagination and breathe life into your worlds with the  SCSG." />
+    <meta property="og:description" content="Easily and quickly generate unique fictional characters based on your preferences for your stories. Ignite your imagination and breathe life into your worlds with the  SCSG." />
     <meta property="og:image" content="" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="" />
     <meta property="twitter:title" content="SCSG - Star Character Sheet Generator" />
-    <meta property="twitter:description"
-        content="Easily and quickly generate unique fictional characters based on your preferences for your stories. Ignite your imagination and breathe life into your worlds with the  SCSG." />
+    <meta property="twitter:description" content="Easily and quickly generate unique fictional characters based on your preferences for your stories. Ignite your imagination and breathe life into your worlds with the  SCSG." />
     <meta property="twitter:image" content="" />
 </head>
 
@@ -233,134 +231,140 @@
                                 </form>
                             </section>
                         </div>
-
                         <!-- CHARACTER -->
                         <div class="app-section-category" data-name="CHARACTER">
                             <!-- GENERAL -->
                             <section class="app-section" data-name="General">
                                 <h1>General</h1>
+                                <p>Essential and fundamental information to define the essence of your fictional character. This section serves as a starting point, presenting a variety of interconnected fields that compose a general profile.</p>
 
-                                <!-- ====== -->
-                                <!-- NAME -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Name</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>First Name</td>
-                                            <td id="cs-general-first-name">Empty</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Surname</td>
-                                            <td id="cs-general-last-name">Empty</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                <h1>Properties</h1>
+                                <div class="app-table-collection">
+                                    <!-- ====== -->
+                                    <!-- NAME -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>First Name</td>
+                                                <td id="cs-general-first-name">Empty</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Surname</td>
+                                                <td id="cs-general-last-name">Empty</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                <!-- AGE -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">AGE</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Age</td>
-                                            <td id="cs-general-age">Empty</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    <!-- AGES -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">AGES</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Age</td>
+                                                <td id="cs-general-age">Empty</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                <!-- SEX -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">SEX</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Sex</td>
-                                            <td id="cs-general-sex">Empty</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    <!-- BIOLOGY -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">BIOLOGY</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Sex</td>
+                                                <td id="cs-general-sex">Empty</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                <!-- BIRTH -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">BIRTH</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Date of Birth</td>
-                                            <td id="cs-general-birth-date">Empty</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    <!-- DATES -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">DATES</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Birthday</td>
+                                                <td id="cs-general-birth-date">Empty</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                <!-- WORK -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">WORK</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Occupation</td>
-                                            <td id="cs-general-occupation">Empty</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    <!-- WORK -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">WORK</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Occupation</td>
+                                                <td id="cs-general-occupation">Empty</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                <!-- COUNTRIES -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">COUNTRIES</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Country of Residence</td>
-                                            <td id="cs-general-residence-country">Empty</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Country of Birth</td>
-                                            <td id="cs-general-birth-country">Empty</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    <!-- COUNTRIES -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">COUNTRIES</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Country of Residence</td>
+                                                <td id="cs-general-residence-country">Empty</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Country of Birth</td>
+                                                <td id="cs-general-birth-country">Empty</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                <!-- CIVILITY -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">CIVILITY</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Civil Status</td>
-                                            <td id="cs-general-civil-status">Empty</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    <!-- CIVILITY -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">CIVILITY</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Civil Status</td>
+                                                <td id="cs-general-civil-status">Empty</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                <!-- ====== -->
+                                    <!-- ====== -->
+                                </div>
                             </section>
 
                             <!-- PHYSICAL -->
                             <section class="app-section" data-name="Physical">
                                 <h1>Physical</h1>
+                                <p>Properties related to the body and physical structure of your character. From general characteristics to more specific details, this section provides a comprehensive view of the character's physical capabilities.</p>
 
+                                <h1>Properties</h1>
+                                <div class="app-table-collection">
                                 <!-- ====== -->
                                 <!-- CHARACTERISTICS -->
                                 <table>
@@ -414,14 +418,17 @@
                                         </tr>
                                     </tbody>
                                 </table>
-
                                 <!-- ====== -->
+                                </div>
                             </section>
 
                             <!-- APPEARANCE -->
                             <section class="app-section" data-name="Appearance">
                                 <h1>Appearance</h1>
+                                <p>All relevant information about your character's appearance. Gain a basic understanding of how they present themselves to the world, exploring important properties that can be further detailed for a comprehensive portrayal.</p>
 
+                                <h1>Properties</h1>
+                                <div class="app-table-collection">
                                 <!-- BODY -->
                                 <table>
                                     <thead>
@@ -590,12 +597,16 @@
                                         </tr>
                                     </tbody>
                                 </table>
+                                </div>
                             </section>
 
                             <!-- CLOTHES -->
                             <section class="app-section" data-name="Clothes">
                                 <h1>Clothes</h1>
+                                <p>Details on how the character dresses and their personal clothing preferences, highlighting elements that assist in characterization.</p>
 
+                                <h1>Properties</h1>
+                                <div class="app-table-collection">
                                 <!-- ====== -->
                                 <!-- T-SHIRT -->
                                 <table>
@@ -616,12 +627,16 @@
                                 </table>
 
                                 <!-- ====== -->
+                            </div>
                             </section>
 
                             <!-- ACCESSORIES -->
                             <section class="app-section" data-name="Accessories">
                                 <h1>Accessories</h1>
+                                <p>Information about the accessories that the character carries, including details of preferences, uses, among other things.</p>
 
+                                <h1>Properties</h1>
+                                <div class="app-table-collection">
                                 <!-- ====== -->
                                 <!-- GLASSES -->
                                 <table>
@@ -723,72 +738,139 @@
                                 </table>
 
                                 <!-- ====== -->
+                                </div>
                             </section>
 
                             <!-- PERSONALITY -->
                             <section class="app-section" data-name="Personality">
                                 <h1>Personality</h1>
+
                                 <p>Session under construction.</p>
+                                <p>The personality section explores the distinct psychological and behavioral traits of your character. This includes their thought patterns, emotional reactions, core values, and how they interact with the world around them. Describing the character's personality is crucial for understanding how they face challenges, interact with other characters, and evolve throughout the story. This section provides a deep insight into the motivations and complexities that shape the unique identity of your character.</p>
+
+                                <h1>Properties</h1>
+                                <div class="app-table-collection">
+                                </div>
                             </section>
 
                             <!-- Education -->
                             <section class="app-section" data-name="Education">
-                                <h1>Personality</h1>
+                                <h1>Education</h1>
+
                                 <p>Session under construction.</p>
+                                <p>All relevant information about the character's academic education, understanding their background, areas of specialization, and other pertinent aspects of academic life.</p>
+
+                                <h1>Properties</h1>
+                                <div class="app-table-collection">
+                                </div>
                             </section>
 
                             <!-- Habits -->
                             <section class="app-section" data-name="Habits">
-                                <h1>Personality</h1>
+                                <h1>Habits</h1>
+
                                 <p>Session under construction.</p>
+                                <p>All habits that shape the behavior characterizing the character, providing a deeper layer of insight into their way of behaving influenced by their own habits.</p>
+
+                                <h1>Properties</h1>
+                                <div class="app-table-collection">
+                                </div>
                             </section>
 
                             <!-- Family -->
                             <section class="app-section" data-name="Family">
-                                <h1>Personality</h1>
+                                <h1>Family</h1>
+
                                 <p>Session under construction.</p>
+                                <p>Relevant information about the family and familial dynamics of the character, highlighting useful details that aid in creating a detailed family context that shapes their life.</p>
+
+                                <h1>Properties</h1>
+                                <div class="app-table-collection">
+                                </div>
                             </section>
 
                             <!-- Characteristics -->
                             <section class="app-section" data-name="Characteristics">
-                                <h1>Personality</h1>
+                                <h1>Characteristics</h1>
+
                                 <p>Session under construction.</p>
+                                <p>General characteristics about attributes and aspects of the character, highlighting their strengths and weaknesses in a collection of information.</p>
+
+                                <h1>Properties</h1>
+                                <div class="app-table-collection">
+                                </div>
                             </section>
 
                             <!-- Skills and Abilities -->
                             <section class="app-section" data-name="Skills and Abilities">
-                                <h1>Personality</h1>
+                                <h1>Skills and Abilities</h1>
+
                                 <p>Session under construction.</p>
+                                <p>Listing of all the skills and abilities your character possesses, highlighting their respective performance levels individually in each of them, as well as presenting original and specific elements of the character. Crucial for detailed development in a story, governing everything from reactions to behaviors in specific situations.</p>
+
+                                <h1>Properties</h1>
+                                <div class="app-table-collection">
+                                </div>
                             </section>
 
                             <!-- Background -->
                             <section class="app-section" data-name="Background">
-                                <h1>Personality</h1>
+                                <h1>Background</h1>
+
                                 <p>Session under construction.</p>
+                                <p>Backgrounds aim to capture the individuality of your character and elements that may not necessarily have a significant narrative performance but bring depth and can help think about what the character would do in a specific situation. This section includes various fields that help identify in a more detailed way how the character is and behaves in the world, highlighting things that enhance them.</p>
+
+                                <h1>Properties</h1>
+                                <div class="app-table-collection">
+                                </div>
                             </section>
 
                             <!-- Belongings -->
                             <section class="app-section" data-name="Belongings">
-                                <h1>Personality</h1>
+                                <h1>Belongings</h1>
+
                                 <p>Session under construction.</p>
+                                <p>All possessions and items that belong to your character. It includes details about valuable objects, specific tools, or any other items that play a significant role in the character's life. Belongings provide insights into your character's priorities, passions, and practical needs, adding layers of depth to their narrative.</p>
+
+                                <h1>Properties</h1>
+                                <div class="app-table-collection">
+                                </div>
                             </section>
 
-                            <!-- History -->
-                            <section class="app-section" data-name="History">
-                                <h1>Personality</h1>
+                            <!-- Personal Profile -->
+                            <section class="app-section" data-name="Personal Profile">
+                                <h1>Personal Profile</h1>
+
                                 <p>Session under construction.</p>
+                                <p>Refers to all aspects that motivate your character and create foundations for what is desired and aspired by them, highlighting various points that contribute to their personal development.</p>
+
+                                <h1>Properties</h1>
+                                <div class="app-table-collection">
+                                </div>
                             </section>
 
                             <!-- Connections -->
                             <section class="app-section" data-name="Connections">
-                                <h1>Personality</h1>
+                                <h1>Connections</h1>
+
                                 <p>Session under construction.</p>
+                                <p>A list of personal connections that the character has had throughout life, highlighting close people, relationships, among other information.</p>
+
+                                <h1>Properties</h1>
+                                <div class="app-table-collection">
+                                </div>
                             </section>
 
                             <!-- Summary -->
                             <section class="app-section" data-name="Summary">
-                                <h1>Personality</h1>
+                                <h1>Summary</h1>
+
                                 <p>Session under construction.</p>
+                                <p>Synthesis and final recapitulation of all the information gathered earlier. A complete overview of your character.</p>
+
+                                <h1>Properties</h1>
+                                <div class="app-table-collection">
+                                </div>
                             </section>
                         </div>
 
