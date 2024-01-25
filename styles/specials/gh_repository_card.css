@@ -1,0 +1,25 @@
+.gh-repo-card {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    justify-items: center;
+
+    padding: 8px;
+
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    width: 50%;
+    height: 256px;
+
+    cursor: pointer;
+
+    background-color: #1e1f22;
+
+    border-width: 0px 0px 0px 4px;
+    border-style: solid;
+    border-color: #0e0e0f;
+    border-radius: 8px;
+}
