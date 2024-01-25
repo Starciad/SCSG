@@ -170,9 +170,9 @@ const generalGenerator = Object.freeze({
         const currentYear = new Date().getFullYear();
         const birthYear = currentYear - currentAge;
 
-        const birthMonth = random.getRandomNumber(1, 12);
+        const birthMonth = Random.getRandomNumber(1, 12);
         const maxDaysInMonth = new Date(birthYear, birthMonth, 0).getDate();
-        const birthDay = random.getRandomNumber(1, maxDaysInMonth);
+        const birthDay = Random.getRandomNumber(1, maxDaysInMonth);
 
         return {
             year: birthYear,
