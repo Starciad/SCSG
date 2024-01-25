@@ -1,25 +1,25 @@
 //#region IMPORTS
 // Names
-import { EUANamesCollection } from "../../collections/names/EUANamesCollection.js";
+import { EUANamesCollection } from "../../collections/names/eua_names_collection.js";
 
 // General
-import { OccupationsCollection } from "../../collections/general/OccupationsCollection.js";
-import { CivilStatusCollection } from "../../collections/general/CivilStatusCollection.js";
-import { CountriesCollection } from "../../collections/general/CountriesCollection.js";
+import { OccupationsCollection } from "../../collections/general/occupations_collection.js";
+import { CivilStatusCollection } from "../../collections/general/civil_status_collection.js";
+import { CountriesCollection } from "../../collections/general/countries_collection.js";
 
 // Physical
-import { BloodTypeCollection } from "../../collections/physical/BloodTypeCollection.js";
-import { HeightCollection } from "../../collections/physical/HeightCollection.js";
-import { WeightCollection } from "../../collections/physical/WeightCollection.js";
-import { BodyTypeCollection } from "../../collections/physical/BodyTypeCollection.js";
+import { BloodTypeCollection } from "../../collections/physical/blood_type_collection.js";
+import { HeightCollection } from "../../collections/physical/height_collection.js";
+import { WeightCollection } from "../../collections/physical/weight_collection.js";
+import { BodyTypeCollection } from "../../collections/physical/body_type_collection.js";
 
 // Appearance
-import { SkinToneCollection } from "../../collections/appearance/SkinToneCollection.js";
+import { SkinToneCollection } from "../../collections/appearance/skin_tone_collection.js";
 
 // Math
-import { Random } from "../../math/Random.js";
-import { FaceShapesCollection } from "../../collections/appearance/FaceShapesCollection.js";
-import { IntensityCollection } from "../../collections/special/IntensityCollection.js";
+import { Random } from "../../math/random.js";
+import { FaceShapesCollection } from "../../collections/appearance/face_shapes_collection.js";
+import { IntensityCollection } from "../../collections/special/intensity_collection.js";
 //#endregion
 
 export function SCSGData(settings) {

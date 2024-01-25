@@ -1,5 +1,5 @@
-import { buildControlPanel, buildDynamicAppMenu } from "./managers/PageManager.js";
-import { SCSGInitialize } from "./generator/SCSGMain.js";
+import { buildControlPanel, buildDynamicAppMenu } from "./managers/page_manager.js";
+import { SCSGInitialize } from "./generator/scsg_main.js";
 
 // ==================================== //
 // Initializers

@@ -1,4 +1,4 @@
-import { Random } from "../../math/Random.js";
+import { Random } from "../../math/random.js";
 
 export const BloodTypeCollection = Object.freeze({
     bloodTypes: ["A", "B", "AB", "O"],
