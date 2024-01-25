@@ -150,7 +150,8 @@
                                 <p>If you're curious about the inner workings, feel free to explore the project's
                                     repository on the GitHub platform.</p>
 
-                                <button id="gh-repo-button" class="btn btn-primary-success">SCSG GitHub Repository</button>
+                                <button id="gh-repo-button" class="btn btn-primary-success">SCSG GitHub
+                                    Repository</button>
                             </section>
 
                             <!-- CREDITS -->
@@ -199,19 +200,19 @@
                                 <form>
                                     <fieldset>
                                         <legend>General</legend>
-            
+
                                         <label for="name-style-type">Name Style</label>
                                         <select name="name-style-type" id="name-style-type">
                                             <option value="USA" selected>United States</option>
                                         </select>
-            
+
                                         <label for="sex-type">Sex</label>
                                         <select name="sex-type" id="sex-type">
                                             <option value="random" selected>Random</option>
                                             <option value="masculine">Masculine</option>
                                             <option value="feminine">Feminine</option>
                                         </select>
-            
+
                                         <label for="age-range-type">Age Range</label>
                                         <select name="age-range-type" id="age-range-type">
                                             <option value="random" selected>Random</option>
@@ -222,11 +223,12 @@
                                             <option value="elderly">Elderly (60+ years old)</option>
                                         </select>
                                     </fieldset>
-            
+
                                     <div class="app-settings-buttons">
                                         <button id="scsg-generate-button" type="button"
                                             class="btn btn-primary-success">Generate</button>
-                                        <button id="scsg-reset-button" type="reset" class="btn btn-destructive">Reset</button>
+                                        <button id="scsg-reset-button" type="reset"
+                                            class="btn btn-destructive">Reset</button>
                                     </div>
                                 </form>
                             </section>
@@ -237,16 +239,564 @@
                             <!-- GENERAL -->
                             <section class="app-section" data-name="General">
                                 <h1>General</h1>
+
+                                <!-- ====== -->
+                                <!-- NAME -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>First Name</td>
+                                            <td id="cs-general-first-name">Empty</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Surname</td>
+                                            <td id="cs-general-last-name">Empty</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- AGE -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">AGE</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Age</td>
+                                            <td id="cs-general-age">Empty</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- SEX -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">SEX</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Sex</td>
+                                            <td id="cs-general-sex">Empty</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- BIRTH -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">BIRTH</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Date of Birth</td>
+                                            <td id="cs-general-birth-date">Empty</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- WORK -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">WORK</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Occupation</td>
+                                            <td id="cs-general-occupation">Empty</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- COUNTRIES -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">COUNTRIES</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Country of Residence</td>
+                                            <td id="cs-general-residence-country">Empty</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Country of Birth</td>
+                                            <td id="cs-general-birth-country">Empty</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- CIVILITY -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">CIVILITY</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Civil Status</td>
+                                            <td id="cs-general-civil-status">Empty</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- ====== -->
                             </section>
 
                             <!-- PHYSICAL -->
                             <section class="app-section" data-name="Physical">
                                 <h1>Physical</h1>
+
+                                <!-- ====== -->
+                                <!-- CHARACTERISTICS -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">CHARACTERISTICS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Height (Centimeters)</td>
+                                            <td id="cs-physical-height">Empty</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Weight (Kilograms)</td>
+                                            <td id="cs-physical-weight">Empty</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- BLOOD -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">BLOOD</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Blood Type</td>
+                                            <td id="cs-physical-blood-type">Empty</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rh Factor</td>
+                                            <td id="cs-physical-blood-rh">Empty</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- BODY -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">BODY</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Type</td>
+                                            <td id="cs-physical-body-type">Empty</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- ====== -->
                             </section>
 
                             <!-- APPEARANCE -->
                             <section class="app-section" data-name="Appearance">
                                 <h1>Appearance</h1>
+
+                                <!-- BODY -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">BODY</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Skin Tone</td>
+                                            <td id="cs-appearance-skin-tone">Empty</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- FACE -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">FACE</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Format</td>
+                                            <td>Empty</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Distinctive Signs</td>
+                                            <td>Empty</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- BEARD -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">BEARD</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Has?</td>
+                                            <td>Empty</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Color</td>
+                                            <td>Empty</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Format</td>
+                                            <td>Empty</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Type</td>
+                                            <td>Empty</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- EYES -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">EYES</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Color</td>
+                                            <td>Empty</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- EYEBROWS -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">EYEBROWS</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <!-- NOSE -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">NOSE</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <!-- MOUTH -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">MOUTH</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <!-- EARS -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">EARS</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <!-- HAIR -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">HAIR</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <!-- WEAKNESSES -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>WEAKNESSES</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>LIST</td>
+                                            <!-- LIST -->
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- INJURIES -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>INJURIES</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>LIST</td>
+                                            <!-- LIST -->
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+
+                                    </tfoot>
+                                </table>
+
+                                <!-- SCARS -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>SCARS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>LIST</td>
+                                            <!-- LIST -->
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </section>
+
+                            <!-- CLOTHES -->
+                            <section class="app-section" data-name="Clothes">
+                                <h1>Clothes</h1>
+
+                                <!-- ====== -->
+                                <!-- T-SHIRT -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">T-shirt</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <!-- SHOES -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Shoes</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <!-- ====== -->
+                            </section>
+
+                            <!-- ACCESSORIES -->
+                            <section class="app-section" data-name="Accessories">
+                                <h1>Accessories</h1>
+
+                                <!-- ====== -->
+                                <!-- GLASSES -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Glasses</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <!-- GLOVES -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Gloves</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <!-- BRACELETS -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Bracelets</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <!-- NECKLACES -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Necklaces</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <!-- RINGS -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Rings</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <!-- HATS AND CAPS -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Hats & Caps</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <!-- EARRINGS -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Earrings</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <!-- BACKPACKS AND BAGS -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Backpacks and Bags</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <!-- TATTOOS -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Tattoos</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <!-- PIERCINGS -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Piercings</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <!-- BELTS -->
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">Belts</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+
+                                <!-- ====== -->
+                            </section>
+
+                            <!-- PERSONALITY -->
+                            <section class="app-section" data-name="Personality">
+                                <h1>Personality</h1>
+                                <p>Session under construction.</p>
+                            </section>
+
+                            <!-- Education -->
+                            <section class="app-section" data-name="Education">
+                                <h1>Personality</h1>
+                                <p>Session under construction.</p>
+                            </section>
+
+                            <!-- Habits -->
+                            <section class="app-section" data-name="Habits">
+                                <h1>Personality</h1>
+                                <p>Session under construction.</p>
+                            </section>
+
+                            <!-- Family -->
+                            <section class="app-section" data-name="Family">
+                                <h1>Personality</h1>
+                                <p>Session under construction.</p>
+                            </section>
+
+                            <!-- Characteristics -->
+                            <section class="app-section" data-name="Characteristics">
+                                <h1>Personality</h1>
+                                <p>Session under construction.</p>
+                            </section>
+
+                            <!-- Skills and Abilities -->
+                            <section class="app-section" data-name="Skills and Abilities">
+                                <h1>Personality</h1>
+                                <p>Session under construction.</p>
+                            </section>
+
+                            <!-- Background -->
+                            <section class="app-section" data-name="Background">
+                                <h1>Personality</h1>
+                                <p>Session under construction.</p>
+                            </section>
+
+                            <!-- Belongings -->
+                            <section class="app-section" data-name="Belongings">
+                                <h1>Personality</h1>
+                                <p>Session under construction.</p>
+                            </section>
+
+                            <!-- History -->
+                            <section class="app-section" data-name="History">
+                                <h1>Personality</h1>
+                                <p>Session under construction.</p>
+                            </section>
+
+                            <!-- Connections -->
+                            <section class="app-section" data-name="Connections">
+                                <h1>Personality</h1>
+                                <p>Session under construction.</p>
+                            </section>
+
+                            <!-- Summary -->
+                            <section class="app-section" data-name="Summary">
+                                <h1>Personality</h1>
+                                <p>Session under construction.</p>
+                            </section>
+                        </div>
+
+                        <!-- EXPORT -->
+                        <div class="app-section-category" data-name="EXPORT">
+                            <!-- EXPORT -->
+                            <section class="app-section" data-name="Export">
+                                <h1>Export</h1>
                             </section>
                         </div>
                     </div>
