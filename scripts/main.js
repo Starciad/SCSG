@@ -7,9 +7,10 @@ import { SCSGInitialize } from "./generator/SCSGMain.js";
 function InitializeBuilders() {
     buildDynamicAppMenu();
     buildControlPanel();
+
 }
 
-function InitializeEvents() {
+function InitializeElements() {
     // Query elements
     let SCSGAsideMenuButton = document.querySelector("#scsg-aside-menu-button");
     let githubRepositoryButton = document.querySelector("#gh-repo-button");
@@ -17,6 +18,11 @@ function InitializeEvents() {
     let creditsIgorUPButton = document.querySelector("#credits-btn-igorup");
     let creditsInsanyaButton = document.querySelector("#credits-btn-insanya");
     let pageAside = document.querySelector(".page-aside");
+
+    // Elmenets
+    if (window.screen.width <= 800) {
+        pageAside.classList.add('hidden');
+    }
 
     // Add events
     SCSGAsideMenuButton.addEventListener('click', () => {
@@ -49,7 +55,7 @@ function InitializeGenerator() {
 
 function Main() {
     InitializeBuilders();
-    InitializeEvents();
+    InitializeElements();
     InitializeGenerator();
 }
 
