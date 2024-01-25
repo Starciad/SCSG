@@ -1,51 +1,56 @@
-import { SCSGenerator } from "./core/dataGenerator.js";
-import { buildControlPanel, buildDynamicAppMenu } from "./core/pageManager.js";
+import { buildControlPanel, buildDynamicAppMenu } from "./managers/PageManager.js";
+import { SCSGInitialize } from "./generator/SCSGMain.js";
 
-// Buttons
-let SCSGGenerateButton = document.querySelector("#scsg-generate-button");
-let SCSGAsideMenuButton = document.querySelector("#scsg-aside-menu-button");
+// ==================================== //
+// Initializers
 
-let githubRepositoryButton = document.querySelector("#gh-repo-button");
-let creditsStarciadButton = document.querySelector("#credits-btn-starciad");
-let creditsIgorUPButton = document.querySelector("#credits-btn-igorup");
-let creditsInsanyaButton = document.querySelector("#credits-btn-insanya");
+function InitializeBuilders() {
+    buildDynamicAppMenu();
+    buildControlPanel();
+}
 
-// Pages
-let pageAside = document.querySelector(".page-aside");
+function InitializeEvents() {
+    // Query elements
+    let SCSGAsideMenuButton = document.querySelector("#scsg-aside-menu-button");
+    let githubRepositoryButton = document.querySelector("#gh-repo-button");
+    let creditsStarciadButton = document.querySelector("#credits-btn-starciad");
+    let creditsIgorUPButton = document.querySelector("#credits-btn-igorup");
+    let creditsInsanyaButton = document.querySelector("#credits-btn-insanya");
+    let pageAside = document.querySelector(".page-aside");
 
-// Builders
-buildDynamicAppMenu();
-buildControlPanel();
+    // Add events
+    SCSGAsideMenuButton.addEventListener('click', () => {
+        pageAside.classList.toggle('hidden');
+    });
 
-// Events
-SCSGAsideMenuButton.addEventListener('click', () => {
-    pageAside.classList.toggle('hidden');
-});
+    githubRepositoryButton.addEventListener('click', () => {
+        window.open("https://github.com/Starciad/SCSG.git", '_blank').focus();
+    });
 
-githubRepositoryButton.addEventListener('click', () => {
-    window.open("https://github.com/Starciad/SCSG.git", '_blank').focus();
-});
+    creditsStarciadButton.addEventListener('click', () => {
+        window.open("https://github.com/Starciad/", '_blank').focus();
+    });
 
-creditsStarciadButton.addEventListener('click', () => {
-    window.open("https://github.com/Starciad/", '_blank').focus();
-});
+    creditsIgorUPButton.addEventListener('click', () => {
+        window.open("https://github.com/igorunderplayer", '_blank').focus();
+    });
 
-creditsIgorUPButton.addEventListener('click', () => {
-    window.open("https://github.com/igorunderplayer", '_blank').focus();
-});
+    creditsInsanyaButton.addEventListener('click', () => {
+        window.open("https://github.com/Insanya29", '_blank').focus();
+    });
+}
 
-creditsInsanyaButton.addEventListener('click', () => {
-    window.open("https://github.com/Insanya29", '_blank').focus();
-});
+function InitializeGenerator() {
+    document.querySelector("#scsg-generate-button").addEventListener('click', SCSGInitialize)
+}
 
-// SCSGGenerateButton.addEventListener('click', () => {
-//     let nameStyleType = document.querySelector("#name-style-type").value;
-//     let sexType = document.querySelector("#sex-type").value;
-//     let ageRangeType = document.querySelector("#age-range-type").value;
-// 
-//     SCSGenerator(
-//         nameStyleType,
-//         sexType,
-//         ageRangeType
-//     );
-// });
+// ========================================== //
+// Routine
+
+function Main() {
+    InitializeBuilders();
+    InitializeEvents();
+    InitializeGenerator();
+}
+
+Main();

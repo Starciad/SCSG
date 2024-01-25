@@ -1,5 +1,7 @@
+import { random } from "../../math/Random.js";
+
 export const EUANamesCollection = Object.freeze({
-  maleNames: [
+  masculine_names: [
     "James",
     "John",
     "Robert",
@@ -101,7 +103,8 @@ export const EUANamesCollection = Object.freeze({
     "Milton",
     "Alex",
   ],
-  femaleNames: [
+
+  feminine_names: [
     "Mary",
     "Patricia",
     "Jennifer",
@@ -203,7 +206,8 @@ export const EUANamesCollection = Object.freeze({
     "Emily",
     "Linda",
   ],
-  lastNames: [
+
+  surnames: [
     "Smith",
     "Johnson",
     "Williams",
@@ -306,18 +310,15 @@ export const EUANamesCollection = Object.freeze({
     "Gonzales"
   ],
 
-  getRandomMaleName: function () {
-    const randomIndex = Math.floor(Math.random() * this.maleNames.length);
-    return this.maleNames[randomIndex];
+  getRandomMasculineName: function () {
+    return random.getRandomArrayElement(this.masculine_names);
   },
 
-  getRandomFemaleName: function () {
-    const randomIndex = Math.floor(Math.random() * this.femaleNames.length);
-    return this.femaleNames[randomIndex];
+  getRandomFeminineName: function () {
+    return random.getRandomArrayElement(this.feminine_names);
   },
 
-  getRandomLastName: function () {
-    const randomIndex = Math.floor(Math.random() * this.lastNames.length);
-    return this.lastNames[randomIndex];
+  getRandomSurname: function () {
+    return random.getRandomArrayElement(this.surnames);
   },
 });

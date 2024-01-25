@@ -1,8 +1,8 @@
-import { random } from "../../math/random.js";
+import { random } from "../../math/Random.js";
 
 export const BloodTypeCollection = Object.freeze({
     bloodTypes: ["A", "B", "AB", "O"],
-    rhFactors: ["+", "-"],
+    rhFactors: ["Positive", "Negative"],
 
     getRandomBloodType: function () {
         return random.getRandomArrayElement(this.bloodTypes);
