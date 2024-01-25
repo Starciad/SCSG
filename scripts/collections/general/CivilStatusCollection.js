@@ -1,4 +1,4 @@
-import { random } from "../../math/Random.js";
+import { random } from "../../math/random.js";
 
 export const CivilStatusCollection = Object.freeze({
     civilStatus: [

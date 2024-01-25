@@ -17,7 +17,7 @@ import { BodyTypeCollection } from "../../collections/physical/BodyTypeCollectio
 import { SkinToneCollection } from "../../collections/appearance/SkinToneCollection.js";
 
 // Math
-import { random } from "../../math/Random.js";
+import { random } from "../../math/random.js";
 import { FaceShapesCollection } from "../../collections/appearance/FaceShapesCollection.js";
 import { IntensityCollection } from "../../collections/special/IntensityCollection.js";
 //#endregion
