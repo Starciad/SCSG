@@ -7,30 +7,32 @@
     <title>🎭 ➥ SCSG - SCSG - Star Character Sheet Generator.</title>
 
     <!-- SCRIPTS -->
-    <!-- Core -->
-    <script src="scripts/core/dataGenerator.js" type="module"></script>
-    <script src="scripts/core/pageUpdater.js" type="module"></script>
-    <script src="scripts/core/pageManager.js" type="module"></script>
+    <!-- Generator -->
+    <script src="scripts/generator/SCSGMain.js" type="module"></script>
+    <script src="scripts/generator/routine/SCSGData.js" type="module"></script>
+    <script src="scripts/generator/routine/SCSGInfos.js" type="module"></script>
+    <script src="scripts/generator/routine/SCSGSettings.js" type="module"></script>
+    <script src="scripts/generator/routine/SCSGUpdater.js" type="module"></script>
+
+    <!-- Managers -->
+    <script src="scripts/managers/PageManager.js" type="module"></script>
 
     <!-- Math -->
-    <script src="scripts/math/random.js" type="module"></script>
+    <script src="scripts/math/Random.js" type="module"></script>
 
     <!-- Collections -->
     <script src="scripts/collections/names/EUANamesCollection.js" type="module"></script>
-
     <script src="scripts/collections/general/OccupationsCollection.js" type="module"></script>
     <script src="scripts/collections/general/CountriesCollection.js" type="module"></script>
     <script src="scripts/collections/general/CivilStatusCollection.js" type="module"></script>
-
     <script src="scripts/collections/physical/BloodTypeCollection.js" type="module"></script>
     <script src="scripts/collections/physical/HeightCollection.js" type="module"></script>
     <script src="scripts/collections/physical/WeightCollection.js" type="module"></script>
     <script src="scripts/collections/physical/BodyTypeCollection.js" type="module"></script>
-
     <script src="scripts/collections/appearance/SkinToneCollection.js" type="module"></script>
 
     <!-- Core -->
-    <script src="scripts/main.js" type="module" defer></script>
+    <script src="scripts/Main.js" type="module" defer></script>
 
     <!-- STYLES -->
     <link rel="stylesheet" href="styles/default.css">
@@ -86,7 +88,7 @@
         <div class="page-content">
             <aside class="page-aside">
                 <div class="app-menu">
-                    <!-- PROCEDURAL NAVIGATOR -->
+                    <!-- PROCEDURAL MENU -->
                 </div>
             </aside>
 
@@ -231,6 +233,7 @@
                                 </form>
                             </section>
                         </div>
+
                         <!-- CHARACTER -->
                         <div class="app-section-category" data-name="CHARACTER">
                             <!-- GENERAL -->
@@ -365,60 +368,60 @@
 
                                 <h1>Properties</h1>
                                 <div class="app-table-collection">
-                                <!-- ====== -->
-                                <!-- CHARACTERISTICS -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">CHARACTERISTICS</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Height (Centimeters)</td>
-                                            <td id="cs-physical-height">Empty</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Weight (Kilograms)</td>
-                                            <td id="cs-physical-weight">Empty</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    <!-- ====== -->
+                                    <!-- CHARACTERISTICS -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">CHARACTERISTICS</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Height (Centimeters)</td>
+                                                <td id="cs-physical-height">Empty</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Weight (Kilograms)</td>
+                                                <td id="cs-physical-weight">Empty</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                <!-- BLOOD -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">BLOOD</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Blood Type</td>
-                                            <td id="cs-physical-blood-type">Empty</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Rh Factor</td>
-                                            <td id="cs-physical-blood-rh">Empty</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    <!-- BLOOD -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">BLOOD</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Blood Type</td>
+                                                <td id="cs-physical-blood-type">Empty</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Rh Factor</td>
+                                                <td id="cs-physical-blood-rh-factor">Empty</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                <!-- BODY -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">BODY</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Type</td>
-                                            <td id="cs-physical-body-type">Empty</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <!-- ====== -->
+                                    <!-- BODY -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">BODY</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Type</td>
+                                                <td id="cs-physical-body-type">Empty</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <!-- ====== -->
                                 </div>
                             </section>
 
@@ -429,174 +432,174 @@
 
                                 <h1>Properties</h1>
                                 <div class="app-table-collection">
-                                <!-- BODY -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">BODY</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Skin Tone</td>
-                                            <td id="cs-appearance-skin-tone">Empty</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    <!-- BODY -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">BODY</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Skin Tone</td>
+                                                <td id="cs-appearance-skin-tone">Empty</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                <!-- FACE -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">FACE</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Format</td>
-                                            <td>Empty</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Distinctive Signs</td>
-                                            <td>Empty</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    <!-- FACE -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">FACE</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Format</td>
+                                                <td>Empty</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Distinctive Signs</td>
+                                                <td>Empty</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                <!-- BEARD -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">BEARD</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Has?</td>
-                                            <td>Empty</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Color</td>
-                                            <td>Empty</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Format</td>
-                                            <td>Empty</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Type</td>
-                                            <td>Empty</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    <!-- BEARD -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">BEARD</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Has?</td>
+                                                <td>Empty</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Color</td>
+                                                <td>Empty</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Format</td>
+                                                <td>Empty</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Type</td>
+                                                <td>Empty</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                <!-- EYES -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">EYES</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Color</td>
-                                            <td>Empty</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    <!-- EYES -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">EYES</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Color</td>
+                                                <td>Empty</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                <!-- EYEBROWS -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">EYEBROWS</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                    <!-- EYEBROWS -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">EYEBROWS</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                <!-- NOSE -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">NOSE</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                    <!-- NOSE -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">NOSE</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                <!-- MOUTH -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">MOUTH</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                    <!-- MOUTH -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">MOUTH</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                <!-- EARS -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">EARS</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                    <!-- EARS -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">EARS</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                <!-- HAIR -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">HAIR</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                    <!-- HAIR -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">HAIR</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                <!-- WEAKNESSES -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>WEAKNESSES</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>LIST</td>
-                                            <!-- LIST -->
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    <!-- WEAKNESSES -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>WEAKNESSES</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>LIST</td>
+                                                <!-- LIST -->
+                                            </tr>
+                                        </tbody>
+                                    </table>
 
-                                <!-- INJURIES -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>INJURIES</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>LIST</td>
-                                            <!-- LIST -->
-                                        </tr>
-                                    </tbody>
-                                    <tfoot>
+                                    <!-- INJURIES -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>INJURIES</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>LIST</td>
+                                                <!-- LIST -->
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
 
-                                    </tfoot>
-                                </table>
+                                        </tfoot>
+                                    </table>
 
-                                <!-- SCARS -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th>SCARS</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>LIST</td>
-                                            <!-- LIST -->
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                    <!-- SCARS -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>SCARS</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>LIST</td>
+                                                <!-- LIST -->
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </section>
 
@@ -607,27 +610,27 @@
 
                                 <h1>Properties</h1>
                                 <div class="app-table-collection">
-                                <!-- ====== -->
-                                <!-- T-SHIRT -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">T-shirt</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                    <!-- ====== -->
+                                    <!-- T-SHIRT -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">T-shirt</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                <!-- SHOES -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Shoes</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                    <!-- SHOES -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Shoes</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                <!-- ====== -->
-                            </div>
+                                    <!-- ====== -->
+                                </div>
                             </section>
 
                             <!-- ACCESSORIES -->
@@ -637,107 +640,107 @@
 
                                 <h1>Properties</h1>
                                 <div class="app-table-collection">
-                                <!-- ====== -->
-                                <!-- GLASSES -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Glasses</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                    <!-- ====== -->
+                                    <!-- GLASSES -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Glasses</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                <!-- GLOVES -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Gloves</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                    <!-- GLOVES -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Gloves</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                <!-- BRACELETS -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Bracelets</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                    <!-- BRACELETS -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Bracelets</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                <!-- NECKLACES -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Necklaces</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                    <!-- NECKLACES -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Necklaces</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                <!-- RINGS -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Rings</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                    <!-- RINGS -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Rings</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                <!-- HATS AND CAPS -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Hats & Caps</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                    <!-- HATS AND CAPS -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Hats & Caps</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                <!-- EARRINGS -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Earrings</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                    <!-- EARRINGS -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Earrings</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                <!-- BACKPACKS AND BAGS -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Backpacks and Bags</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                    <!-- BACKPACKS AND BAGS -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Backpacks and Bags</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                <!-- TATTOOS -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Tattoos</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                    <!-- TATTOOS -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Tattoos</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                <!-- PIERCINGS -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Piercings</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                    <!-- PIERCINGS -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Piercings</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                <!-- BELTS -->
-                                <table>
-                                    <thead>
-                                        <tr>
-                                            <th colspan="2">Belts</th>
-                                        </tr>
-                                    </thead>
-                                </table>
+                                    <!-- BELTS -->
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">Belts</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
 
-                                <!-- ====== -->
+                                    <!-- ====== -->
                                 </div>
                             </section>
 
