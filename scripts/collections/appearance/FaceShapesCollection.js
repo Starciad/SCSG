@@ -1,4 +1,4 @@
-import { random } from "../../math/random.js";
+import { Random } from "../../math/Random.js";
 
 export const FaceShapesCollection = Object.freeze({
     faceShapes: [
@@ -12,6 +12,6 @@ export const FaceShapesCollection = Object.freeze({
     ],
 
     getRandomFaceShape: function () {
-        return random.getRandomArrayElement(this.faceShapes);
+        return Random.getRandomArrayElement(this.faceShapes);
     },
 });

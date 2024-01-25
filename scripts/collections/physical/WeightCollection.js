@@ -1,4 +1,4 @@
-import { random } from "../../math/random.js";
+import { Random } from "../../math/Random.js";
 
 export const WeightCollection = Object.freeze({
     weightRangeBasedOnAge: [
@@ -11,7 +11,7 @@ export const WeightCollection = Object.freeze({
 
     getRandomWeight: function (age) {
         const currentRange = this.weightRangeBasedOnAge.find(range => age >= range.minAge && age <= range.maxAge);
-        const randomWeight = random.getRandomNumber(currentRange.minWeight, currentRange.maxWeight);
+        const randomWeight = Random.getRandomNumber(currentRange.minWeight, currentRange.maxWeight);
         
         return randomWeight;
     },

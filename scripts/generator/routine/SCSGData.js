@@ -17,7 +17,7 @@ import { BodyTypeCollection } from "../../collections/physical/BodyTypeCollectio
 import { SkinToneCollection } from "../../collections/appearance/SkinToneCollection.js";
 
 // Math
-import { random } from "../../math/random.js";
+import { Random } from "../../math/Random.js";
 import { FaceShapesCollection } from "../../collections/appearance/FaceShapesCollection.js";
 import { IntensityCollection } from "../../collections/special/IntensityCollection.js";
 //#endregion
@@ -118,25 +118,25 @@ const generalGenerator = Object.freeze({
     getRandomAge: function (ageRangeType) {
         switch (ageRangeType) {
             case "random":
-                return random.getRandomNumber(0, 100);
+                return Random.getRandomNumber(0, 100);
 
             case "child":
-                return random.getRandomNumber(0, 12);
+                return Random.getRandomNumber(0, 12);
 
             case "teenager":
-                return random.getRandomNumber(13, 19);
+                return Random.getRandomNumber(13, 19);
 
             case "youngAdult":
-                return random.getRandomNumber(20, 29);
+                return Random.getRandomNumber(20, 29);
 
             case "adult":
-                return random.getRandomNumber(30, 59);
+                return Random.getRandomNumber(30, 59);
 
             case "elderly":
-                return random.getRandomNumber(60, 100);
+                return Random.getRandomNumber(60, 100);
 
             default:
-                return random.getRandomNumber(0, 100);
+                return Random.getRandomNumber(0, 100);
         }
     },
 

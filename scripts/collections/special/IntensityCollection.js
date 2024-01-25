@@ -1,4 +1,4 @@
-import { random } from "../../math/random.js";
+import { Random } from "../../math/Random.js";
 
 export const IntensityCollection = Object.freeze({
     intensities: [
@@ -13,6 +13,6 @@ export const IntensityCollection = Object.freeze({
     ],
 
     getRandomIntensity: function () {
-        return random.getRandomArrayElement(this.intensities);
+        return Random.getRandomArrayElement(this.intensities);
     },
 });

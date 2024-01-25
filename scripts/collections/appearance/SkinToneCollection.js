@@ -1,4 +1,4 @@
-import { random } from "../../math/random.js";
+import { Random } from "../../math/Random.js";
 
 export const SkinToneCollection = Object.freeze({
     skinTones: [
@@ -11,6 +11,6 @@ export const SkinToneCollection = Object.freeze({
     ],
 
     getRandomSkinTone: function () {
-        return random.getRandomArrayElement(this.skinTones);
+        return Random.getRandomArrayElement(this.skinTones);
     },
 });

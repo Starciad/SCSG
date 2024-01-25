@@ -1,4 +1,4 @@
-import { random } from "../../math/random.js";
+import { Random } from "../../math/Random.js";
 
 export const BodyTypeCollection = Object.freeze({
     bodyTypes: [
@@ -8,6 +8,6 @@ export const BodyTypeCollection = Object.freeze({
     ],
 
     getRandomBodyType: function () {
-        return random.getRandomArrayElement(this.bodyTypes);
+        return Random.getRandomArrayElement(this.bodyTypes);
     },
 });

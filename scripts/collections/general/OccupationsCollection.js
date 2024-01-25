@@ -1,4 +1,4 @@
-import { random } from "../../math/random.js";
+import { Random } from "../../math/Random.js";
 
 export const OccupationsCollection = Object.freeze({
     occupations: [
@@ -175,6 +175,6 @@ export const OccupationsCollection = Object.freeze({
     ],
 
     getRandomOccupation: function () {
-        return random.getRandomArrayElement(this.occupations);
+        return Random.getRandomArrayElement(this.occupations);
     },
 });

@@ -1,4 +1,4 @@
-import { random } from "../../math/random.js";
+import { Random } from "../../math/Random.js";
 
 export const CountriesCollection = Object.freeze({
     countries: [
@@ -249,6 +249,6 @@ export const CountriesCollection = Object.freeze({
     ],
 
     getRandomCountry: function () {
-        return random.getRandomArrayElement(this.countries);
+        return Random.getRandomArrayElement(this.countries);
     },
 });

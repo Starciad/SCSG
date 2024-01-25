@@ -1,4 +1,4 @@
-import { random } from "../../math/random.js";
+import { Random } from "../../math/Random.js";
 
 export const EUANamesCollection = Object.freeze({
   masculine_names: [
@@ -311,14 +311,14 @@ export const EUANamesCollection = Object.freeze({
   ],
 
   getRandomMasculineName: function () {
-    return random.getRandomArrayElement(this.masculine_names);
+    return Random.getRandomArrayElement(this.masculine_names);
   },
 
   getRandomFeminineName: function () {
-    return random.getRandomArrayElement(this.feminine_names);
+    return Random.getRandomArrayElement(this.feminine_names);
   },
 
   getRandomSurname: function () {
-    return random.getRandomArrayElement(this.surnames);
+    return Random.getRandomArrayElement(this.surnames);
   },
 });

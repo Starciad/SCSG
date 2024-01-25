@@ -1,4 +1,4 @@
-import { random } from "../../math/random.js";
+import { Random } from "../../math/Random.js";
 
 export const CivilStatusCollection = Object.freeze({
     civilStatus: [
@@ -10,6 +10,6 @@ export const CivilStatusCollection = Object.freeze({
     ],
 
     getRandomCivilStatus: function () {
-        return random.getRandomArrayElement(this.civilStatus);
+        return Random.getRandomArrayElement(this.civilStatus);
     },
 });
