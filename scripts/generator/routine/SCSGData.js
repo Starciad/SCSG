@@ -19,6 +19,7 @@ import { SkinToneCollection } from "../../collections/appearance/SkinToneCollect
 // Math
 import { random } from "../../math/Random.js";
 import { FaceShapesCollection } from "../../collections/appearance/FaceShapesCollection.js";
+import { IntensityCollection } from "../../collections/special/IntensityCollection.js";
 //#endregion
 
 export function SCSGData(settings) {
@@ -42,6 +43,10 @@ export function SCSGData(settings) {
     // Appearance
     let char_appearance_skin_tone = appearanceGenerator.getRandomSkinTone();
     let char_appearance_face_shape = appearanceGenerator.getRandomFaceShape();
+    let char_appearance_face_freckles = appearanceGenerator.getRandomFrecklesIntensity();
+    let char_appearance_face_dimples = appearanceGenerator.getRandomDimplesIntensity();
+    let char_appearance_face_moles = appearanceGenerator.getRandomMolesIntensity();
+    let char_appearance_face_wrinkles = appearanceGenerator.getRandomWrinklesIntensity();
 
     return {
         // General
@@ -69,7 +74,14 @@ export function SCSGData(settings) {
         // Appearance
         appearance: {
             skin_tone: char_appearance_skin_tone,
-            face_shape: char_appearance_face_shape,
+
+            face: {
+                shape: char_appearance_face_shape,
+                freckles: char_appearance_face_freckles,
+                dimples: char_appearance_face_dimples,
+                moles: char_appearance_face_moles,
+                wrinkles: char_appearance_face_wrinkles,
+            }
         },
     };
 }
@@ -199,6 +211,22 @@ const appearanceGenerator = Object.freeze({
 
     getRandomFaceShape: function () {
         return FaceShapesCollection.getRandomFaceShape();
-    }
+    },
+
+    getRandomFrecklesIntensity: function () {
+        return IntensityCollection.getRandomIntensity();
+    },
+
+    getRandomDimplesIntensity: function () {
+        return IntensityCollection.getRandomIntensity();
+    },
+
+    getRandomMolesIntensity: function () {
+        return IntensityCollection.getRandomIntensity();
+    },
+
+    getRandomWrinklesIntensity: function () {
+        return IntensityCollection.getRandomIntensity();
+    },
 });
 //#endregion

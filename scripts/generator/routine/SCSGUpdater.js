@@ -19,7 +19,11 @@ export function SCSGUpdater(characterInfos) {
 
     // Appearance
     document.querySelector("#cs-appearance-skin-tone").innerHTML = characterInfos.appearance.skin_tone;
-    document.querySelector("#cs-appearance-face-shape").innerHTML = characterInfos.appearance.face_shape;
+    document.querySelector("#cs-appearance-face-shape").innerHTML = characterInfos.appearance.face.shape;
+    document.querySelector("#cs-appearance-face-freckles").innerHTML = characterInfos.appearance.face.freckles;
+    document.querySelector("#cs-appearance-face-dimples").innerHTML = characterInfos.appearance.face.dimples;
+    document.querySelector("#cs-appearance-face-moles").innerHTML = characterInfos.appearance.face.moles;
+    document.querySelector("#cs-appearance-face-wrinkles").innerHTML = characterInfos.appearance.face.wrinkles;
 }
 
 function getFormattedDate(date) {
