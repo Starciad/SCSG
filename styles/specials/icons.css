@@ -1,0 +1,12 @@
+/* BASE */
+.icon {
+    width: 32px;
+    height: 32px;
+
+    background-size: cover;
+}
+
+/* ICONS */
+.icon-home {
+    background-image: url("../../assets/graphics/icons/website_icons.webp");
+}

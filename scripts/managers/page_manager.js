@@ -30,20 +30,24 @@ export function buildDynamicAppMenu() {
 
         category.querySelectorAll(".app-section").forEach(section => {
             let sectionName = section.dataset.name;
+            let iconName = section.dataset.icon;
 
             let sectionButton = document.createElement("button");
             let sectionButtonAvatar = document.createElement("div");
             let sectionButtonDecorator = document.createElement("div");
             let sectionButtonAvatarValue = document.createElement("div");
-            let sectionButtonDecoratorValue = document.createElement("div");
+            let sectionButtonDecoratorValue = document.createElement("span");
 
             sectionButton.classList.add("app-menu-btn");
             sectionButtonAvatar.classList.add("app-menu-btn-avatar");
             sectionButtonDecorator.classList.add("app-menu-btn-decorator");
-            sectionButtonAvatarValue.id = "value";
-            sectionButtonDecoratorValue.id = "value";
-            sectionButtonDecoratorValue.innerText = sectionName;
+            sectionButtonAvatarValue.classList.add("icon");
+            sectionButtonAvatarValue.classList.add("icon-" + iconName);
+            
+            sectionButton.setAttribute("type", "button");
 
+            sectionButtonDecoratorValue.innerText = sectionName;
+            
             sectionButtonAvatar.appendChild(sectionButtonAvatarValue);
             sectionButtonDecorator.appendChild(sectionButtonDecoratorValue);
             sectionButton.appendChild(sectionButtonAvatar);

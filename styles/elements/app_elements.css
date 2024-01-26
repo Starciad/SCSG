@@ -10,3 +10,72 @@
     flex: 1;
     min-width: 250px;
 }
+
+/* ==================== */
+/* MENU */
+.app-menu-group-title {
+    display: flex;
+
+    flex-direction: column;
+
+    font-weight: bold;
+
+    text-align: center;
+    text-anchor: middle;
+
+    padding: 4px;
+
+    margin-top: -28px;
+    margin-bottom: 8px;
+
+    border-radius: 4px;
+
+    background-color: #1e1f22;
+}
+
+/* BUTTONS */
+.app-menu-btn {
+    display: flex;
+
+    width: 100%;
+    height: auto;
+
+    text-align: start;
+    
+    font-weight: bolder;
+    font-size: medium;
+
+    border-radius: 8px;
+    border-style: none;
+
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+    align-items: center;
+
+    padding: 8px;
+
+    background-color: transparent;
+}
+
+.app-menu-btn-selected {
+    background-color: #35373c;
+}
+
+.app-menu-btn:hover {
+    background-color: #35373c;
+}
+
+.app-menu-btn:active {
+    background-color: #3f4248;
+}
+
+.app-menu-btn-avatar {
+
+}
+
+.app-menu-btn-decorator {
+    margin-left: 16px;
+
+    font-size: 120%;
+}
