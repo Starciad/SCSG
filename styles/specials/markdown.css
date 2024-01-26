@@ -613,6 +613,18 @@
     margin-bottom: 16px;
 }
 
+.app-section table {
+    width: 100%;
+    height: 100%;
+}
+
+.app-section table th,
+.app-section table td,
+.app-section table tr {
+    width: 100%;
+    height: 100%;
+}
+
 .app-section table th {
     font-weight: var(--base-text-weight-semibold, 600);
 }
