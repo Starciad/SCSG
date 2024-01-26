@@ -1,3 +1,9 @@
+<br/>
+
+<img align="center" src="./assets/graphics/banners/scsg_banner.webp" />
+
+<br/><br/>
+
 # Welcome to SCSG!
 The **Star Character Sheet Generator (SCSG)** is a free, simple, and fast utility designed to bring your characters to life in your stories, whether for books, RPGs, scripts, and more.
 
