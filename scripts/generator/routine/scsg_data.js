@@ -20,25 +20,28 @@ import { SkinToneCollection } from "../../collections/appearance/skin_tone_colle
 import { Random } from "../../math/random.js";
 import { FaceShapesCollection } from "../../collections/appearance/face_shapes_collection.js";
 import { IntensityCollection } from "../../collections/special/intensity_collection.js";
+import { BeardCollection } from "../../collections/appearance/beard_collection.js";
 //#endregion
 
 export function SCSGData(settings) {
-    // General
-    let char_general_sex = generalGenerator.getRandomSex(settings.general.sexType);
-    let char_general_fullname = generalGenerator.getRandomName(settings.general.nameStyleType, char_general_sex);
-    let char_general_age = generalGenerator.getRandomAge(settings.general.ageRangeType);
-    let char_general_occupation = generalGenerator.getRandomOccupation();
-    let char_general_residence_country = generalGenerator.getRandomCountry();
-    let char_general_birth_country = generalGenerator.getRandomCountry();
-    let char_general_civil_status = generalGenerator.getRandomCivilStatus();
-    let char_general_birth_date = generalGenerator.getRandomBirthDate(char_general_age);
+    //#region General
+    let char_general_personal_sex = generalGenerator.getRandomSex(settings.general.sexType);
+    let char_general_name_fullname = generalGenerator.getRandomName(settings.general.nameStyleType, char_general_personal_sex);
+    let char_general_personal_age = generalGenerator.getRandomAge(settings.general.ageRangeType);
+    let char_general_personal_birthday = generalGenerator.getRandomBirthday(char_general_personal_age);
+    let char_general_personal_civil_status = generalGenerator.getRandomCivilStatus();
+    let char_general_professional_occupation = generalGenerator.getRandomOccupation();
+    let char_general_location_residence_country = generalGenerator.getRandomCountry();
+    let char_general_location_birth_country = generalGenerator.getRandomCountry();
+    //#endregion
 
-    // Physical
-    let char_physical_height = physicalGenerator.getRandomHeight(char_general_age);
-    let char_physical_weight = physicalGenerator.getRandomWeight(char_general_age);
+    //#region Physical
+    let char_physical_characteristics_height = physicalGenerator.getRandomHeight(char_general_personal_age);
+    let char_physical_characteristics_weight = physicalGenerator.getRandomWeight(char_general_personal_age);
     let char_physical_blood_type = physicalGenerator.getRandomBloodType();
-    let char_physical_rh_factor = physicalGenerator.getRandomRhFactor();
+    let char_physical_blood_rh_factor = physicalGenerator.getRandomRhFactor();
     let char_physical_body_type = physicalGenerator.getRandomBodyType();
+    //#endregion
 
     // Appearance
     let char_appearance_skin_tone = appearanceGenerator.getRandomSkinTone();
@@ -47,40 +50,69 @@ export function SCSGData(settings) {
     let char_appearance_face_dimples = appearanceGenerator.getRandomDimplesIntensity();
     let char_appearance_face_moles = appearanceGenerator.getRandomMolesIntensity();
     let char_appearance_face_wrinkles = appearanceGenerator.getRandomWrinklesIntensity();
+    let char_appearance_beard_type = appearanceGenerator.getRandomBeardType();
 
     return {
         // General
         general: {
-            first_name: char_general_fullname.first_name,
-            surname: char_general_fullname.surname,
-            age: char_general_age,
-            occupation: char_general_occupation,
-            sex: char_general_sex.charAt(0).toUpperCase() + char_general_sex.slice(1),
-            residence_country: char_general_residence_country,
-            birth_country: char_general_birth_country,
-            civil_status: char_general_civil_status,
-            birth_date: char_general_birth_date,
+            name: {
+                first: char_general_name_fullname.first_name,
+                surname: char_general_name_fullname.surname,
+            },
+            
+            personal: {
+                age: char_general_personal_age,
+                birthday: char_general_personal_birthday,
+                sex: char_general_personal_sex.charAt(0).toUpperCase() + char_general_personal_sex.slice(1),
+                civil_status: char_general_personal_civil_status,
+            },
+            
+            professional: {
+                occupation: char_general_professional_occupation,
+            },
+            
+            location: {
+                residence_country: char_general_location_residence_country,
+                birth_country: char_general_location_birth_country,
+            },
         },
 
         // Physical
         physical: {
-            height: char_physical_height,
-            weight: char_physical_weight,
-            blood_type: char_physical_blood_type,
-            rh_factor: char_physical_rh_factor,
-            body_type: char_physical_body_type,
+            characteristics: {
+                height: char_physical_characteristics_height,
+                weight: char_physical_characteristics_weight,
+            },
+
+            blood: {
+                type: char_physical_blood_type,
+                rh_factor: char_physical_blood_rh_factor,
+            },
+
+            body: {
+                type: char_physical_body_type,
+            },
         },
 
         // Appearance
         appearance: {
-            skin_tone: char_appearance_skin_tone,
+            body: {
+                skin_tone: char_appearance_skin_tone,
+            },
 
             face: {
                 shape: char_appearance_face_shape,
-                freckles: char_appearance_face_freckles,
-                dimples: char_appearance_face_dimples,
-                moles: char_appearance_face_moles,
-                wrinkles: char_appearance_face_wrinkles,
+
+                characteristics: {
+                    freckles: char_appearance_face_freckles,
+                    dimples: char_appearance_face_dimples,
+                    moles: char_appearance_face_moles,
+                    wrinkles: char_appearance_face_wrinkles,
+                },
+            },
+
+            beard: {
+                type: char_appearance_beard_type,
             }
         },
     };
@@ -166,7 +198,7 @@ const generalGenerator = Object.freeze({
         return CivilStatusCollection.getRandomCivilStatus();
     },
 
-    getRandomBirthDate: function (currentAge) {
+    getRandomBirthday: function (currentAge) {
         const currentYear = new Date().getFullYear();
         const birthYear = currentYear - currentAge;
 
@@ -227,6 +259,10 @@ const appearanceGenerator = Object.freeze({
 
     getRandomWrinklesIntensity: function () {
         return IntensityCollection.getRandomIntensity();
+    },
+
+    getRandomBeardType: function () {
+        return BeardCollection.getRandomBeardType();
     },
 });
 //#endregion

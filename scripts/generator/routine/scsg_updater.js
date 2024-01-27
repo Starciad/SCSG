@@ -1,29 +1,47 @@
 export function SCSGUpdater(characterInfos) {
-    // General
-    document.querySelector("#cs-general-first-name").innerHTML = characterInfos.general.first_name;
-    document.querySelector("#cs-general-last-name").innerHTML = characterInfos.general.surname;
-    document.querySelector("#cs-general-age").innerHTML = characterInfos.general.age;
-    document.querySelector("#cs-general-occupation").innerHTML = characterInfos.general.occupation;
-    document.querySelector("#cs-general-sex").innerHTML = characterInfos.general.sex;
-    document.querySelector("#cs-general-residence-country").innerHTML = characterInfos.general.residence_country.name;
-    document.querySelector("#cs-general-birth-country").innerHTML = characterInfos.general.birth_country.name;
-    document.querySelector("#cs-general-civil-status").innerHTML = characterInfos.general.civil_status;
-    document.querySelector("#cs-general-birth-date").innerHTML = getFormattedDate(characterInfos.general.birth_date);
+    //#region General
+    // Name
+    document.querySelector("#cs-general-name-first").innerHTML = characterInfos.general.name.first;
+    document.querySelector("#cs-general-name-surname").innerHTML = characterInfos.general.name.surname;
 
-    // Physical
-    document.querySelector("#cs-physical-height").innerHTML = characterInfos.physical.height;
-    document.querySelector("#cs-physical-weight").innerHTML = characterInfos.physical.weight;
-    document.querySelector("#cs-physical-blood-type").innerHTML = characterInfos.physical.blood_type;
-    document.querySelector("#cs-physical-blood-rh-factor").innerHTML = characterInfos.physical.rh_factor;
-    document.querySelector("#cs-physical-body-type").innerHTML = characterInfos.physical.body_type;
+    // Personal
+    document.querySelector("#cs-general-personal-age").innerHTML = characterInfos.general.personal.age;
+    document.querySelector("#cs-general-personal-birthday").innerHTML = getFormattedDate(characterInfos.general.personal.birthday);
+    document.querySelector("#cs-general-personal-sex").innerHTML = characterInfos.general.personal.sex;
+    document.querySelector("#cs-general-personal-civil-status").innerHTML = characterInfos.general.personal.civil_status;
 
-    // Appearance
-    document.querySelector("#cs-appearance-skin-tone").innerHTML = characterInfos.appearance.skin_tone;
+    // Professional
+    document.querySelector("#cs-general-professional-occupation").innerHTML = characterInfos.general.professional.occupation;
+
+    // Location
+    document.querySelector("#cs-general-location-residence-country").innerHTML = characterInfos.general.location.residence_country.name;
+    document.querySelector("#cs-general-location-birth-country").innerHTML = characterInfos.general.location.birth_country.name;
+    //#endregion
+
+    //#region Physical
+    // Characteristics
+    document.querySelector("#cs-physical-characteristics-height").innerHTML = characterInfos.physical.characteristics.height;
+    document.querySelector("#cs-physical-characteristics-weight").innerHTML = characterInfos.physical.characteristics.weight;
+
+    // Blood
+    document.querySelector("#cs-physical-blood-type").innerHTML = characterInfos.physical.blood.type;
+    document.querySelector("#cs-physical-blood-rh-factor").innerHTML = characterInfos.physical.blood.rh_factor;
+
+    // Body
+    document.querySelector("#cs-physical-body-type").innerHTML = characterInfos.physical.body.type;
+    //#endregion
+
+    //#region Appearance
+    // Body
+    document.querySelector("#cs-appearance-body-skin-tone").innerHTML = characterInfos.appearance.body.skin_tone;
+    
+    // Face
     document.querySelector("#cs-appearance-face-shape").innerHTML = characterInfos.appearance.face.shape;
-    document.querySelector("#cs-appearance-face-freckles").innerHTML = characterInfos.appearance.face.freckles;
-    document.querySelector("#cs-appearance-face-dimples").innerHTML = characterInfos.appearance.face.dimples;
-    document.querySelector("#cs-appearance-face-moles").innerHTML = characterInfos.appearance.face.moles;
-    document.querySelector("#cs-appearance-face-wrinkles").innerHTML = characterInfos.appearance.face.wrinkles;
+    document.querySelector("#cs-appearance-face-characteristics-freckles").innerHTML = characterInfos.appearance.face.characteristics.freckles;
+    document.querySelector("#cs-appearance-face-characteristics-dimples").innerHTML = characterInfos.appearance.face.characteristics.dimples;
+    document.querySelector("#cs-appearance-face-characteristics-moles").innerHTML = characterInfos.appearance.face.characteristics.moles;
+    document.querySelector("#cs-appearance-face-characteristics-wrinkles").innerHTML = characterInfos.appearance.face.characteristics.wrinkles;
+    //#endregion
 }
 
 function getFormattedDate(date) {

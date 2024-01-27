@@ -56,6 +56,7 @@
     <!-- Appearance -->
     <script src="scripts/collections/appearance/skin_tone_collection.js" type="module"></script>
     <script src="scripts/collections/appearance/face_shapes_collection.js" type="module"></script>
+    <script src="scripts/collections/appearance/beard_collection.js" type="module"></script>
     <!-- #endregion -->
 
     <!-- Core -->
@@ -267,105 +268,72 @@
                                         <tbody>
                                             <tr>
                                                 <td>First Name</td>
-                                                <td id="cs-general-first-name">Empty</td>
+                                                <td id="cs-general-name-first">Empty</td>
                                             </tr>
                                             <tr>
                                                 <td>Surname</td>
-                                                <td id="cs-general-last-name">Empty</td>
+                                                <td id="cs-general-name-surname">Empty</td>
                                             </tr>
                                         </tbody>
                                     </table>
 
-                                    <!-- AGES -->
+                                    <!-- PERSONAL -->
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th colspan="2">AGES</th>
+                                                <th colspan="2">PERSONAL</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>Age</td>
-                                                <td id="cs-general-age">Empty</td>
+                                                <td id="cs-general-personal-age">Empty</td>
                                             </tr>
-                                        </tbody>
-                                    </table>
-
-                                    <!-- BIOLOGY -->
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th colspan="2">BIOLOGY</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Sex</td>
-                                                <td id="cs-general-sex">Empty</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-
-                                    <!-- DATES -->
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th colspan="2">DATES</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
                                             <tr>
                                                 <td>Birthday</td>
-                                                <td id="cs-general-birth-date">Empty</td>
+                                                <td id="cs-general-personal-birthday">Empty</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Sex</td>
+                                                <td id="cs-general-personal-sex">Empty</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Civil Status</td>
+                                                <td id="cs-general-personal-civil-status">Empty</td>
                                             </tr>
                                         </tbody>
                                     </table>
 
-                                    <!-- WORK -->
+                                    <!-- PROFESSIONAL -->
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th colspan="2">WORK</th>
+                                                <th colspan="2">PROFESSIONAL</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>Occupation</td>
-                                                <td id="cs-general-occupation">Empty</td>
+                                                <td id="cs-general-professional-occupation">Empty</td>
                                             </tr>
                                         </tbody>
                                     </table>
 
-                                    <!-- COUNTRIES -->
+                                    <!-- LOCATION -->
                                     <table>
                                         <thead>
                                             <tr>
-                                                <th colspan="2">COUNTRIES</th>
+                                                <th colspan="2">LOCATION</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <td>Country of Residence</td>
-                                                <td id="cs-general-residence-country">Empty</td>
+                                                <td id="cs-general-location-residence-country">Empty</td>
                                             </tr>
                                             <tr>
                                                 <td>Country of Birth</td>
-                                                <td id="cs-general-birth-country">Empty</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-
-                                    <!-- CIVILITY -->
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th colspan="2">CIVILITY</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Civil Status</td>
-                                                <td id="cs-general-civil-status">Empty</td>
+                                                <td id="cs-general-location-birth-country">Empty</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -392,11 +360,11 @@
                                         <tbody>
                                             <tr>
                                                 <td>Height (Centimeters)</td>
-                                                <td id="cs-physical-height">Empty</td>
+                                                <td id="cs-physical-characteristics-height">Empty</td>
                                             </tr>
                                             <tr>
                                                 <td>Weight (Kilograms)</td>
-                                                <td id="cs-physical-weight">Empty</td>
+                                                <td id="cs-physical-characteristics-weight">Empty</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -455,7 +423,7 @@
                                         <tbody>
                                             <tr>
                                                 <td>Skin Tone</td>
-                                                <td id="cs-appearance-skin-tone">Empty</td>
+                                                <td id="cs-appearance-body-skin-tone">Empty</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -477,42 +445,19 @@
                                             </tr>
                                             <tr>
                                                 <td>Freckles</td>
-                                                <td id="cs-appearance-face-freckles">Empty</td>
+                                                <td id="cs-appearance-face-characteristics-freckles">Empty</td>
                                             </tr>
                                             <tr>
                                                 <td>Dimples</td>
-                                                <td id="cs-appearance-face-dimples">Empty</td>
+                                                <td id="cs-appearance-face-characteristics-dimples">Empty</td>
                                             </tr>
                                             <tr>
                                                 <td>Moles</td>
-                                                <td id="cs-appearance-face-moles">Empty</td>
+                                                <td id="cs-appearance-face-characteristics-moles">Empty</td>
                                             </tr>
                                             <tr>
                                                 <td>Wrinkles</td>
-                                                <td id="cs-appearance-face-wrinkles">Empty</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-
-                                    <!-- BEARD -->
-                                    <table>
-                                        <thead>
-                                            <tr>
-                                                <th colspan="2">BEARD</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td>Color</td>
-                                                <td>Empty</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Format</td>
-                                                <td>Empty</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Type</td>
-                                                <td>Empty</td>
+                                                <td id="cs-appearance-face-characteristics-wrinkles">Empty</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -575,6 +520,21 @@
                                                 <th colspan="2">HAIR</th>
                                             </tr>
                                         </thead>
+                                    </table>
+ 
+                                    <!-- BEARD -->
+                                    <table id="cs-appearance-beard-table">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="2">BEARD</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Type</td>
+                                                <td id="cs-appearance-beard-type">Empty</td>
+                                            </tr>
+                                        </tbody>
                                     </table>
 
                                     <!-- WEAKNESSES -->
@@ -828,7 +788,7 @@
                                 </div>
                             </section>
 
-                            <!-- Skills and Abilities -->
+                            <!-- Skills -->
                             <section class="app-section" data-name="Skills" data-icon="shield">
                                 <h1>Skills</h1>
 
