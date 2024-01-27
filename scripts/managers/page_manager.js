@@ -1,3 +1,5 @@
+import { responsive_mode_width } from "../constants/screen_constants.js";
+
 let categories = [];
 let sections = [];
 let buttons = [];
@@ -6,7 +8,9 @@ let currentSectionIndex;
 let currentButtonIndex;
 
 export function buildDynamicAppMenu() {
+    let pageAside = document.querySelector(".page-aside");
     let appMenu = document.querySelector(".app-menu");
+
     let tempSectionIndex = 0;
 
     document.querySelectorAll(".app-section-category").forEach(category => {
@@ -16,12 +20,16 @@ export function buildDynamicAppMenu() {
 
         let sectionCategory = document.createElement("div");
         let sectionCategoryTitle = document.createElement("div");
+        let buttonCollection = document.createElement("div");
 
         sectionCategory.classList.add("app-menu-group");
         sectionCategoryTitle.classList.add("app-menu-group-title");
+        buttonCollection.classList.add("app-menu-btn-collection");
+
         sectionCategoryTitle.innerHTML = categoryName;
 
         sectionCategory.appendChild(sectionCategoryTitle);
+        sectionCategory.appendChild(buttonCollection);
         appMenu.appendChild(sectionCategory);
 
         categories.push(sectionCategory);
@@ -53,8 +61,8 @@ export function buildDynamicAppMenu() {
             sectionButton.appendChild(sectionButtonAvatar);
             sectionButton.appendChild(sectionButtonDecorator);
 
-            sectionCategory.appendChild(sectionButton);
-
+            buttonCollection.appendChild(sectionButton);
+            
             let targetSection = { name: sectionName, index: tempSectionIndex, element: section };
             sections.push(targetSection);
             buttons.push(sectionButton);
@@ -63,6 +71,10 @@ export function buildDynamicAppMenu() {
             sectionButton.addEventListener('click', () => {
                 selectButton(sectionButton);
                 showSection(targetSection);
+
+                if (window.screen.width < responsive_mode_width) {
+                    pageAside.classList.add('hidden');
+                }
             });
 
             tempSectionIndex++;

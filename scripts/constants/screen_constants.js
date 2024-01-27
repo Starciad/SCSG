@@ -1,0 +1,1 @@
+export const responsive_mode_width = 801;

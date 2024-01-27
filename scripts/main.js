@@ -1,5 +1,6 @@
 import { buildControlPanel, buildDynamicAppMenu } from "./managers/page_manager.js";
 import { SCSGInitialize } from "./generator/scsg_main.js";
+import { responsive_mode_width } from "./constants/screen_constants.js";
 
 // ==================================== //
 // Initializers
@@ -20,7 +21,7 @@ function InitializeElements() {
     let pageAside = document.querySelector(".page-aside");
 
     // Elmenets
-    if (window.screen.width <= 800) {
+    if (window.screen.width <= responsive_mode_width) {
         pageAside.classList.add('hidden');
     }
 
