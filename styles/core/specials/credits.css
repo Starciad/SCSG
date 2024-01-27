@@ -9,7 +9,7 @@
     justify-content: center;
 
     border-radius: 12px;
-    
+
     background-color: #2b2d31;
 }
 
@@ -53,6 +53,9 @@
 .ce-avatar {
     width: 100%;
     height: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .ce-avatar-border {
@@ -63,27 +66,21 @@
 }
 
 .ce-avatar-starciad {
-    background-image: url("../../assets/graphics/avatars/starciad_avatar.webp");
-    background-repeat: no-repeat;
+    background-image: url("../../../assets/graphics/avatars/starciad_avatar.webp");
     background-size: cover;
-    background-position: center;
 }
 
 .ce-avatar-insanya {
-    background-image: url("../../assets/graphics/avatars/insanya_avatar.webp");
-    background-repeat: no-repeat;
+    background-image: url("../../../assets/graphics/avatars/insanya_avatar.webp");
     background-size: cover;
-    background-position: center;
 }
 
 .ce-avatar-focsi {
     width: 100px;
     height: 100px;
 
-    background-image: url("../../assets/graphics/avatars/focsi_avatar.webp");
-    background-repeat: no-repeat;
-    background-size:contain;
-    background-position: center;
+    background-image: url("../../../assets/graphics/avatars/focsi_avatar.webp");
+    background-size: contain;
 
     border-radius: 100%;
 
@@ -91,8 +88,6 @@
 }
 
 .ce-avatar-igorup {
-    background-image: url("../../assets/graphics/avatars/igor_up.webp");
-    background-repeat: no-repeat;
+    background-image: url("../../../assets/graphics/avatars/igor_up.webp");
     background-size: cover;
-    background-position: center;
 }
