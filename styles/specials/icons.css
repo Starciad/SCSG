@@ -116,3 +116,18 @@
     background-position-x: -32px;
     background-position-y: -128px;
 }
+
+.icon-menu {
+    background-position-x: -64px;
+    background-position-y: -128px;
+}
+
+.icon-left-arrow {
+    background-position-x: -96px;
+    background-position-y: -128px;
+}
+
+.icon-right-arrow {
+    background-position-x: -128px;
+    background-position-y: -128px;
+}
