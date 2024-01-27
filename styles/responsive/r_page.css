@@ -1,34 +1,48 @@
-/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (max-width:320px) {
+
+}
+
+@media (max-width:480px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
 @media (max-width:800px) {
+    .page-header {
+        height: 12%;
+    }
+
     .page-screen {
         justify-content: center;
         align-items: center;
     }
 
-    .app-menu-group-title {
-        font-size: 24px;
-    }
-
-    .app-menu-btn {
-        text-align: center;
-
-        height: 96px;
-        font-size: 24px;
-    }
-
     .page-aside {
-        position: absolute;
+        position: fixed;
 
         flex-grow: 2;
 
         width: 95%;
-        height: 70%;
+        height: 75%;
 
-        border-color: #1e1f22;
+        border-color: #141517;
         border-style: solid;
         border-width: 4px;
         border-radius: 16px;
 
         padding: 12px;
+    }
+
+    .page-main {
+        height: 100%;
+    }
+}
+
+@media (max-width:900px) {
+    .page-footer {
+        display: none;
     }
 }

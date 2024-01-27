@@ -1,0 +1,78 @@
+@media (max-width:320px) {
+
+}
+
+@media (max-width:480px) {
+
+}
+
+@media (max-width:600px) {
+
+}
+
+@media (max-width:800px) {
+    /* ========== */
+    /* MENU GROUP */
+    .app-menu-group {
+        display: flex;
+    
+        padding: 8px;
+    
+        height: auto;
+        width: 100%;
+    
+        margin-top: 16px;
+        margin-bottom: 32px;
+    
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 8px;
+        border-color: #1e1f22;
+    }
+    
+    .app-menu-group-title {
+        font-size: 24px;
+    }
+
+    /* ========== */
+    /* BUTTON */
+    .app-menu-btn-collection {
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        width: 100%;
+        height: 100%;
+
+        padding: 32px;
+
+        gap: 16px;
+    }
+
+    .app-menu-btn {
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        width: 96px;
+        height: 96px;
+
+        font-size: 24px;
+    }
+
+    .app-menu-btn-decorator {
+        margin: 0px;
+    }
+
+    .app-menu-btn-decorator span {
+        font-size: 12px;
+        text-align: center;
+    }
+}
+
+@media (max-width:900px) {
+
+}
