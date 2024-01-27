@@ -1,12 +1,118 @@
 /* BASE */
 .icon {
+    background-image: url("../../assets/graphics/icons/website_icons.webp");
+
     width: 32px;
     height: 32px;
-
-    background-size: cover;
 }
 
 /* ICONS */
 .icon-home {
-    background-image: url("../../assets/graphics/icons/website_icons.webp");
+    background-position-x: 0px;
+    background-position-y: 0px;
+}
+
+.icon-info {
+    background-position-x: -32px;
+    background-position-y: 0px;
+}
+
+.icon-repository {
+    background-position-x: -64px;
+    background-position-y: 0px;
+}
+
+.icon-heart {
+    background-position-x: -96px;
+    background-position-y: 0px;
+}
+
+.icon-gear {
+    background-position-x: -128px;
+    background-position-y: 0px;
+}
+
+.icon-magnifying-glass {
+    background-position-x: 0px;
+    background-position-y: -32px;
+}
+
+.icon-halteres {
+    background-position-x: -32px;
+    background-position-y: -32px;
+}
+
+.icon-art-pallet {
+    background-position-x: -64px;
+    background-position-y: -32px;
+}
+
+.icon-shirt {
+    background-position-x: -96px;
+    background-position-y: -32px;
+}
+
+.icon-backpack {
+    background-position-x: -128px;
+    background-position-y: -32px;
+}
+
+.icon-theatrical-mask {
+    background-position-x: 0px;
+    background-position-y: -64px;
+}
+
+.icon-capelo {
+    background-position-x: -32px;
+    background-position-y: -64px;
+}
+
+.icon-clock {
+    background-position-x: -64px;
+    background-position-y: -64px;
+}
+
+.icon-family {
+    background-position-x: -96px;
+    background-position-y: -64px;
+}
+
+.icon-star {
+    background-position-x: -128px;
+    background-position-y: -64px;
+}
+
+.icon-shield {
+    background-position-x: 0px;
+    background-position-y: -96px;
+}
+
+.icon-tied-scroll {
+    background-position-x: -32px;
+    background-position-y: -96px;
+}
+
+.icon-box {
+    background-position-x: -64px;
+    background-position-y: -96px;
+}
+
+.icon-profile {
+    background-position-x: -96px;
+    background-position-y: -96px;
+}
+
+.icon-chain {
+    background-position-x: -128px;
+    background-position-y: -96px;
+}
+
+.icon-clipboard {
+    background-position-x: -0px;
+    background-position-y: -128px;
+}
+
+.icon-export {
+    background-position-x: -32px;
+    background-position-y: -128px;
 }
