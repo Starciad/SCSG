@@ -6,6 +6,37 @@
     height: 32px;
 }
 
+.icon-btn {
+    display: inline-block;
+
+    width: 32px;
+    height: 32px;
+
+    padding: 8px;
+    margin: 4px;
+    
+    cursor: pointer;
+
+    text-decoration: none;
+
+    border: none;
+    
+    background-color: transparent;
+}
+
+.icon-btn:hover {
+    opacity: 0.7;
+}
+
+.icon-btn:active {
+    transform: translateY(1px);
+}
+
+.icon-btn:disabled {
+    opacity: 0.5;
+}
+
+
 /* ICONS */
 .icon-home {
     background-position-x: 0px;
