@@ -52,6 +52,10 @@
     background-color: #2b2d31;
 
     z-index: 9999;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
 }
 
 .page-main {

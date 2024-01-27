@@ -19,6 +19,11 @@
     font-weight: bold;
 
     text-decoration: none;
+
+    /* Disable text selection. */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .btn:hover {

@@ -54,6 +54,11 @@ select {
     border-radius: 8px;
 
     background-color: #1e1f22;
+
+    /* Disable text selection. */
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 option {
