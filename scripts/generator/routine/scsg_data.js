@@ -31,6 +31,7 @@ import { Random } from "../../math/random.js";
 import { BelovedBelongingsCollection } from "../../collections/background/beloved_belongings_collection.js";
 import { CharacteristicsCollection } from "../../collections/background/characteristics_collection.js";
 import { PhobiasCollection } from "../../collections/background/phobias_collection.js";
+import { ManiasCollection } from "../../collections/background/manias_collection.js";
 
 //#endregion
 
@@ -71,6 +72,7 @@ export function SCSGData(settings) {
     let char_background_dear_belongings = backgroundGenerator.getRandomDarlingBelonging();
     let char_background_dear_characteristic = backgroundGenerator.getRandomCharacteristic();
     let char_background_dear_phobias = backgroundGenerator.getRandomPhobias();
+    let char_background_dear_manias = backgroundGenerator.getRandomManias();
     //#endregion
 
     return {
@@ -162,6 +164,7 @@ export function SCSGData(settings) {
             },
 
             phobias: char_background_dear_phobias,
+            manias: char_background_dear_manias,
         },
     };
 }
@@ -339,36 +342,35 @@ const backgroundGenerator = Object.freeze({
     },
 
     getRandomPhobias: function () {
-        let phobias = [];
-        let phobiasAndIntensity = [];
+        return this.getRandomItems(PhobiasCollection.phobias, Random.getRandomNumber(0, 5));
+    },
+    
+    getRandomManias: function () {
+        return this.getRandomItems(ManiasCollection.manias, Random.getRandomNumber(0, 5));
+    },
 
-        let count = Random.getRandomNumber(0, 5);
-
-        for (let i = 0; i < count; i++) {
-            let phobiaSelected = PhobiasCollection.getRandomPhobia();
-
-            if (phobias.includes(phobiaSelected)) {
-                continue;
-            }
-
-            phobias.push(phobiaSelected);
+    // Utilities
+    getRandomItems: function(collection, count) {
+        let items = new Set();
+    
+        while (items.size < count) {
+            let selectedItem = Random.getRandomArrayElement(collection);
+            items.add(selectedItem);
         }
-
-        phobias.forEach(phobia => {
+    
+        return Array.from(items).map(item => {
             let intensitySelected;
-
+    
             do {
                 intensitySelected = IntensityCollection.getRandomIntensity();
             } while (intensitySelected === "None");
-
-            phobiasAndIntensity.push({ 
-                name: phobia.name,
-                description: phobia.description,
+    
+            return {
+                name: item.name,
+                description: item.description,
                 intensity: intensitySelected
-            });
+            };
         });
-
-        return phobiasAndIntensity;
-    },
+    }
 });
 //#endregion

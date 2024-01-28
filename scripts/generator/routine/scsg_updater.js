@@ -34,6 +34,7 @@ let cs_background_important_location;
 let cs_background_dear_belongings;
 let cs_background_characteristic;
 let cs_background_phobias_collection;
+let cs_background_manias_collection;
 
 // ======================================== //
 // Main
@@ -74,6 +75,7 @@ export function SCSGQueryElements() {
     cs_background_dear_belongings = document.querySelector("#cs-background-dear-belongings");
     cs_background_characteristic = document.querySelector("#cs-background-characteristic");
     cs_background_phobias_collection = document.querySelector("#cs-background-phobias-collection");
+    cs_background_manias_collection = document.querySelector("#cs-background-manias-collection");
 }
 
 export function SCSGUpdater(characterInfos) {
@@ -156,35 +158,10 @@ function updateBackground(characterInfos) {
     cs_background_characteristic.innerHTML = characterInfos.background.characteristics.target;
 
     // Phobias
-    cs_background_phobias_collection.replaceChildren();
+    createCollectionItems(characterInfos.background.phobias, cs_background_phobias_collection);
 
-    if (characterInfos.background.phobias.length > 0) {
-        characterInfos.background.phobias.forEach(phobia => {
-            let phobia_item = document.createElement("div");
-            let title = document.createElement("span");
-            let description = document.createElement("span");
-            
-            phobia_item.classList.add("app-item-square");
-            title.classList.add("app-item-square-title");
-            description.classList.add("app-item-square-description");
-            
-            phobia_item.appendChild(title);
-            phobia_item.appendChild(description);
-    
-            title.innerHTML = `${phobia.name} (${phobia.intensity})`;
-            description.innerHTML = phobia.description;
-    
-            cs_background_phobias_collection.appendChild(phobia_item);
-        });
-    }
-    else {
-        let empty_item = document.createElement("div");
-        empty_item.classList.add("app-item-square");
-        
-        empty_item.innerHTML = "The character does not have phobias.";
-        
-        cs_background_phobias_collection.appendChild(empty_item);
-    }
+    // Manias
+    createCollectionItems(characterInfos.background.manias, cs_background_manias_collection);
 }
 
 // ================================ //
@@ -194,4 +171,35 @@ function getFormattedDate(date) {
     return date.day.toString().padStart(2, '0') + "/" +
         date.month.toString().padStart(2, '0') + "/" +
         date.year + " (day/month/year)";
+}
+
+function createCollectionItems(collection, container) {
+    container.replaceChildren();
+
+    if (collection.length > 0) {
+        collection.forEach(item => {
+            let itemElement = document.createElement("div");
+            let title = document.createElement("span");
+            let description = document.createElement("span");
+
+            itemElement.classList.add("app-item-square");
+            title.classList.add("app-item-square-title");
+            description.classList.add("app-item-square-description");
+
+            itemElement.appendChild(title);
+            itemElement.appendChild(description);
+
+            title.innerHTML = `${item.name} (${item.intensity})`;
+            description.innerHTML = item.description;
+
+            container.appendChild(itemElement);
+        });
+    } else {
+        let emptyItem = document.createElement("div");
+        emptyItem.classList.add("app-item-square");
+
+        emptyItem.innerHTML = "There are no items in the respective collection.";
+
+        container.appendChild(emptyItem);
+    }
 }
