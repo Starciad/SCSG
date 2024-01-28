@@ -1,5 +1,11 @@
 export function SCSGUpdater(characterInfos) {
-    //#region General
+    updateGeneral(characterInfos);
+    updatePhysical(characterInfos);
+    updateAppearance(characterInfos);
+    updateBackground(characterInfos);
+}
+
+function updateGeneral(characterInfos) {
     // Name
     document.querySelector("#cs-general-name-first").innerHTML = characterInfos.general.name.first;
     document.querySelector("#cs-general-name-surname").innerHTML = characterInfos.general.name.surname;
@@ -16,9 +22,9 @@ export function SCSGUpdater(characterInfos) {
     // Location
     document.querySelector("#cs-general-location-residence-country").innerHTML = characterInfos.general.location.residence_country.name;
     document.querySelector("#cs-general-location-birth-country").innerHTML = characterInfos.general.location.birth_country.name;
-    //#endregion
+}
 
-    //#region Physical
+function updatePhysical(characterInfos) {
     // Characteristics
     document.querySelector("#cs-physical-characteristics-height").innerHTML = characterInfos.physical.characteristics.height;
     document.querySelector("#cs-physical-characteristics-weight").innerHTML = characterInfos.physical.characteristics.weight;
@@ -29,20 +35,36 @@ export function SCSGUpdater(characterInfos) {
 
     // Body
     document.querySelector("#cs-physical-body-type").innerHTML = characterInfos.physical.body.type;
-    //#endregion
+}
 
-    //#region Appearance
+function updateAppearance(characterInfos) {
     // Body
     document.querySelector("#cs-appearance-body-skin-tone").innerHTML = characterInfos.appearance.body.skin_tone;
-    
+
     // Face
     document.querySelector("#cs-appearance-face-shape").innerHTML = characterInfos.appearance.face.shape;
     document.querySelector("#cs-appearance-face-characteristics-freckles").innerHTML = characterInfos.appearance.face.characteristics.freckles;
     document.querySelector("#cs-appearance-face-characteristics-dimples").innerHTML = characterInfos.appearance.face.characteristics.dimples;
     document.querySelector("#cs-appearance-face-characteristics-moles").innerHTML = characterInfos.appearance.face.characteristics.moles;
     document.querySelector("#cs-appearance-face-characteristics-wrinkles").innerHTML = characterInfos.appearance.face.characteristics.wrinkles;
-    //#endregion
 }
+
+function updateBackground(characterInfos) {
+    // Ideologies and Beliefs
+    document.querySelector("#cs-background-ideologies-beliefs-description").innerHTML = characterInfos.background.ideologies_and_beliefs.description;
+    let examplesList = document.querySelector("#cs-background-ideologies-beliefs-examples");
+    examplesList.innerHTML = "";
+
+    characterInfos.background.ideologies_and_beliefs.examples.forEach(example => {
+        let listElement = document.createElement("li");
+        listElement.innerHTML = example;
+        
+        examplesList.appendChild(listElement);
+    });
+}
+
+// ================================ //
+// Utilities
 
 function getFormattedDate(date) {
     return date.day.toString().padStart(2, '0') + "/" +

@@ -21,6 +21,7 @@ import { Random } from "../../math/random.js";
 import { FaceShapesCollection } from "../../collections/appearance/face_shapes_collection.js";
 import { IntensityCollection } from "../../collections/special/intensity_collection.js";
 import { BeardCollection } from "../../collections/appearance/beard_collection.js";
+import { IdeologiesAndBeliefsCollection } from "../../collections/background/ideologies_and_beliefs_collection.js";
 //#endregion
 
 export function SCSGData(settings) {
@@ -43,7 +44,7 @@ export function SCSGData(settings) {
     let char_physical_body_type = physicalGenerator.getRandomBodyType();
     //#endregion
 
-    // Appearance
+    //#region Appearance
     let char_appearance_skin_tone = appearanceGenerator.getRandomSkinTone();
     let char_appearance_face_shape = appearanceGenerator.getRandomFaceShape();
     let char_appearance_face_freckles = appearanceGenerator.getRandomFrecklesIntensity();
@@ -51,6 +52,11 @@ export function SCSGData(settings) {
     let char_appearance_face_moles = appearanceGenerator.getRandomMolesIntensity();
     let char_appearance_face_wrinkles = appearanceGenerator.getRandomWrinklesIntensity();
     let char_appearance_beard_type = appearanceGenerator.getRandomBeardType();
+    //#endregion
+
+    //#region Background
+    let char_background_ideologies_and_beliefs = backgroundGenerator.getRandomIdeologyAndBelief();
+    //#endregion
 
     return {
         // General
@@ -114,6 +120,14 @@ export function SCSGData(settings) {
             beard: {
                 type: char_appearance_beard_type,
             }
+        },
+
+        // Background
+        background: {
+            ideologies_and_beliefs: {
+                description: char_background_ideologies_and_beliefs.description,
+                examples: char_background_ideologies_and_beliefs.examples,
+            },
         },
     };
 }
@@ -264,5 +278,11 @@ const appearanceGenerator = Object.freeze({
     getRandomBeardType: function () {
         return BeardCollection.getRandomBeardType();
     },
+});
+
+const backgroundGenerator = Object.freeze({
+    getRandomIdeologyAndBelief: function () {
+        return IdeologiesAndBeliefsCollection.getRandomIdeologyAndBelief();
+    }
 });
 //#endregion
