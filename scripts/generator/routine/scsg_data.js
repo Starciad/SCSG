@@ -28,6 +28,7 @@ import { IntensityCollection } from "../../collections/special/intensity_collect
 
 // Math
 import { Random } from "../../math/random.js";
+import { BelovedBelongingsCollection } from "../../collections/background/beloved_belongings_collection.js";
 
 //#endregion
 
@@ -65,6 +66,7 @@ export function SCSGData(settings) {
     let char_background_ideologies_and_beliefs = backgroundGenerator.getRandomIdeologyAndBelief();
     let char_background_significant_people = backgroundGenerator.getRandomSignificantPeople();
     let char_background_important_location = backgroundGenerator.getRandomImportantLocation();
+    let char_background_dear_belongings = backgroundGenerator.getRandomDarlingBelonging();
     //#endregion
 
     return {
@@ -146,6 +148,10 @@ export function SCSGData(settings) {
             important_locations: {
                 target: char_background_important_location
             },
+
+            dear_belongings: {
+                target: char_background_dear_belongings,
+            }
         },
     };
 }
@@ -312,6 +318,10 @@ const backgroundGenerator = Object.freeze({
 
     getRandomImportantLocation: function () {
         return ImportantLocationsCollection.getRandomImportantLocation();
+    },
+
+    getRandomDarlingBelonging: function () {
+        return BelovedBelongingsCollection.getRandomDarlingBelonging();
     },
 });
 //#endregion

@@ -68,6 +68,9 @@ function updateBackground(characterInfos) {
     
     // Important Locations
     document.querySelector("#cs-background-important-location").innerHTML = characterInfos.background.important_locations.target;
+    
+    // Dear Belongings
+    document.querySelector("#cs-background-dear-belongings").innerHTML = characterInfos.background.dear_belongings.target;
 }
 
 // ================================ //
