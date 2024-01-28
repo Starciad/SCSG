@@ -29,6 +29,7 @@ import { IntensityCollection } from "../../collections/special/intensity_collect
 // Math
 import { Random } from "../../math/random.js";
 import { BelovedBelongingsCollection } from "../../collections/background/beloved_belongings_collection.js";
+import { CharacteristicsCollection } from "../../collections/background/characteristics_collection.js";
 
 //#endregion
 
@@ -67,6 +68,7 @@ export function SCSGData(settings) {
     let char_background_significant_people = backgroundGenerator.getRandomSignificantPeople();
     let char_background_important_location = backgroundGenerator.getRandomImportantLocation();
     let char_background_dear_belongings = backgroundGenerator.getRandomDarlingBelonging();
+    let char_background_dear_characteristic = backgroundGenerator.getRandomCharacteristic();
     //#endregion
 
     return {
@@ -150,7 +152,11 @@ export function SCSGData(settings) {
             },
 
             dear_belongings: {
-                target: char_background_dear_belongings,
+                target: char_background_dear_belongings
+            },
+
+            characteristics: {
+                target: char_background_dear_characteristic
             }
         },
     };
@@ -322,6 +328,10 @@ const backgroundGenerator = Object.freeze({
 
     getRandomDarlingBelonging: function () {
         return BelovedBelongingsCollection.getRandomDarlingBelonging();
+    },
+
+    getRandomCharacteristic: function () {
+        return CharacteristicsCollection.getRandomCharacteristic();
     },
 });
 //#endregion

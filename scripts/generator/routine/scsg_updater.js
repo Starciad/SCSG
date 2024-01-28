@@ -71,6 +71,9 @@ function updateBackground(characterInfos) {
     
     // Dear Belongings
     document.querySelector("#cs-background-dear-belongings").innerHTML = characterInfos.background.dear_belongings.target;
+    
+    // Characteristics
+    document.querySelector("#cs-background-characteristic").innerHTML = characterInfos.background.characteristics.target;
 }
 
 // ================================ //
