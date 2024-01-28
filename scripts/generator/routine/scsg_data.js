@@ -15,14 +15,20 @@ import { BodyTypeCollection } from "../../collections/physical/body_type_collect
 
 // Appearance
 import { SkinToneCollection } from "../../collections/appearance/skin_tone_collection.js";
+import { FaceShapesCollection } from "../../collections/appearance/face_shapes_collection.js";
+import { BeardCollection } from "../../collections/appearance/beard_collection.js";
+
+// Background
+import { IdeologiesAndBeliefsCollection } from "../../collections/background/ideologies_and_beliefs_collection.js";
+import { SignificantPeopleCollection } from "../../collections/background/significant_people_collection.js";
+import { ImportantLocationsCollection } from "../../collections/background/important_locations_collection.js";
+
+// Special
+import { IntensityCollection } from "../../collections/special/intensity_collection.js";
 
 // Math
 import { Random } from "../../math/random.js";
-import { FaceShapesCollection } from "../../collections/appearance/face_shapes_collection.js";
-import { IntensityCollection } from "../../collections/special/intensity_collection.js";
-import { BeardCollection } from "../../collections/appearance/beard_collection.js";
-import { IdeologiesAndBeliefsCollection } from "../../collections/background/ideologies_and_beliefs_collection.js";
-import { SignificantPeopleCollection } from "../../collections/background/significant_people_collection.js";
+
 //#endregion
 
 export function SCSGData(settings) {
@@ -58,6 +64,7 @@ export function SCSGData(settings) {
     //#region Background
     let char_background_ideologies_and_beliefs = backgroundGenerator.getRandomIdeologyAndBelief();
     let char_background_significant_people = backgroundGenerator.getRandomSignificantPeople();
+    let char_background_important_location = backgroundGenerator.getRandomImportantLocation();
     //#endregion
 
     return {
@@ -134,7 +141,11 @@ export function SCSGData(settings) {
             significant_people: {
                 target: char_background_significant_people.target,
                 reason: char_background_significant_people.reason
-            }
+            },
+
+            important_locations: {
+                target: char_background_important_location
+            },
         },
     };
 }
@@ -297,6 +308,10 @@ const backgroundGenerator = Object.freeze({
             target: SignificantPeopleCollection.getRandomSignificantPeople(),
             reason: SignificantPeopleCollection.getRandomSignificantPeopleReason(),
         };
+    },
+
+    getRandomImportantLocation: function () {
+        return ImportantLocationsCollection.getRandomImportantLocation();
     },
 });
 //#endregion

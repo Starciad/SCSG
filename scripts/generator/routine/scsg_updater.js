@@ -65,6 +65,9 @@ function updateBackground(characterInfos) {
     // Significant People
     document.querySelector("#cs-background-significant-people-target").innerHTML = characterInfos.background.significant_people.target;
     document.querySelector("#cs-background-significant-people-reason").innerHTML = characterInfos.background.significant_people.reason;
+    
+    // Important Locations
+    document.querySelector("#cs-background-important-location").innerHTML = characterInfos.background.important_locations.target;
 }
 
 // ================================ //
