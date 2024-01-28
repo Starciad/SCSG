@@ -1,3 +1,79 @@
+// Vars
+// General
+let cs_general_name_first;
+let cs_general_name_surname;
+let cs_general_personal_age;
+let cs_general_personal_birthday;
+let cs_general_personal_sex;
+let cs_general_personal_civil_status;
+let cs_general_professional_occupation;
+let cs_general_location_residence_country;
+let cs_general_location_birth_country;
+
+// Physical
+let cs_physical_characteristics_height;
+let cs_physical_characteristics_weight;
+let cs_physical_blood_type;
+let cs_physical_blood_rh_factor;
+let cs_physical_body_type;
+
+// Appearance
+let cs_appearance_body_skin_tone;
+let cs_appearance_face_shape;
+let cs_appearance_face_characteristics_freckles;
+let cs_appearance_face_characteristics_dimples;
+let cs_appearance_face_characteristics_moles;
+let cs_appearance_face_characteristics_wrinkles;
+
+// Background
+let cs_background_ideologies_beliefs_description;
+let cs_background_ideologies_beliefs_examples;
+let cs_background_significant_people_target;
+let cs_background_significant_people_reason;
+let cs_background_important_location;
+let cs_background_dear_belongings;
+let cs_background_characteristic;
+
+// ======================================== //
+// Main
+
+export function SCSGQueryElements() {
+    // General
+    cs_general_name_first = document.querySelector("#cs-general-name-first");
+    cs_general_name_surname = document.querySelector("#cs-general-name-surname");
+    cs_general_personal_age = document.querySelector("#cs-general-personal-age");
+    cs_general_personal_birthday = document.querySelector("#cs-general-personal-birthday");
+    cs_general_personal_sex = document.querySelector("#cs-general-personal-sex");
+    cs_general_personal_civil_status = document.querySelector("#cs-general-personal-civil-status");
+    cs_general_professional_occupation = document.querySelector("#cs-general-professional-occupation");
+    cs_general_location_residence_country = document.querySelector("#cs-general-location-residence-country");
+    cs_general_location_birth_country = document.querySelector("#cs-general-location-birth-country");
+
+    // Physical
+    cs_physical_characteristics_height = document.querySelector("#cs-physical-characteristics-height");
+    cs_physical_characteristics_weight = document.querySelector("#cs-physical-characteristics-weight");
+    cs_physical_blood_type = document.querySelector("#cs-physical-blood-type");
+    cs_physical_blood_rh_factor = document.querySelector("#cs-physical-blood-rh-factor");
+    cs_physical_body_type = document.querySelector("#cs-physical-body-type");
+
+    // Appearance
+    cs_appearance_body_skin_tone = document.querySelector("#cs-appearance-body-skin-tone");
+    cs_appearance_face_shape = document.querySelector("#cs-appearance-face-shape");
+    cs_appearance_face_characteristics_freckles = document.querySelector("#cs-appearance-face-characteristics-freckles");
+    cs_appearance_face_characteristics_dimples = document.querySelector("#cs-appearance-face-characteristics-dimples");
+    cs_appearance_face_characteristics_moles = document.querySelector("#cs-appearance-face-characteristics-moles");
+    cs_appearance_face_characteristics_wrinkles = document.querySelector("#cs-appearance-face-characteristics-wrinkles");
+
+    // Background
+    cs_background_ideologies_beliefs_description = document.querySelector("#cs-background-ideologies-beliefs-description");
+    cs_background_ideologies_beliefs_examples = document.querySelector("#cs-background-ideologies-beliefs-examples");
+    cs_background_significant_people_target = document.querySelector("#cs-background-significant-people-target");
+    cs_background_significant_people_reason = document.querySelector("#cs-background-significant-people-reason");
+    cs_background_important_location = document.querySelector("#cs-background-important-location");
+    cs_background_dear_belongings = document.querySelector("#cs-background-dear-belongings");
+    cs_background_characteristic = document.querySelector("#cs-background-characteristic");
+}
+
 export function SCSGUpdater(characterInfos) {
     updateGeneral(characterInfos);
     updatePhysical(characterInfos);
@@ -5,75 +81,77 @@ export function SCSGUpdater(characterInfos) {
     updateBackground(characterInfos);
 }
 
+// ======================================== //
+// Updates
+
 function updateGeneral(characterInfos) {
     // Name
-    document.querySelector("#cs-general-name-first").innerHTML = characterInfos.general.name.first;
-    document.querySelector("#cs-general-name-surname").innerHTML = characterInfos.general.name.surname;
+    cs_general_name_first.innerHTML = characterInfos.general.name.first;
+    cs_general_name_surname.innerHTML = characterInfos.general.name.surname;
 
     // Personal
-    document.querySelector("#cs-general-personal-age").innerHTML = characterInfos.general.personal.age;
-    document.querySelector("#cs-general-personal-birthday").innerHTML = getFormattedDate(characterInfos.general.personal.birthday);
-    document.querySelector("#cs-general-personal-sex").innerHTML = characterInfos.general.personal.sex;
-    document.querySelector("#cs-general-personal-civil-status").innerHTML = characterInfos.general.personal.civil_status;
+    cs_general_personal_age.innerHTML = characterInfos.general.personal.age;
+    cs_general_personal_birthday.innerHTML = getFormattedDate(characterInfos.general.personal.birthday);
+    cs_general_personal_sex.innerHTML = characterInfos.general.personal.sex;
+    cs_general_personal_civil_status.innerHTML = characterInfos.general.personal.civil_status;
 
     // Professional
-    document.querySelector("#cs-general-professional-occupation").innerHTML = characterInfos.general.professional.occupation;
+    cs_general_professional_occupation.innerHTML = characterInfos.general.professional.occupation;
 
     // Location
-    document.querySelector("#cs-general-location-residence-country").innerHTML = characterInfos.general.location.residence_country.name;
-    document.querySelector("#cs-general-location-birth-country").innerHTML = characterInfos.general.location.birth_country.name;
+    cs_general_location_residence_country.innerHTML = characterInfos.general.location.residence_country.name;
+    cs_general_location_birth_country.innerHTML = characterInfos.general.location.birth_country.name;
 }
 
 function updatePhysical(characterInfos) {
     // Characteristics
-    document.querySelector("#cs-physical-characteristics-height").innerHTML = characterInfos.physical.characteristics.height;
-    document.querySelector("#cs-physical-characteristics-weight").innerHTML = characterInfos.physical.characteristics.weight;
+    cs_physical_characteristics_height.innerHTML = characterInfos.physical.characteristics.height;
+    cs_physical_characteristics_weight.innerHTML = characterInfos.physical.characteristics.weight;
 
     // Blood
-    document.querySelector("#cs-physical-blood-type").innerHTML = characterInfos.physical.blood.type;
-    document.querySelector("#cs-physical-blood-rh-factor").innerHTML = characterInfos.physical.blood.rh_factor;
+    cs_physical_blood_type.innerHTML = characterInfos.physical.blood.type;
+    cs_physical_blood_rh_factor.innerHTML = characterInfos.physical.blood.rh_factor;
 
     // Body
-    document.querySelector("#cs-physical-body-type").innerHTML = characterInfos.physical.body.type;
+    cs_physical_body_type.innerHTML = characterInfos.physical.body.type;
 }
 
 function updateAppearance(characterInfos) {
     // Body
-    document.querySelector("#cs-appearance-body-skin-tone").innerHTML = characterInfos.appearance.body.skin_tone;
+    cs_appearance_body_skin_tone.innerHTML = characterInfos.appearance.body.skin_tone;
 
     // Face
-    document.querySelector("#cs-appearance-face-shape").innerHTML = characterInfos.appearance.face.shape;
-    document.querySelector("#cs-appearance-face-characteristics-freckles").innerHTML = characterInfos.appearance.face.characteristics.freckles;
-    document.querySelector("#cs-appearance-face-characteristics-dimples").innerHTML = characterInfos.appearance.face.characteristics.dimples;
-    document.querySelector("#cs-appearance-face-characteristics-moles").innerHTML = characterInfos.appearance.face.characteristics.moles;
-    document.querySelector("#cs-appearance-face-characteristics-wrinkles").innerHTML = characterInfos.appearance.face.characteristics.wrinkles;
+    cs_appearance_face_shape.innerHTML = characterInfos.appearance.face.shape;
+    cs_appearance_face_characteristics_freckles.innerHTML = characterInfos.appearance.face.characteristics.freckles;
+    cs_appearance_face_characteristics_dimples.innerHTML = characterInfos.appearance.face.characteristics.dimples;
+    cs_appearance_face_characteristics_moles.innerHTML = characterInfos.appearance.face.characteristics.moles;
+    cs_appearance_face_characteristics_wrinkles.innerHTML = characterInfos.appearance.face.characteristics.wrinkles;
 }
 
 function updateBackground(characterInfos) {
     // Ideologies and Beliefs
-    document.querySelector("#cs-background-ideologies-beliefs-description").innerHTML = characterInfos.background.ideologies_and_beliefs.description;
-    let examplesList = document.querySelector("#cs-background-ideologies-beliefs-examples");
-    examplesList.replaceChildren();
+    cs_background_ideologies_beliefs_description.innerHTML = characterInfos.background.ideologies_and_beliefs.description;
+    cs_background_ideologies_beliefs_examples.replaceChildren();
 
     characterInfos.background.ideologies_and_beliefs.examples.forEach(example => {
         let listElement = document.createElement("li");
         listElement.innerHTML = example;
 
-        examplesList.appendChild(listElement);
+        cs_background_ideologies_beliefs_examples.appendChild(listElement);
     });
 
     // Significant People
-    document.querySelector("#cs-background-significant-people-target").innerHTML = characterInfos.background.significant_people.target;
-    document.querySelector("#cs-background-significant-people-reason").innerHTML = characterInfos.background.significant_people.reason;
-    
+    cs_background_significant_people_target.innerHTML = characterInfos.background.significant_people.target;
+    cs_background_significant_people_reason.innerHTML = characterInfos.background.significant_people.reason;
+
     // Important Locations
-    document.querySelector("#cs-background-important-location").innerHTML = characterInfos.background.important_locations.target;
-    
+    cs_background_important_location.innerHTML = characterInfos.background.important_locations.target;
+
     // Dear Belongings
-    document.querySelector("#cs-background-dear-belongings").innerHTML = characterInfos.background.dear_belongings.target;
-    
+    cs_background_dear_belongings.innerHTML = characterInfos.background.dear_belongings.target;
+
     // Characteristics
-    document.querySelector("#cs-background-characteristic").innerHTML = characterInfos.background.characteristics.target;
+    cs_background_characteristic.innerHTML = characterInfos.background.characteristics.target;
 }
 
 // ================================ //
