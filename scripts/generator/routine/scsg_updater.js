@@ -58,9 +58,13 @@ function updateBackground(characterInfos) {
     characterInfos.background.ideologies_and_beliefs.examples.forEach(example => {
         let listElement = document.createElement("li");
         listElement.innerHTML = example;
-        
+
         examplesList.appendChild(listElement);
     });
+
+    // Significant People
+    document.querySelector("#cs-background-significant-people-target").innerHTML = characterInfos.background.significant_people.target;
+    document.querySelector("#cs-background-significant-people-reason").innerHTML = characterInfos.background.significant_people.reason;
 }
 
 // ================================ //

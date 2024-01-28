@@ -22,6 +22,7 @@ import { FaceShapesCollection } from "../../collections/appearance/face_shapes_c
 import { IntensityCollection } from "../../collections/special/intensity_collection.js";
 import { BeardCollection } from "../../collections/appearance/beard_collection.js";
 import { IdeologiesAndBeliefsCollection } from "../../collections/background/ideologies_and_beliefs_collection.js";
+import { SignificantPeopleCollection } from "../../collections/background/significant_people_collection.js";
 //#endregion
 
 export function SCSGData(settings) {
@@ -56,6 +57,7 @@ export function SCSGData(settings) {
 
     //#region Background
     let char_background_ideologies_and_beliefs = backgroundGenerator.getRandomIdeologyAndBelief();
+    let char_background_significant_people = backgroundGenerator.getRandomSignificantPeople();
     //#endregion
 
     return {
@@ -128,6 +130,11 @@ export function SCSGData(settings) {
                 description: char_background_ideologies_and_beliefs.description,
                 examples: char_background_ideologies_and_beliefs.examples,
             },
+
+            significant_people: {
+                target: char_background_significant_people.target,
+                reason: char_background_significant_people.reason
+            }
         },
     };
 }
@@ -283,6 +290,13 @@ const appearanceGenerator = Object.freeze({
 const backgroundGenerator = Object.freeze({
     getRandomIdeologyAndBelief: function () {
         return IdeologiesAndBeliefsCollection.getRandomIdeologyAndBelief();
-    }
+    },
+
+    getRandomSignificantPeople: function () {
+        return {
+            target: SignificantPeopleCollection.getRandomSignificantPeople(),
+            reason: SignificantPeopleCollection.getRandomSignificantPeopleReason(),
+        };
+    },
 });
 //#endregion
