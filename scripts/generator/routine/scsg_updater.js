@@ -53,7 +53,7 @@ function updateBackground(characterInfos) {
     // Ideologies and Beliefs
     document.querySelector("#cs-background-ideologies-beliefs-description").innerHTML = characterInfos.background.ideologies_and_beliefs.description;
     let examplesList = document.querySelector("#cs-background-ideologies-beliefs-examples");
-    examplesList.innerHTML = "";
+    examplesList.replaceChildren();
 
     characterInfos.background.ideologies_and_beliefs.examples.forEach(example => {
         let listElement = document.createElement("li");
