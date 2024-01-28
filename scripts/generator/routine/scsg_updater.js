@@ -33,6 +33,7 @@ let cs_background_significant_people_reason;
 let cs_background_important_location;
 let cs_background_dear_belongings;
 let cs_background_characteristic;
+let cs_background_phobias_collection;
 
 // ======================================== //
 // Main
@@ -72,6 +73,7 @@ export function SCSGQueryElements() {
     cs_background_important_location = document.querySelector("#cs-background-important-location");
     cs_background_dear_belongings = document.querySelector("#cs-background-dear-belongings");
     cs_background_characteristic = document.querySelector("#cs-background-characteristic");
+    cs_background_phobias_collection = document.querySelector("#cs-background-phobias-collection");
 }
 
 export function SCSGUpdater(characterInfos) {
@@ -152,6 +154,37 @@ function updateBackground(characterInfos) {
 
     // Characteristics
     cs_background_characteristic.innerHTML = characterInfos.background.characteristics.target;
+
+    // Phobias
+    cs_background_phobias_collection.replaceChildren();
+
+    if (characterInfos.background.phobias.length > 0) {
+        characterInfos.background.phobias.forEach(phobia => {
+            let phobia_item = document.createElement("div");
+            let title = document.createElement("span");
+            let description = document.createElement("span");
+            
+            phobia_item.classList.add("app-item-square");
+            title.classList.add("app-item-square-title");
+            description.classList.add("app-item-square-description");
+            
+            phobia_item.appendChild(title);
+            phobia_item.appendChild(description);
+    
+            title.innerHTML = `${phobia.name} (${phobia.intensity})`;
+            description.innerHTML = phobia.description;
+    
+            cs_background_phobias_collection.appendChild(phobia_item);
+        });
+    }
+    else {
+        let empty_item = document.createElement("div");
+        empty_item.classList.add("app-item-square");
+        
+        empty_item.innerHTML = "The character does not have phobias.";
+        
+        cs_background_phobias_collection.appendChild(empty_item);
+    }
 }
 
 // ================================ //

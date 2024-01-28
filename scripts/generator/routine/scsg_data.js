@@ -30,6 +30,7 @@ import { IntensityCollection } from "../../collections/special/intensity_collect
 import { Random } from "../../math/random.js";
 import { BelovedBelongingsCollection } from "../../collections/background/beloved_belongings_collection.js";
 import { CharacteristicsCollection } from "../../collections/background/characteristics_collection.js";
+import { PhobiasCollection } from "../../collections/background/phobias_collection.js";
 
 //#endregion
 
@@ -69,6 +70,7 @@ export function SCSGData(settings) {
     let char_background_important_location = backgroundGenerator.getRandomImportantLocation();
     let char_background_dear_belongings = backgroundGenerator.getRandomDarlingBelonging();
     let char_background_dear_characteristic = backgroundGenerator.getRandomCharacteristic();
+    let char_background_dear_phobias = backgroundGenerator.getRandomPhobias();
     //#endregion
 
     return {
@@ -157,7 +159,9 @@ export function SCSGData(settings) {
 
             characteristics: {
                 target: char_background_dear_characteristic
-            }
+            },
+
+            phobias: char_background_dear_phobias,
         },
     };
 }
@@ -332,6 +336,39 @@ const backgroundGenerator = Object.freeze({
 
     getRandomCharacteristic: function () {
         return CharacteristicsCollection.getRandomCharacteristic();
+    },
+
+    getRandomPhobias: function () {
+        let phobias = [];
+        let phobiasAndIntensity = [];
+
+        let count = Random.getRandomNumber(0, 5);
+
+        for (let i = 0; i < count; i++) {
+            let phobiaSelected = PhobiasCollection.getRandomPhobia();
+
+            if (phobias.includes(phobiaSelected)) {
+                continue;
+            }
+
+            phobias.push(phobiaSelected);
+        }
+
+        phobias.forEach(phobia => {
+            let intensitySelected;
+
+            do {
+                intensitySelected = IntensityCollection.getRandomIntensity();
+            } while (intensitySelected === "None");
+
+            phobiasAndIntensity.push({ 
+                name: phobia.name,
+                description: phobia.description,
+                intensity: intensitySelected
+            });
+        });
+
+        return phobiasAndIntensity;
     },
 });
 //#endregion

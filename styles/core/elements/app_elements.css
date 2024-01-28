@@ -75,3 +75,36 @@
 
     font-size: 120%;
 }
+
+/* COLLECTION */
+.app-items-collection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    width: 100%;
+    height: auto;
+}
+
+.app-item-square {
+    display: flex;
+    flex-direction: column;
+
+    width: auto;
+    height: auto;
+
+    background-color: #2b2d31;
+
+    padding: 16px;
+
+    border-radius: 16px;
+}
+
+.app-item-square-title {
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.app-item-square-description {
+    text-align: justify;
+}
