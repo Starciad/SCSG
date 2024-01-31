@@ -11,10 +11,6 @@
 }
 
 @media (max-width:800px) {
-    .page-header {
-        height: 12%;
-    }
-
     .page-screen {
         justify-content: center;
         align-items: center;
@@ -42,7 +38,5 @@
 }
 
 @media (max-width:900px) {
-    .page-footer {
-        display: none;
-    }
+
 }
