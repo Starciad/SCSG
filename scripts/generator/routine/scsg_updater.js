@@ -117,72 +117,72 @@ export function SCSGUpdater(characterInfos) {
 
 function updateGeneral(characterInfos) {
     // Name
-    cs_general_name_first.innerHTML = characterInfos.general.name.first;
-    cs_general_name_surname.innerHTML = characterInfos.general.name.surname;
+    cs_general_name_first.textContent = characterInfos.general.name.first;
+    cs_general_name_surname.textContent = characterInfos.general.name.surname;
 
     // Personal
-    cs_general_personal_age.innerHTML = characterInfos.general.personal.age;
-    cs_general_personal_birthday.innerHTML = getFormattedDate(characterInfos.general.personal.birthday);
-    cs_general_personal_sex.innerHTML = characterInfos.general.personal.sex;
-    cs_general_personal_civil_status.innerHTML = characterInfos.general.personal.civil_status;
+    cs_general_personal_age.textContent = characterInfos.general.personal.age;
+    cs_general_personal_birthday.textContent = getFormattedDate(characterInfos.general.personal.birthday);
+    cs_general_personal_sex.textContent = characterInfos.general.personal.sex;
+    cs_general_personal_civil_status.textContent = characterInfos.general.personal.civil_status;
 
     // Professional
-    cs_general_professional_occupation.innerHTML = characterInfos.general.professional.occupation;
+    cs_general_professional_occupation.textContent = characterInfos.general.professional.occupation;
 
     // Location
-    cs_general_location_residence_country.innerHTML = characterInfos.general.location.residence_country.name;
-    cs_general_location_birth_country.innerHTML = characterInfos.general.location.birth_country.name;
+    cs_general_location_residence_country.textContent = characterInfos.general.location.residence_country.name;
+    cs_general_location_birth_country.textContent = characterInfos.general.location.birth_country.name;
 }
 
 function updatePhysical(characterInfos) {
     // Characteristics
-    cs_physical_characteristics_height.innerHTML = characterInfos.physical.characteristics.height;
-    cs_physical_characteristics_weight.innerHTML = characterInfos.physical.characteristics.weight;
+    cs_physical_characteristics_height.textContent = characterInfos.physical.characteristics.height;
+    cs_physical_characteristics_weight.textContent = characterInfos.physical.characteristics.weight;
 
     // Blood
-    cs_physical_blood_type.innerHTML = characterInfos.physical.blood.type;
-    cs_physical_blood_rh_factor.innerHTML = characterInfos.physical.blood.rh_factor;
+    cs_physical_blood_type.textContent = characterInfos.physical.blood.type;
+    cs_physical_blood_rh_factor.textContent = characterInfos.physical.blood.rh_factor;
 
     // Body
-    cs_physical_body_type.innerHTML = characterInfos.physical.body.type;
+    cs_physical_body_type.textContent = characterInfos.physical.body.type;
 }
 
 function updateAppearance(characterInfos) {
     // Body
-    cs_appearance_body_skin_tone.innerHTML = characterInfos.appearance.body.skin_tone;
+    cs_appearance_body_skin_tone.textContent = characterInfos.appearance.body.skin_tone;
 
     // Face
-    cs_appearance_face_shape.innerHTML = characterInfos.appearance.face.shape;
-    cs_appearance_face_characteristics_freckles.innerHTML = characterInfos.appearance.face.characteristics.freckles;
-    cs_appearance_face_characteristics_dimples.innerHTML = characterInfos.appearance.face.characteristics.dimples;
-    cs_appearance_face_characteristics_moles.innerHTML = characterInfos.appearance.face.characteristics.moles;
-    cs_appearance_face_characteristics_wrinkles.innerHTML = characterInfos.appearance.face.characteristics.wrinkles;
+    cs_appearance_face_shape.textContent = characterInfos.appearance.face.shape;
+    cs_appearance_face_characteristics_freckles.textContent = characterInfos.appearance.face.characteristics.freckles;
+    cs_appearance_face_characteristics_dimples.textContent = characterInfos.appearance.face.characteristics.dimples;
+    cs_appearance_face_characteristics_moles.textContent = characterInfos.appearance.face.characteristics.moles;
+    cs_appearance_face_characteristics_wrinkles.textContent = characterInfos.appearance.face.characteristics.wrinkles;
 }
 
 function updateBackground(characterInfos) {
     // Ideologies and Beliefs
-    cs_background_ideologies_beliefs_description.innerHTML = characterInfos.background.ideologies_and_beliefs.description;
+    cs_background_ideologies_beliefs_description.textContent = characterInfos.background.ideologies_and_beliefs.description;
     cs_background_ideologies_beliefs_examples.replaceChildren();
 
     characterInfos.background.ideologies_and_beliefs.examples.forEach(example => {
         let listElement = document.createElement("li");
-        listElement.innerHTML = example;
+        listElement.textContent = example;
 
         cs_background_ideologies_beliefs_examples.appendChild(listElement);
     });
 
     // Significant People
-    cs_background_significant_people_target.innerHTML = characterInfos.background.significant_people.target;
-    cs_background_significant_people_reason.innerHTML = characterInfos.background.significant_people.reason;
+    cs_background_significant_people_target.textContent = characterInfos.background.significant_people.target;
+    cs_background_significant_people_reason.textContent = characterInfos.background.significant_people.reason;
 
     // Important Locations
-    cs_background_important_location.innerHTML = characterInfos.background.important_locations.target;
+    cs_background_important_location.textContent = characterInfos.background.important_locations.target;
 
     // Dear Belongings
-    cs_background_dear_belongings.innerHTML = characterInfos.background.dear_belongings.target;
+    cs_background_dear_belongings.textContent = characterInfos.background.dear_belongings.target;
 
     // Characteristics
-    cs_background_characteristic.innerHTML = characterInfos.background.characteristics.target;
+    cs_background_characteristic.textContent = characterInfos.background.characteristics.target;
 
     // Phobias
     createCollectionItems(characterInfos.background.phobias, cs_background_phobias_collection);
@@ -192,17 +192,17 @@ function updateBackground(characterInfos) {
 }
 
 function updateCharacteristics(characterInfos) {
-    cs_characteristics_strength_title.innerHTML = characterInfos.characteristics.strength.title;
-    cs_characteristics_constitution_title.innerHTML = characterInfos.characteristics.constitution.title;
-    cs_characteristics_dexterity_title.innerHTML = characterInfos.characteristics.dexterity.title;
-    cs_characteristics_appearance_title.innerHTML = characterInfos.characteristics.appearance.title;
-    cs_characteristics_intelligence_title.innerHTML = characterInfos.characteristics.intelligence.title;
+    cs_characteristics_strength_title.textContent = characterInfos.characteristics.strength.title;
+    cs_characteristics_constitution_title.textContent = characterInfos.characteristics.constitution.title;
+    cs_characteristics_dexterity_title.textContent = characterInfos.characteristics.dexterity.title;
+    cs_characteristics_appearance_title.textContent = characterInfos.characteristics.appearance.title;
+    cs_characteristics_intelligence_title.textContent = characterInfos.characteristics.intelligence.title;
 
-    cs_characteristics_strength_description.innerHTML = characterInfos.characteristics.strength.description;
-    cs_characteristics_constitution_description.innerHTML = characterInfos.characteristics.constitution.description;
-    cs_characteristics_dexterity_description.innerHTML = characterInfos.characteristics.dexterity.description;
-    cs_characteristics_appearance_description.innerHTML = characterInfos.characteristics.appearance.description;
-    cs_characteristics_intelligence_description.innerHTML = characterInfos.characteristics.intelligence.description;
+    cs_characteristics_strength_description.textContent = characterInfos.characteristics.strength.description;
+    cs_characteristics_constitution_description.textContent = characterInfos.characteristics.constitution.description;
+    cs_characteristics_dexterity_description.textContent = characterInfos.characteristics.dexterity.description;
+    cs_characteristics_appearance_description.textContent = characterInfos.characteristics.appearance.description;
+    cs_characteristics_intelligence_description.textContent = characterInfos.characteristics.intelligence.description;
 }
 
 // ================================ //
@@ -230,8 +230,8 @@ function createCollectionItems(collection, container) {
             itemElement.appendChild(title);
             itemElement.appendChild(description);
 
-            title.innerHTML = `${item.name} (${item.intensity})`;
-            description.innerHTML = item.description;
+            title.textContent = `${item.name} (${item.intensity})`;
+            description.textContent = item.description;
 
             container.appendChild(itemElement);
         });
@@ -239,7 +239,7 @@ function createCollectionItems(collection, container) {
         let emptyItem = document.createElement("div");
         emptyItem.classList.add("app-item-square");
 
-        emptyItem.innerHTML = "There are no items in the respective collection.";
+        emptyItem.textContent = "There are no items in the respective collection.";
 
         container.appendChild(emptyItem);
     }
