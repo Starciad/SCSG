@@ -1,6 +1,6 @@
 import { Random } from "../../math/random.js";
 
-export const CharacteristicsCollection = Object.freeze({
+export const BackgroundCharacteristicsCollection = Object.freeze({
     characteristics: [
         "Generous (e.g., generous with tips, always helps those in need, philanthropist).",
         "Good with Animals (e.g., loves cats, grew up on a farm, good with horses).",

@@ -65,6 +65,9 @@
     <script src="scripts/collections/background/characteristics_collection.js" type="module"></script>
     <script src="scripts/collections/background/phobias_collection.js" type="module"></script>
     <script src="scripts/collections/background/manias_collection.js" type="module"></script>
+    
+    <!-- Characteristics -->
+    <script src="scripts/collections/characteristics/characteristics_collection.js" type="module"></script>
     <!-- #endregion -->
 
     <!-- Core -->
@@ -247,10 +250,8 @@
                                     </fieldset>
 
                                     <div class="app-settings-buttons">
-                                        <button id="scsg-generate-button" type="button"
-                                            class="btn btn-primary-success">Generate</button>
-                                        <button id="scsg-reset-button" type="reset"
-                                            class="btn btn-destructive">Reset</button>
+                                        <button id="scsg-generate-button" type="button" class="btn btn-primary-success">Generate</button>
+                                        <button id="scsg-reset-button" type="reset" class="btn btn-destructive">Reset</button>
                                     </div>
                                 </form>
                             </section>
@@ -794,48 +795,40 @@
                                 <article>
                                     <h3>Strength</h3>
                                     <ul>
-                                        <li><strong>Score:</strong> <span>0</span> (Interval of 15 to 90);</li>
-                                        <li><strong>Details:</strong> Empty.</li>
+                                        <li><strong>Target:</strong> <span id="cs-characteristics-strength-title">Empty</span>;</li>
+                                        <li><strong>Details:</strong> <span id="cs-characteristics-strength-description">Empty</span></li>
                                     </ul>
                                 </article>
 
                                 <article>
                                     <h3>Constitution</h3>
                                     <ul>
-                                        <li><strong>Score:</strong> <span>0</span> (Interval of 15 to 90);</li>
-                                        <li><strong>Details:</strong> Empty.</li>
+                                        <li><strong>Target:</strong> <span id="cs-characteristics-constitution-title">Empty</span>;</li>
+                                        <li><strong>Details:</strong> <span id="cs-characteristics-constitution-description">Empty</span></li>
                                     </ul>
                                 </article>
 
                                 <article>
                                     <h3>Dexterity</h3>
                                     <ul>
-                                        <li><strong>Score:</strong> <span>0</span> (Interval of 15 to 90);</li>
-                                        <li><strong>Details:</strong> Empty.</li>
+                                        <li><strong>Target:</strong> <span id="cs-characteristics-dexterity-title">Empty</span>;</li>
+                                        <li><strong>Details:</strong> <span id="cs-characteristics-dexterity-description">Empty</span></li>
                                     </ul>
                                 </article>
 
                                 <article>
                                     <h3>Appearance</h3>
                                     <ul>
-                                        <li><strong>Score:</strong> <span>0</span> (Interval of 15 to 90);</li>
-                                        <li><strong>Details:</strong> Empty.</li>
+                                        <li><strong>Target:</strong> <span id="cs-characteristics-appearance-title">Empty</span>;</li>
+                                        <li><strong>Details:</strong> <span id="cs-characteristics-appearance-description">Empty</span></li>
                                     </ul>
                                 </article>
 
                                 <article>
                                     <h3>Intelligence</h3>
                                     <ul>
-                                        <li><strong>Score:</strong> <span>0</span> (Interval of 15 to 90);</li>
-                                        <li><strong>Details:</strong> Empty.</li>
-                                    </ul>
-                                </article>
-
-                                <article>
-                                    <h3>Education</h3>
-                                    <ul>
-                                        <li><strong>Score:</strong> <span>0</span> (Interval of 15 to 90);</li>
-                                        <li><strong>Details:</strong> Empty.</li>
+                                        <li><strong>Target:</strong> <span id="cs-characteristics-intelligence-title">Empty</span>;</li>
+                                        <li><strong>Details:</strong> <span id="cs-characteristics-intelligence-description">Empty</span></li>
                                     </ul>
                                 </article>
                             </section>

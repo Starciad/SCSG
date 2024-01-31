@@ -36,6 +36,19 @@ let cs_background_characteristic;
 let cs_background_phobias_collection;
 let cs_background_manias_collection;
 
+// Characteristics
+let cs_characteristics_strength_title;
+let cs_characteristics_constitution_title;
+let cs_characteristics_dexterity_title;
+let cs_characteristics_appearance_title;
+let cs_characteristics_intelligence_title;
+
+let cs_characteristics_strength_description;
+let cs_characteristics_constitution_description;
+let cs_characteristics_dexterity_description;
+let cs_characteristics_appearance_description;
+let cs_characteristics_intelligence_description;
+
 // ======================================== //
 // Main
 
@@ -76,6 +89,19 @@ export function SCSGQueryElements() {
     cs_background_characteristic = document.querySelector("#cs-background-characteristic");
     cs_background_phobias_collection = document.querySelector("#cs-background-phobias-collection");
     cs_background_manias_collection = document.querySelector("#cs-background-manias-collection");
+
+    // Characteristics
+    cs_characteristics_strength_title = document.querySelector("#cs-characteristics-strength-title");
+    cs_characteristics_constitution_title = document.querySelector("#cs-characteristics-constitution-title");
+    cs_characteristics_dexterity_title = document.querySelector("#cs-characteristics-dexterity-title");
+    cs_characteristics_appearance_title = document.querySelector("#cs-characteristics-appearance-title");
+    cs_characteristics_intelligence_title = document.querySelector("#cs-characteristics-intelligence-title");
+
+    cs_characteristics_strength_description = document.querySelector("#cs-characteristics-strength-description");
+    cs_characteristics_constitution_description = document.querySelector("#cs-characteristics-constitution-description");
+    cs_characteristics_dexterity_description = document.querySelector("#cs-characteristics-dexterity-description");
+    cs_characteristics_appearance_description = document.querySelector("#cs-characteristics-appearance-description");
+    cs_characteristics_intelligence_description = document.querySelector("#cs-characteristics-intelligence-description");
 }
 
 export function SCSGUpdater(characterInfos) {
@@ -83,6 +109,7 @@ export function SCSGUpdater(characterInfos) {
     updatePhysical(characterInfos);
     updateAppearance(characterInfos);
     updateBackground(characterInfos);
+    updateCharacteristics(characterInfos);
 }
 
 // ======================================== //
@@ -162,6 +189,20 @@ function updateBackground(characterInfos) {
 
     // Manias
     createCollectionItems(characterInfos.background.manias, cs_background_manias_collection);
+}
+
+function updateCharacteristics(characterInfos) {
+    cs_characteristics_strength_title.innerHTML = characterInfos.characteristics.strength.title;
+    cs_characteristics_constitution_title.innerHTML = characterInfos.characteristics.constitution.title;
+    cs_characteristics_dexterity_title.innerHTML = characterInfos.characteristics.dexterity.title;
+    cs_characteristics_appearance_title.innerHTML = characterInfos.characteristics.appearance.title;
+    cs_characteristics_intelligence_title.innerHTML = characterInfos.characteristics.intelligence.title;
+
+    cs_characteristics_strength_description.innerHTML = characterInfos.characteristics.strength.description;
+    cs_characteristics_constitution_description.innerHTML = characterInfos.characteristics.constitution.description;
+    cs_characteristics_dexterity_description.innerHTML = characterInfos.characteristics.dexterity.description;
+    cs_characteristics_appearance_description.innerHTML = characterInfos.characteristics.appearance.description;
+    cs_characteristics_intelligence_description.innerHTML = characterInfos.characteristics.intelligence.description;
 }
 
 // ================================ //

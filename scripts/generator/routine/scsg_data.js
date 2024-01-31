@@ -22,16 +22,19 @@ import { BeardCollection } from "../../collections/appearance/beard_collection.j
 import { IdeologiesAndBeliefsCollection } from "../../collections/background/ideologies_and_beliefs_collection.js";
 import { SignificantPeopleCollection } from "../../collections/background/significant_people_collection.js";
 import { ImportantLocationsCollection } from "../../collections/background/important_locations_collection.js";
+import { PhobiasCollection } from "../../collections/background/phobias_collection.js";
+import { ManiasCollection } from "../../collections/background/manias_collection.js";
+import { BackgroundCharacteristicsCollection } from "../../collections/background/characteristics_collection.js";
+import { BelovedBelongingsCollection } from "../../collections/background/beloved_belongings_collection.js";
+
+// Characteristics
+import { CharacteristicsCollection } from "../../collections/characteristics/characteristics_collection.js";
 
 // Special
 import { IntensityCollection } from "../../collections/special/intensity_collection.js";
 
 // Math
 import { Random } from "../../math/random.js";
-import { BelovedBelongingsCollection } from "../../collections/background/beloved_belongings_collection.js";
-import { CharacteristicsCollection } from "../../collections/background/characteristics_collection.js";
-import { PhobiasCollection } from "../../collections/background/phobias_collection.js";
-import { ManiasCollection } from "../../collections/background/manias_collection.js";
 
 //#endregion
 
@@ -70,9 +73,17 @@ export function SCSGData(settings) {
     let char_background_significant_people = backgroundGenerator.getRandomSignificantPeople();
     let char_background_important_location = backgroundGenerator.getRandomImportantLocation();
     let char_background_dear_belongings = backgroundGenerator.getRandomDarlingBelonging();
-    let char_background_dear_characteristic = backgroundGenerator.getRandomCharacteristic();
-    let char_background_dear_phobias = backgroundGenerator.getRandomPhobias();
-    let char_background_dear_manias = backgroundGenerator.getRandomManias();
+    let char_background_characteristic = backgroundGenerator.getRandomCharacteristic();
+    let char_background_phobias = backgroundGenerator.getRandomPhobias();
+    let char_background_manias = backgroundGenerator.getRandomManias();
+    //#endregion
+
+    //#region Characteristics
+    let char_characteristics_strength = characteristicsGenerator.getRandomStrengthCharacteristic();
+    let char_characteristics_constitution = characteristicsGenerator.getRandomConstitutionCharacteristic();
+    let char_characteristics_dexterity = characteristicsGenerator.getRandomDexterityCharacteristic();
+    let char_characteristics_appearance = characteristicsGenerator.getRandomAppearanceCharacteristic();
+    let char_characteristics_intelligence = characteristicsGenerator.getRandomIntelligenceCharacteristic();
     //#endregion
 
     return {
@@ -160,11 +171,20 @@ export function SCSGData(settings) {
             },
 
             characteristics: {
-                target: char_background_dear_characteristic
+                target: char_background_characteristic
             },
 
-            phobias: char_background_dear_phobias,
-            manias: char_background_dear_manias,
+            phobias: char_background_phobias,
+            manias: char_background_manias,
+        },
+
+        // Characteristics
+        characteristics: {
+            strength: char_characteristics_strength,
+            constitution: char_characteristics_constitution,
+            dexterity: char_characteristics_dexterity,
+            appearance: char_characteristics_appearance,
+            intelligence: char_characteristics_intelligence,
         },
     };
 }
@@ -338,7 +358,7 @@ const backgroundGenerator = Object.freeze({
     },
 
     getRandomCharacteristic: function () {
-        return CharacteristicsCollection.getRandomCharacteristic();
+        return BackgroundCharacteristicsCollection.getRandomCharacteristic();
     },
 
     getRandomPhobias: function () {
@@ -371,6 +391,32 @@ const backgroundGenerator = Object.freeze({
                 intensity: intensitySelected
             };
         });
+    }
+});
+
+const characteristicsGenerator = Object.freeze({
+    getRandomStrengthCharacteristic: function () {
+        return CharacteristicsCollection.getRandomStrengthCharacteristic(this.getRandomPoints());
+    },
+
+    getRandomConstitutionCharacteristic: function () {
+        return CharacteristicsCollection.getRandomConstitutionCharacteristic(this.getRandomPoints());
+    },
+
+    getRandomDexterityCharacteristic: function () {
+        return CharacteristicsCollection.getRandomDexterityCharacteristic(this.getRandomPoints());
+    },
+
+    getRandomAppearanceCharacteristic: function () {
+        return CharacteristicsCollection.getRandomAppearanceCharacteristic(this.getRandomPoints());
+    },
+
+    getRandomIntelligenceCharacteristic: function () {
+        return CharacteristicsCollection.getRandomIntelligenceCharacteristic(this.getRandomPoints());
+    },
+
+    getRandomPoints: function () {
+        return (Random.getRandomNumber(1, 6) + Random.getRandomNumber(1, 6) + Random.getRandomNumber(1, 6)) * 5;
     }
 });
 //#endregion
