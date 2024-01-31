@@ -1,6 +1,13 @@
+import { isEmpty } from "./utilities/objects.js";
+
 const fileName = "SCSG_File";
 
 export function SCSGDownload(characterInfos) {
+    if (isEmpty(characterInfos)) {
+        alert("Before downloading the character file, it needs to be generated!");
+        return;
+    }
+
     let fileType = document.querySelector("#downloadable-file-type").value;
     let fileContent = "";
     let fileExtension = "";

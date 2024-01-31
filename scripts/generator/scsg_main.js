@@ -10,6 +10,8 @@ export function SCSGInitialize() {
     initializeGenerator();
     saveGeneration();
     publishGeneration();
+
+    alert("The character has been generated!");
 }
 
 function initializeGenerator() {
