@@ -13,11 +13,6 @@ import { HeightCollection } from "../../collections/physical/height_collection.j
 import { WeightCollection } from "../../collections/physical/weight_collection.js";
 import { BodyTypeCollection } from "../../collections/physical/body_type_collection.js";
 
-// Appearance
-import { SkinToneCollection } from "../../collections/appearance/skin_tone_collection.js";
-import { FaceShapesCollection } from "../../collections/appearance/face_shapes_collection.js";
-import { BeardCollection } from "../../collections/appearance/beard_collection.js";
-
 // Background
 import { IdeologiesAndBeliefsCollection } from "../../collections/background/ideologies_and_beliefs_collection.js";
 import { SignificantPeopleCollection } from "../../collections/background/significant_people_collection.js";
@@ -56,16 +51,6 @@ export function SCSGData(settings) {
     let char_physical_blood_type = physicalGenerator.getRandomBloodType();
     let char_physical_blood_rh_factor = physicalGenerator.getRandomRhFactor();
     let char_physical_body_type = physicalGenerator.getRandomBodyType();
-    //#endregion
-
-    //#region Appearance
-    let char_appearance_skin_tone = appearanceGenerator.getRandomSkinTone();
-    let char_appearance_face_shape = appearanceGenerator.getRandomFaceShape();
-    let char_appearance_face_freckles = appearanceGenerator.getRandomFrecklesIntensity();
-    let char_appearance_face_dimples = appearanceGenerator.getRandomDimplesIntensity();
-    let char_appearance_face_moles = appearanceGenerator.getRandomMolesIntensity();
-    let char_appearance_face_wrinkles = appearanceGenerator.getRandomWrinklesIntensity();
-    let char_appearance_beard_type = appearanceGenerator.getRandomBeardType();
     //#endregion
 
     //#region Background
@@ -126,28 +111,6 @@ export function SCSGData(settings) {
             body: {
                 type: char_physical_body_type,
             },
-        },
-
-        // Appearance
-        appearance: {
-            body: {
-                skin_tone: char_appearance_skin_tone,
-            },
-
-            face: {
-                shape: char_appearance_face_shape,
-
-                characteristics: {
-                    freckles: char_appearance_face_freckles,
-                    dimples: char_appearance_face_dimples,
-                    moles: char_appearance_face_moles,
-                    wrinkles: char_appearance_face_wrinkles,
-                },
-            },
-
-            beard: {
-                type: char_appearance_beard_type,
-            }
         },
 
         // Background
@@ -305,36 +268,6 @@ const physicalGenerator = Object.freeze({
     getRandomBodyType: function () {
         return BodyTypeCollection.getRandomBodyType();
     }
-});
-
-const appearanceGenerator = Object.freeze({
-    getRandomSkinTone: function () {
-        return SkinToneCollection.getRandomSkinTone();
-    },
-
-    getRandomFaceShape: function () {
-        return FaceShapesCollection.getRandomFaceShape();
-    },
-
-    getRandomFrecklesIntensity: function () {
-        return IntensityCollection.getRandomIntensity();
-    },
-
-    getRandomDimplesIntensity: function () {
-        return IntensityCollection.getRandomIntensity();
-    },
-
-    getRandomMolesIntensity: function () {
-        return IntensityCollection.getRandomIntensity();
-    },
-
-    getRandomWrinklesIntensity: function () {
-        return IntensityCollection.getRandomIntensity();
-    },
-
-    getRandomBeardType: function () {
-        return BeardCollection.getRandomBeardType();
-    },
 });
 
 const backgroundGenerator = Object.freeze({

@@ -17,14 +17,6 @@ let cs_physical_blood_type;
 let cs_physical_blood_rh_factor;
 let cs_physical_body_type;
 
-// Appearance
-let cs_appearance_body_skin_tone;
-let cs_appearance_face_shape;
-let cs_appearance_face_characteristics_freckles;
-let cs_appearance_face_characteristics_dimples;
-let cs_appearance_face_characteristics_moles;
-let cs_appearance_face_characteristics_wrinkles;
-
 // Background
 let cs_background_ideologies_beliefs_description;
 let cs_background_ideologies_beliefs_examples;
@@ -71,14 +63,6 @@ export function SCSGQueryElements() {
     cs_physical_blood_rh_factor = document.querySelector("#cs-physical-blood-rh-factor");
     cs_physical_body_type = document.querySelector("#cs-physical-body-type");
 
-    // Appearance
-    cs_appearance_body_skin_tone = document.querySelector("#cs-appearance-body-skin-tone");
-    cs_appearance_face_shape = document.querySelector("#cs-appearance-face-shape");
-    cs_appearance_face_characteristics_freckles = document.querySelector("#cs-appearance-face-characteristics-freckles");
-    cs_appearance_face_characteristics_dimples = document.querySelector("#cs-appearance-face-characteristics-dimples");
-    cs_appearance_face_characteristics_moles = document.querySelector("#cs-appearance-face-characteristics-moles");
-    cs_appearance_face_characteristics_wrinkles = document.querySelector("#cs-appearance-face-characteristics-wrinkles");
-
     // Background
     cs_background_ideologies_beliefs_description = document.querySelector("#cs-background-ideologies-beliefs-description");
     cs_background_ideologies_beliefs_examples = document.querySelector("#cs-background-ideologies-beliefs-examples");
@@ -107,7 +91,6 @@ export function SCSGQueryElements() {
 export function SCSGUpdater(characterInfos) {
     updateGeneral(characterInfos);
     updatePhysical(characterInfos);
-    updateAppearance(characterInfos);
     updateBackground(characterInfos);
     updateCharacteristics(characterInfos);
 }
@@ -145,18 +128,6 @@ function updatePhysical(characterInfos) {
 
     // Body
     cs_physical_body_type.textContent = characterInfos.physical.body.type;
-}
-
-function updateAppearance(characterInfos) {
-    // Body
-    cs_appearance_body_skin_tone.textContent = characterInfos.appearance.body.skin_tone;
-
-    // Face
-    cs_appearance_face_shape.textContent = characterInfos.appearance.face.shape;
-    cs_appearance_face_characteristics_freckles.textContent = characterInfos.appearance.face.characteristics.freckles;
-    cs_appearance_face_characteristics_dimples.textContent = characterInfos.appearance.face.characteristics.dimples;
-    cs_appearance_face_characteristics_moles.textContent = characterInfos.appearance.face.characteristics.moles;
-    cs_appearance_face_characteristics_wrinkles.textContent = characterInfos.appearance.face.characteristics.wrinkles;
 }
 
 function updateBackground(characterInfos) {
