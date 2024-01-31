@@ -66,6 +66,7 @@
     <!-- #endregion -->
 
     <!-- Core -->
+    <script src="scripts/downloader.js" type="module" defer></script>
     <script src="scripts/main.js" type="module" defer></script>
 
     <!-- STYLES -->
@@ -531,6 +532,23 @@
                             <!-- EXPORT -->
                             <section class="app-section" data-name="Export" data-icon="export">
                                 <h1>Export</h1>
+                                <p>Export the built character information between several files that can be downloaded and stored on your device.</p>
+
+                                <h2>Options</h2>
+                                <form>
+                                    <fieldset>
+                                        <legend>Settings</legend>
+
+                                        <label for="downloadable-file-type">File Type</label>
+                                        <select name="downloadable-file-type" id="downloadable-file-type">
+                                            <option value="json" selected>Json</option>
+                                        </select>
+                                    </fieldset>
+
+                                    <div class="app-settings-buttons">
+                                        <button id="scsg-download-button" type="button" class="btn btn-primary-success">Download</button>
+                                    </div>
+                                </form>
                             </section>
                         </div>
                     </div>
